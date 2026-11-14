@@ -367,6 +367,35 @@ body.present-mode th,body.present-mode td{font-size:18px;padding:11px 14px}
   svg text{fill:#333!important}
   *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
 }
+/* ---- one-screen presenter fit ---- */
+body.present-mode .p-stage{gap:14px}
+body.present-mode .kpi.drillable{padding:14px 18px}
+body.present-mode .kpi.drillable .fine{display:none}
+body.present-mode .kpi.drillable .stats{display:flex;flex-wrap:wrap;gap:4px 18px;border-top:0;padding-top:0;margin-top:8px}
+body.present-mode .kpi.drillable .stats>div:nth-child(3){display:none}
+body.present-mode .kpi.drillable .stats span{display:inline;margin-right:6px}
+body.present-mode .kpi.drillable .big{margin-top:6px}
+body.present-mode .p-stage .spotlight{padding:12px 18px}
+body.present-mode .p-stage .spotlight p{margin:6px 0 0}
+body.present-mode .p-stage .post .thumb.has{aspect-ratio:16/9;max-height:300px}
+body.present-mode .p-stage .kpi:not(.drillable) .spark{height:34px;margin-top:8px}
+.tabs-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.pager{display:flex;align-items:center;gap:10px}
+.pager .icon-circle[disabled]{opacity:.35;cursor:not-allowed}
+body.present-mode .kpi.drillable .big{font-size:2.5rem}
+body.present-mode .kpi.drillable .barline{margin-top:3px}
+body.present-mode .kpi.drillable .caution{font-size:14px;margin:4px 0 0}
+body.present-mode .p-head{padding-bottom:10px}
+body.present-mode .dec-card:not(.owner-hero){padding:14px 18px;gap:8px}
+body.present-mode .dec-card:not(.owner-hero) h3{font-size:1.1rem!important}
+body.present-mode .dec-card:not(.owner-hero)>p{font-size:16px!important}
+body.present-mode main{padding:16px 0 20px}
+/* shorter screens: scale the stage so a stop still fits without scrolling */
+@media (min-width:1100px) and (max-height:960px){body.present-mode #main .p-stage{zoom:.86}}
+@media (min-width:1100px) and (max-height:820px){body.present-mode #main .p-stage{zoom:.7}}
+#more-hint{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);background:#f0f4ef;color:#12283b;font-size:15px;font-weight:700;padding:6px 16px;border-radius:999px;box-shadow:0 6px 20px #0008;z-index:30;pointer-events:none}
+#more-hint[hidden]{display:none}
+@media print{#more-hint,.pager{display:none!important}}
 </style>
 </head>
 <body class="present-mode">
@@ -518,7 +547,7 @@ const METRICS = {reach: 'Reach / Views', er: 'Engagement rate', shares: 'Shares'
 const HINT = {reach: 'ผลสะสมของโพสต์ ณ วันที่อ่านค่า · ไม่ใช่คนไม่ซ้ำ · TikTok เป็น Views', er: 'ER ใช้นิยามของ Publer: IG รวม Saves, FB รวม Post clicks · ห้ามเทียบข้ามแพลตฟอร์ม · ระวังโพสต์ Reach ต่ำ', saves: 'Publer CSV ไม่มี Saves จึงมีเฉพาะโพสต์ IG เดือนล่าสุดที่อ่านผ่าน connector/Gemini', link_clicks: 'มีเฉพาะ Facebook', shares: 'จำนวนแชร์สะสม', comments: 'จำนวนคอมเมนต์สะสม', dt: 'เรียงจากโพสต์ล่าสุด'};
 
 const DEFAULT_S = {mode: 'present', stop: 1, brand: 'Compare', platform: 'All', from: d90, to: cutoff, format: 'All', noRecruit: false, pillar: 'All', q: '', metric: 'reach', visible: 9};
-const S = {...DEFAULT_S, sub: {1: 'score', 2: 'aud', 3: 'worked', 4: 'worked', 6: 'recs', 7: 'all'}, execIdx: 0, trendPlat: 'All'};
+const S = {...DEFAULT_S, sub: {1: 'score', 2: 'aud', 3: 'worked', 4: 'worked', 6: 'recs', 7: 'decision'}, execIdx: 0, trendPlat: 'All', spotPlat: 'Instagram', page: {}};
 
 // ---------- Single filter & stats path (preserved untouched) ----------
 const brands = () => S.brand === 'Compare' ? BR : [S.brand], plats = () => S.platform === 'All' ? PL : [S.platform];
@@ -766,6 +795,16 @@ function method(includeHead = true) {
 }
 const SECTIONS = {readout, audience, scorecard, content: contentLab, patterns, trends, decisions, method};
 
+// ---------- One-screen paging for presenter stops ----------
+const PAGE = 4;
+function pager(stop, total) {
+  const pages = Math.max(1, Math.ceil(total / PAGE));
+  S.page[stop] = Math.min(Math.max(S.page[stop] || 0, 0), pages - 1);
+  const cur = S.page[stop];
+  return {start: cur * PAGE, end: cur * PAGE + PAGE,
+    html: pages > 1 ? `<div class="pager"><button type="button" class="icon-circle" data-page="${stop}:-1" ${cur === 0 ? 'disabled' : ''} aria-label="หน้าก่อนหน้า">‹</button><span class="badge">หน้า ${cur + 1} / ${pages} · ${total} รายการ</span><button type="button" class="icon-circle" data-page="${stop}:1" ${cur >= pages - 1 ? 'disabled' : ''} aria-label="หน้าถัดไป">›</button></div>` : ''};
+}
+
 // ---------- Presenter Stops Definition ----------
 const STOPS = [
   {id: 1, title: 'อะไรเปลี่ยน และรู้ได้แค่ไหน', kicker: 'STOP 01 / 07 · READOUT & SCORECARD', src: '01 Readout + 03 Scorecard', sub: () => `ค่ากลางต่อโพสต์ 1–${cd} ${curLbl} เทียบ 1–${+prev.to.slice(8)} ${prevLbl} · Reach (FB/IG) · Views (TikTok)`},
@@ -819,8 +858,7 @@ function renderStop1() {
   let cards = '';
   for (const b of brands()) for (const pl of plats()) cards += scorecardCardHTML(b, pl, true);
 
-  return `${subtabs}${spotlight}
-    <div class="legend" style="margin:0">${brands().map(b => `<span><i style="background:var(--m-${b === 'SURYA' ? 'surya' : 'monster'})"></i>${short(b)} ${curLbl}</span>`).join('')}<span><i style="background:var(--prev)"></i>ช่วงเดียวกัน ${prevLbl}</span></div>
+  return `${subtabs}
     <div class="grid3">${cards}</div>
     <p class="fine">โพสต์เดือนปัจจุบันมีอายุน้อยกว่าโพสต์เดือนก่อน ณ วันที่อ่านค่า ส่วนต่างจึงเอียงไปทางลบ · Sum of post reach ไม่ใช่จำนวนคนไม่ซ้ำ · กดที่การ์ดเพื่อเปิดดูโพสต์เบื้องหลังตัวเลข</p>`;
 }
@@ -873,7 +911,7 @@ function renderBrandSpotlight(targetBrand, stopNum) {
   const t = (I.brands || {})[targetBrand] || {};
   const worked = t.worked || [], under = t.underperformed || [], why = (t.why || []).map(w => ({...w, type: w.type === 'hypothesis' ? 'inference' : w.type}));
   const allItems = [...worked, ...under, ...why];
-  const activeTab = S.sub[stopNum] || 'worked';
+  const activeTab = ['worked', 'under', 'why'].includes(S.sub[stopNum]) ? S.sub[stopNum] : 'worked';
   const shown = activeTab === 'worked' ? worked : activeTab === 'under' ? under : activeTab === 'why' ? why : allItems;
   const accent = targetBrand === 'SURYA' ? 'var(--surya)' : 'var(--monster)';
   const themeCls = cls(targetBrand) + '-theme';
@@ -893,7 +931,6 @@ function renderBrandSpotlight(targetBrand, stopNum) {
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'worked'}" data-sub="${stopNum}:worked">✅ ได้ผลดี (${worked.length})</button>
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'under'}" data-sub="${stopNum}:under">⚠️ ยังต่ำ (${under.length})</button>
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'why'}" data-sub="${stopNum}:why">💡 สมมติฐาน (${why.length})</button>
-    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'all'}" data-sub="${stopNum}:all">ทั้งหมด (${allItems.length})</button>
   </div>`;
 
   const leftCol = `<div style="display:flex;flex-direction:column;gap:14px">
@@ -902,7 +939,10 @@ function renderBrandSpotlight(targetBrand, stopNum) {
   </div>`;
 
   // Right Zone: Pillar interactive HTML bar charts per active platform (via sel() + stat())
-  const plList = plats();
+  const allPl = plats();
+  const focusPl = allPl.includes(S.spotPlat) ? S.spotPlat : allPl[0];
+  const plList = [focusPl];
+  const plChips = allPl.length > 1 ? allPl.map(pl => `<button type="button" class="p-btn ${pl === focusPl ? 'active' : ''}" data-splat="${pl}" aria-pressed="${pl === focusPl}">${platLogo(pl, 15)}${pl}</button>`).join('') : '';
   const blocks = plList.map(pl => {
     const rows = sel({brand: targetBrand, platform: pl});
     const g = {}; rows.forEach(p => (g[p.pillar] ||= []).push(p));
@@ -931,6 +971,7 @@ function renderBrandSpotlight(targetBrand, stopNum) {
   const rightCol = `<div style="display:flex;flex-direction:column;gap:14px">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
       <span class="unit">Pillar breakdown (n&lt;5 แสดงจาง · อ่านเป็นทิศทาง)</span>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">${plChips}</div>
       <button class="p-btn" data-drawer="brand-tables" data-brand="${esc(targetBrand)}">📋 ดูตารางละเอียด ${esc(short(targetBrand))}</button>
     </div>
     ${blocks}
@@ -985,12 +1026,12 @@ function renderStop6() {
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'all'}" data-sub="6:all">ทั้งหมด (${recs.length + exps.length})</button>
   </div>`;
 
-  const recHTML = `<div class="grid2">${recs.map(r => `<article class="pattern exp ${bc(r.brand)}"><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="kind ${r.type}">${KIND[r.type]}</span><span class="badge">${esc(r.brand)}</span></div><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p><p class="measure">หลักฐาน: ${esc(r.evidence)}</p></article>`).join('')}</div>`;
-  const expHTML = `<div class="grid2">${exps.map(x => `<article class="pattern exp ${/^SURYA/.test(x.title) ? 'SURYA' : /^Monster/.test(x.title) ? 'Monster' : ''}"><span class="kind ${x.type}">${KIND[x.type]}</span><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p><p class="measure">วัดผล: ${esc(x.measure)}</p></article>`).join('')}</div>`;
+  const recCard = (r => `<article class="pattern exp ${bc(r.brand)}"><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="kind ${r.type}">${KIND[r.type]}</span><span class="badge">${esc(r.brand)}</span></div><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p><p class="measure">หลักฐาน: ${esc(r.evidence)}</p></article>`);
+  const expCard = (x => `<article class="pattern exp ${/^SURYA/.test(x.title) ? 'SURYA' : /^Monster/.test(x.title) ? 'Monster' : ''}"><span class="kind ${x.type}">${KIND[x.type]}</span><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p><p class="measure">วัดผล: ${esc(x.measure)}</p></article>`);
 
-  if (activeTab === 'recs') return `${subtabs}${recHTML}`;
-  if (activeTab === 'exps') return `${subtabs}${expHTML}`;
-  return `${subtabs}<h3 style="margin:0">ข้อเสนอด้านคอนเทนต์</h3>${recHTML}<h3 style="margin:6px 0 0">การทดลองเดือนหน้า</h3>${expHTML}`;
+  const cards = activeTab === 'recs' ? recs.map(recCard) : activeTab === 'exps' ? exps.map(expCard) : [...recs.map(recCard), ...exps.map(expCard)];
+  const pg = pager(6, cards.length);
+  return `<div class="tabs-row">${subtabs}${pg.html}</div><div class="grid2">${cards.slice(pg.start, pg.end).join('') || '<div class="card empty">ไม่มีรายการในมุมมองนี้</div>'}</div>`;
 }
 
 function renderStop7() {
@@ -1027,6 +1068,7 @@ function renderStop7() {
   const savedTime = NOTES.updated_at ? `บันทึกล่าสุด ${dth(NOTES.updated_at.slice(0, 16))}` : 'ยังไม่มีการแก้ไข';
 
   const subtabs = `<div class="p-subtabs" role="tablist">
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'decision'}" data-sub="7:decision">🧭 ต้องตัดสินใจ (${decItems.length})</button>
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'all'}" data-sub="7:all">ทั้งหมด (${items.length - decItems.length})</button>
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'exps'}" data-sub="7:exps">🧪 การทดลอง (${items.filter(i => i.group === 'exp').length})</button>
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'recs'}" data-sub="7:recs">🎯 ข้อเสนอ (${items.filter(i => i.group === 'rec').length})</button>
@@ -1043,10 +1085,11 @@ function renderStop7() {
     </div>
   </div>`;
 
-  return `${decItems.map(it => cardFor(it, true)).join('')}
-    ${storageBar}
-    ${subtabs}
-    <div class="grid2">${restItems.length ? restItems.map(it => cardFor(it, false)).join('') : '<div class="card empty">ไม่มีรายการในมุมมองนี้</div>'}</div>`;
+  if (activeTab === 'decision') return `${subtabs}${decItems.map(it => cardFor(it, true)).join('') || '<div class="card empty">ไม่มีรายการที่ต้องตัดสินใจ</div>'}${storageBar}`;
+  const pg = pager(7, restItems.length);
+  return `<div class="tabs-row">${subtabs}${pg.html}</div>
+    <div class="grid2">${restItems.length ? restItems.slice(pg.start, pg.end).map(it => cardFor(it, false)).join('') : '<div class="card empty">ไม่มีรายการในมุมมองนี้</div>'}</div>
+    <p class="fine" style="margin:0">💾 บันทึกอัตโนมัติในเบราว์เซอร์เครื่องนี้ · อนุมัติแล้ว <b>${approvedN}/${items.length}</b> · คัดลอก ดาวน์โหลด หรือพิมพ์บันทึกได้ที่แท็บ “ต้องตัดสินใจ”</p>`;
 }
 
 // ---------- Print Summary of Meeting Notes & Presenter Deck ----------
@@ -1261,7 +1304,16 @@ function renderPresenterStage() {
 
   bindPresenterEvents();
   bindThumbFallbacks('#main');
+  updateMoreHint();
 }
+function updateMoreHint() {
+  let h = $('#more-hint');
+  if (!h) { h = document.createElement('div'); h.id = 'more-hint'; h.textContent = '↓ มีเนื้อหาต่อด้านล่าง'; h.setAttribute('aria-hidden', 'true'); document.body.appendChild(h); }
+  const de = document.documentElement;
+  h.hidden = !(S.mode === 'present' && de.scrollHeight - innerHeight - scrollY > 24);
+}
+addEventListener('scroll', updateMoreHint, {passive: true});
+addEventListener('resize', updateMoreHint);
 
 function bindPresenterEvents() {
   const stageJump = $('#stage-jump-btn');
@@ -1270,7 +1322,7 @@ function bindPresenterEvents() {
   document.querySelectorAll('#main [data-sub]').forEach(btn => {
     btn.onclick = () => {
       const [stop, tab] = btn.dataset.sub.split(':');
-      S.sub[stop] = tab;
+      S.sub[stop] = tab; S.page[stop] = 0;
       renderPresenterStage();
     };
   });
@@ -1281,6 +1333,13 @@ function bindPresenterEvents() {
 
   document.querySelectorAll('#main [data-tplat]').forEach(btn => {
     btn.onclick = () => { S.trendPlat = btn.dataset.tplat; renderPresenterStage(); };
+  });
+
+  document.querySelectorAll('#main [data-splat]').forEach(btn => {
+    btn.onclick = () => { S.spotPlat = btn.dataset.splat; renderPresenterStage(); };
+  });
+  document.querySelectorAll('#main [data-page]').forEach(btn => {
+    btn.onclick = () => { const [stop, d] = btn.dataset.page.split(':'); S.page[stop] = (S.page[stop] || 0) + parseInt(d, 10); renderPresenterStage(); };
   });
 
   document.querySelectorAll('#main [data-setbrand]').forEach(btn => {
