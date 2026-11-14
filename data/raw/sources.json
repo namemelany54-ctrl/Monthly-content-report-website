@@ -1,0 +1,50 @@
+{
+  "_about": "Manifest of every raw source the report reads. Add one entry per new file. as_of = when the numbers were read from Publer (Asia/Bangkok). Later as_of wins when two sources describe the same post. Never edit or delete old raw files: they are the audit trail and enable age-matched comparisons later.",
+  "timezone": "Asia/Bangkok (UTC+7)",
+  "sources": [
+    {
+      "id": "publer-csv-2026-11-10",
+      "type": "publer_csv",
+      "file": "publer-post-insights_2026-01-01_2026-11-10_exported-2026-11-10T1915.csv",
+      "label": "Publer UI export: Post Insights (workspace COFFLORER)",
+      "as_of": "2026-11-10T19:15",
+      "covers_from": "2026-01-01",
+      "covers_to": "2026-11-10",
+      "trust": "publer_direct",
+      "note": "Exported by hand from Publer > Analytics > Post Insights > This year. No Saves or Post Clicks columns. as_of taken from the file's modified time."
+    },
+    {
+      "id": "gemini-mtd-2026-11-14",
+      "type": "supplement_json",
+      "file": "gemini-nov-mtd_extracted-2026-11-14T1320.json",
+      "label": "Gemini extraction via Publer connector (IG + FB only), Nov 1-14 MTD",
+      "as_of": "2026-11-14T13:20",
+      "covers_from": "2026-11-01",
+      "covers_to": "2026-11-13",
+      "trust": "third_party_spot_checked",
+      "note": "Parsed from Gemini's report tables by tools/parse_gemini_md.py. 7 of 29 rows were re-read from Publer by Claude and matched exactly; the other 22 are Gemini-reported and not independently re-read. No TikTok."
+    },
+    {
+      "id": "publer-connector-2026-11-14",
+      "type": "supplement_json",
+      "file": "connector-delta_2026-11-10_2026-11-13_pulled-2026-11-14T1410.json",
+      "label": "Publer connector read by Claude (IG, FB, TikTok), 10-13 Nov",
+      "as_of": "2026-11-14T14:10",
+      "covers_from": "2026-11-10",
+      "covers_to": "2026-11-13",
+      "trust": "publer_direct",
+      "note": "9 rows read directly. The connector returns Saves only on per-account queries, so Saves are absent on most of these rows."
+    },
+    {
+      "id": "publer-followers-2026-11-14",
+      "type": "account_followers",
+      "file": "account-followers_2026-09-28_2026-11-09_pulled-2026-11-14T1445.json",
+      "label": "Publer connector: account followers (weekly), read by Claude",
+      "as_of": "2026-11-14T14:45",
+      "covers_from": "2026-09-28",
+      "covers_to": "2026-11-09",
+      "trust": "publer_direct",
+      "note": "Whole-account follower counts, weekly. Kept separate from post-level results."
+    }
+  ]
+}

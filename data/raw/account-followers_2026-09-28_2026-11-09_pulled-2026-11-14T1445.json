@@ -1,0 +1,12 @@
+{
+  "_about": "Account-level follower counts read from the Publer connector (get_analytics_chart_data, chart 'followers') by Claude on 2026-11-14 ~14:45 ICT, one account per call. Weekly points; 'week' is the week-start date Publer reports. These are whole-account figures and are NOT derived from the post-level data.",
+  "source_id": "publer-followers-2026-11-14",
+  "accounts": [
+    {"brand": "SURYA", "platform": "Instagram", "series": [["2026-09-28", 6925], ["2026-10-05", 6924], ["2026-10-12", 6918], ["2026-10-19", 6942], ["2026-10-26", 6976], ["2026-11-02", 7000], ["2026-11-09", 7009]]},
+    {"brand": "SURYA", "platform": "Facebook", "series": [["2026-09-28", 23226], ["2026-10-05", 23224], ["2026-10-12", 23225], ["2026-10-19", 23258], ["2026-10-26", 23298], ["2026-11-02", 23347], ["2026-11-09", 23369]]},
+    {"brand": "SURYA", "platform": "TikTok", "series": [["2026-09-28", 26735], ["2026-10-05", 26741], ["2026-10-12", 26750], ["2026-10-19", 26750], ["2026-10-26", 26763], ["2026-11-02", 26766], ["2026-11-09", 26766]]},
+    {"brand": "Monster and Friends", "platform": "Instagram", "series": [["2026-09-28", 40319], ["2026-10-05", 40642], ["2026-10-12", 40932], ["2026-10-19", 41401], ["2026-10-26", 41791], ["2026-11-02", 42058], ["2026-11-09", 42302]]},
+    {"brand": "Monster and Friends", "platform": "Facebook", "series": [["2026-09-28", 34108], ["2026-10-05", 34472], ["2026-10-12", 34881], ["2026-10-19", 35158], ["2026-10-26", 35367], ["2026-11-02", 35629], ["2026-11-09", 35921]]},
+    {"brand": "Monster and Friends", "platform": "TikTok", "series": [["2026-09-28", 49153], ["2026-10-05", 49209], ["2026-10-12", 49224], ["2026-10-19", 49257], ["2026-10-26", 49309], ["2026-11-02", 49368], ["2026-11-09", 49427]]}
+  ]
+}

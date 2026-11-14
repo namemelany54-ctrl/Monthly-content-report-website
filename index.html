@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1725">
+<title>Creative Performance Intelligence | COFFLORER</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1725;--panel:#14283b;--panel2:#102338;--line:#2f4a61;--text:#f4f7f7;--muted:#b6c7d1;--quiet:#8ea2b5;
+--surya:#efbd6c;--monster:#70d8ed;--monster2:#fed347;--m-surya:#c98500;--m-monster:#3987e5;--prev:#70899a;--up:#74d3b0;--down:#f29e9e;--warn:#ffdc9c;--link:#8fe1f0;
+--ig:#d55181;--fb:#6da7ec;--tt:#199e70}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;background:radial-gradient(circle at 92% 0%,#203d55 0,transparent 30rem),var(--bg);color:var(--text);font:16px/1.6 "Noto Sans Thai","Leelawadee UI",Tahoma,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+button,input,select{font:inherit}button{cursor:pointer}
+:focus-visible{outline:2px solid #65d9ec;outline-offset:3px}
+.shell{width:min(1400px,calc(100% - 48px));margin:auto}
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:34px 0 22px;border-bottom:1px solid var(--line)}
+.eyebrow{color:#a8c6d6;font-size:.74rem;font-weight:800;letter-spacing:.16em;margin:0 0 8px;text-transform:uppercase}
+h1{font-size:clamp(1.9rem,4vw,3.6rem);line-height:1.1;letter-spacing:-.04em;margin:0;font-weight:900;overflow-wrap:anywhere}h1 em{color:var(--surya);font-style:normal}
+.subhead{color:var(--muted);margin:10px 0 0}
+.head-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+.head-actions>*{font-size:.8rem;font-weight:700;border:1px solid var(--line);background:#193249;border-radius:999px;color:var(--text);padding:9px 14px;white-space:nowrap}
+.banner{display:flex;gap:8px 22px;flex-wrap:wrap;align-items:center;padding:12px 16px;border:1px solid #e8bd7240;background:#e8bd7209;border-radius:10px;color:#c2cbd5;font-size:.8rem;margin:18px 0 0}
+.banner strong{color:var(--surya)}.banner b{color:var(--text);font-variant-numeric:tabular-nums}
+.banner[hidden]{display:none}.stale{border-color:#f29e9e66;background:#f29e9e12;color:#ffd9d9}
+.sticky{position:sticky;top:0;z-index:20;background:#0b1725f2;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand-nav{display:flex;align-items:center;justify-content:space-between;gap:10px 14px;padding:12px 0 8px;flex-wrap:wrap}
+.tabs{display:flex;gap:7px;flex-shrink:0;max-width:100%;overflow:auto}
+.tab{border:1px solid var(--line);border-radius:12px;background:transparent;color:#e7eff2;text-align:left;font-weight:800;padding:7px 14px;white-space:nowrap}
+.tab small{display:block;color:var(--quiet);font-size:.68rem;font-weight:600}
+.tab[aria-pressed=true]{background:#f0f4ef;color:#12283b;border-color:#f0f4ef}.tab[aria-pressed=true] small{color:#526b7b}
+.tab[data-brand="SURYA"][aria-pressed=true]{background:var(--surya);border-color:var(--surya)}.tab[data-brand^="Monster"][aria-pressed=true]{background:var(--monster);border-color:var(--monster2);box-shadow:inset 0 -4px 0 var(--monster2)}
+.scope{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:end}
+.scope label,.filters label{font-size:.68rem;color:var(--quiet);display:flex;flex-direction:column;gap:2px}
+.scope label.chk{flex-direction:row;align-items:center;gap:7px;font-size:.78rem;color:var(--muted);padding-bottom:6px}.chk input{accent-color:var(--surya);width:16px;height:16px}
+select,input[type=date],input[type=search]{font-size:.82rem;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:#122334;color:var(--text);min-width:0}
+.jump{display:flex;gap:18px;overflow:auto;padding:4px 0 10px;white-space:nowrap;font-size:.76rem}.jump a{color:var(--quiet)}.jump a:hover{color:var(--surya)}
+section{margin-top:46px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px}
+.section-head h2{font-size:clamp(1.4rem,2.4vw,2.1rem);letter-spacing:-.03em;line-height:1.2;margin:0}
+.section-head>p{font-size:.8rem;color:var(--muted);max-width:420px;text-align:right;margin:0}
+h3{font-size:1rem;margin:22px 0 10px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px 19px;min-width:0}
+.insight{background:linear-gradient(155deg,#1d374c,#14283b);border:1px solid var(--line);border-radius:16px;padding:18px 20px 18px 24px;position:relative;overflow:hidden}
+.insight:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--accent,var(--surya))}
+.insight p{font-size:.9rem;color:#d6e2e8;margin:8px 0 0}.insight small{display:block;color:var(--quiet);font-size:.72rem;margin-top:10px}
+.kind{font-size:.68rem;font-weight:800;letter-spacing:.1em;padding:2px 8px;border-radius:5px;display:inline-block;margin-right:6px;text-transform:uppercase}
+.kind.verified{background:#74d3b022;color:#9be6c8}.kind.hypothesis{background:#e8bd7222;color:#f3d39a}.kind.inference{background:#b99cf022;color:#d3c1f7}.kind.experiment,.kind.decision{background:#70d8ed22;color:#a8e9f5}
+.kind.disagree,.kind.high{background:#f29e9e22;color:#ffc4c4}.kind.partial,.kind.minor,.kind.medium{background:#e8bd7222;color:#f3d39a}.kind.agree,.kind.low{background:#74d3b022;color:#9be6c8}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted);white-space:nowrap}
+.badge i{width:7px;height:7px;border-radius:50%}.b-Instagram i{background:var(--ig)}.b-Facebook i{background:var(--fb)}.b-TikTok i{background:var(--tt)}
+.bn{font-size:.72rem;letter-spacing:.1em;font-weight:900;color:var(--accent)}
+.SURYA{--accent:var(--surya);--mark:var(--m-surya);--brand-bg:#2a2a22;--brand-line:#6b5a36}.Monster{--accent:var(--monster);--mark:var(--m-monster);--brand-bg:#15304a;--brand-line:#2f5d7c}
+.kpi header{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.kpi .big{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums;margin-top:12px}
+.kpi .unit{color:var(--muted);font-size:.74rem}
+.delta{font-size:.74rem;padding:3px 7px;border-radius:5px;background:#ffffff0a;margin-left:6px;white-space:nowrap}.up{color:var(--up)}.down{color:var(--down)}
+.barline{display:grid;grid-template-columns:62px 1fr 64px;align-items:center;gap:8px;font-size:.7rem;color:var(--muted);margin-top:5px}
+.track{height:9px;border-radius:20px;background:#294253;overflow:hidden}.fill{height:100%;border-radius:4px;background:var(--mark)}.fill.prev{background:var(--prev)}
+.barline b{color:#e5eff2;text-align:right;font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid var(--line);padding-top:10px;margin-top:12px}
+.stats span{display:block;color:var(--quiet);font-size:.68rem}.stats b{font-size:.86rem;font-variant-numeric:tabular-nums}
+.fine{color:var(--quiet);font-size:.72rem;margin:10px 0 0}.caution{color:var(--warn);font-size:.72rem;margin:6px 0 0}
+.spark{display:flex;gap:4px;align-items:flex-end;height:44px;margin-top:12px}.spark i{flex:1;background:var(--mark);border-radius:3px 3px 0 0;min-height:3px;opacity:.85}
+.lab{background:#102538;border:1px solid var(--line);border-radius:20px;padding:22px}
+.filters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:end;margin-bottom:6px}.filters input[type=search]{width:220px}
+.hint{color:var(--quiet);font-size:.74rem;margin:6px 0 14px}
+.post{background:linear-gradient(145deg,var(--brand-bg),#102338);border:1px solid var(--brand-line);border-radius:14px;padding:15px;min-width:0;display:flex;flex-direction:column;gap:9px}
+.thumb{aspect-ratio:4/3;border-radius:10px;background:#15283a;display:grid;place-items:center;overflow:hidden;color:var(--quiet);font-size:.72rem;text-align:center;border:1px dashed var(--line)}
+.thumb img{width:100%;height:100%;object-fit:contain}.thumb.has{border-style:solid}
+.rank{color:var(--surya);letter-spacing:.1em;font-size:.7rem;font-weight:800}
+.post h4{font-size:.92rem;line-height:1.5;margin:0;overflow-wrap:anywhere}
+.meta{display:flex;flex-wrap:wrap;gap:6px;font-size:.68rem;color:var(--quiet);align-items:center}
+.pm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.pm span{font-size:.64rem;color:var(--quiet);display:block}.pm b{font-size:.95rem;font-variant-numeric:tabular-nums}
+.row .thumb{width:76px;aspect-ratio:1;flex-shrink:0}.row .top{display:flex;gap:12px;align-items:flex-start}
+.more{text-align:center;margin:18px 0 0}.more button{background:#1d3b52;color:#d3e5f0;border:1px solid #537186;padding:9px 22px;border-radius:8px}
+.pattern{padding:20px;border:1px solid #25384a;background:#0e1e2f;border-radius:14px}.pattern .fact{font-size:1.35rem;color:var(--accent);line-height:1.35;margin:8px 0;font-weight:700}
+.pattern p{font-size:.82rem;color:#aebdcd;margin:0}.pattern .lbl{color:var(--accent);font-size:.66rem;letter-spacing:.14em;font-weight:800}
+ul.ins{list-style:none;padding:0;margin:0}ul.ins li{padding:9px 0;border-bottom:1px solid #ffffff10;font-size:.86rem;color:#d1dee5}ul.ins li:last-child{border:0}
+.exp h3{margin:8px 0;font-size:1.05rem;line-height:1.45}.exp p{font-size:.84rem;color:#acbbcb;margin:0 0 10px}.exp .measure{color:var(--surya);font-size:.76rem;border-top:1px solid #ffffff10;padding-top:10px;margin:0}
+.scroll{overflow:auto;border:1px solid #25384a;border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:.78rem}
+th,td{padding:9px 12px;border-bottom:1px solid #ffffff0d;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;color:#cad5df}
+th{color:var(--quiet);font-weight:600;background:#112234;font-size:.7rem}
+th:first-child,td:first-child,.l{text-align:left}td.wrap{white-space:normal;min-width:230px;text-align:left}tr.thin td{color:#7f93a5}
+details{border:1px solid #2b3c4e;border-radius:12px;padding:14px 16px;margin-top:14px}summary{cursor:pointer;color:var(--surya);font-size:.86rem}
+.legend{display:flex;gap:16px;font-size:.76rem;color:var(--muted);margin:0 0 10px;flex-wrap:wrap}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+svg text{font:11px "Leelawadee UI","Segoe UI",sans-serif;fill:var(--muted)}
+#tip{position:fixed;pointer-events:none;background:#f0f4ef;color:#12283b;font-size:.76rem;padding:6px 9px;border-radius:6px;display:none;z-index:99;max-width:260px}
+.empty{padding:28px;text-align:center;color:var(--quiet)}
+footer{margin:50px 0 40px;color:var(--quiet);font-size:.74rem;border-top:1px solid var(--line);padding-top:16px}
+@media(max-width:1000px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.shell{width:calc(100% - 28px)}.masthead{flex-direction:column;align-items:flex-start}.grid3,.grid2{grid-template-columns:1fr}.section-head{flex-direction:column;align-items:flex-start}.section-head>p{text-align:left}.brand-nav{flex-direction:column;align-items:stretch}.filters input[type=search]{width:100%}.filters label,.scope label{flex:1 1 44%}.lab{padding:14px}.sticky{position:static}.pm b{font-size:.86rem}html{scroll-padding-top:10px}}
+@media print{:root{--bg:#fff;--panel:#fff;--panel2:#fff;--line:#c9d2da;--text:#111;--muted:#444;--quiet:#555;--surya:#8a5a00;--monster:#0c5f8a;--link:#0c5f8a;--warn:#7a4b00;--up:#0a6b45;--down:#a02626}
+body{background:#fff;font-size:11pt}.sticky,.head-actions button,.filters,.more,#tip{display:none!important}.card,.insight,.post,.pattern,.lab{background:#fff!important;break-inside:avoid;border-color:#c9d2da}.insight p,ul.ins li,.pattern p,.exp p,td{color:#222}th{background:#eef2f5;color:#333}.shell{width:100%}section{margin-top:22px}.kind{border:1px solid #999}.grid3{grid-template-columns:repeat(3,1fr)}.thumb{border-color:#c9d2da;background:#f3f5f7}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="masthead"><div><p class="eyebrow">COFFLORER · Creative Performance Intelligence</p><h1>Social Performance <em id="h-period"></em></h1><p class="subhead">SURYA Coffee Explorers + Monster and Friends · Publer workspace COFFLORER</p></div>
+<div class="head-actions"><span id="h-snap"></span><button id="printBtn">พิมพ์ / บันทึก PDF</button></div></header>
+<div class="banner" id="banner"></div><div class="banner stale" id="stale" hidden></div>
+</div>
+<div class="sticky"><div class="shell">
+<nav class="brand-nav" aria-label="มุมมองแบรนด์"><div class="tabs" role="group" aria-label="เลือกแบรนด์" id="tabs"></div>
+<div class="scope">
+<label>Platform<select id="s-platform"></select></label><label>ช่วงเวลา<select id="s-preset"></select></label><label>From<input type="date" id="s-from"></label><label>To<input type="date" id="s-to"></label><label>Format<select id="s-format"></select></label>
+<label class="chk"><input type="checkbox" id="s-recruit"> ตัดโพสต์ Recruitment ออก</label></div></nav>
+<nav class="jump" aria-label="ส่วนของรายงาน"><a href="#readout">Readout</a><a href="#audience">Audience</a><a href="#scorecard">Scorecard</a><a href="#content">Content Lab</a><a href="#patterns">Patterns</a><a href="#trends">Trends</a><a href="#decisions">Next month</a><a href="#method">Method & sources</a></nav>
+</div></div>
+<div class="shell"><main id="main"></main>
+<footer id="foot"></footer></div>
+<div id="tip"></div>
+<script>/* cache-bust so a refresh always shows the newest data file */document.write('<script src="data/dashboard-data.js?t=' + Date.now() + '"><\/script>')</script>
+<script>
+const D = window.CPI_DATA, P = D.posts, M = D.meta, I = D.insights || {};
+const $ = s => document.querySelector(s), esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const BR = ['SURYA', 'Monster and Friends'], PL = ['Instagram', 'Facebook', 'TikTok'];
+const cls = b => b === 'SURYA' ? 'SURYA' : 'Monster', short = b => b === 'SURYA' ? 'SURYA' : 'Monster';
+const REACH = pl => pl === 'TikTok' ? 'Views' : 'Reach';
+const KIND = {verified: 'Fact', hypothesis: 'Hypothesis', inference: 'Inference', experiment: 'Experiment', decision: 'Decision needed'};
+const TH = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'], EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const median = a => { a = a.filter(v => v != null).sort((x, y) => x - y); if (!a.length) return null; const m = a.length >> 1; return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2; };
+const n0 = v => v == null ? '—' : Math.round(v).toLocaleString('en-US'), p2 = v => v == null ? '—' : v.toFixed(2) + '%';
+const day = p => p.dt.slice(0, 10), pad = n => String(n).padStart(2, '0'), iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const dth = (s, noYear) => { s = s.replace('T', ' '); const [y, m, d] = s.slice(0, 10).split('-'); return `${+d} ${TH[m - 1]}${noYear ? '' : ' ' + y}` + (s.length > 10 ? ' ' + s.slice(11, 16) : ''); };
+const badge = pl => `<span class="badge b-${pl}"><i></i>${pl}</span>`;
+
+// reporting periods come from the data, never hardcoded
+const cutoff = M.latest_post.slice(0, 10), [cy, cm, cd] = cutoff.split('-').map(Number);
+const mtd = {from: `${cy}-${pad(cm)}-01`, to: cutoff}, pm = new Date(cy, cm - 2, 1), pmEnd = new Date(cy, cm - 1, 0);
+const prev = {from: iso(pm), to: iso(new Date(pm.getFullYear(), pm.getMonth(), Math.min(cd, pmEnd.getDate())))}, base = {from: iso(pm), to: iso(pmEnd)};
+const firstDay = P[0].dt.slice(0, 10), d90 = iso(new Date(new Date(cutoff).getTime() - 89 * 864e5));
+const curLbl = TH[cm - 1], prevLbl = TH[pm.getMonth()];
+const PRESETS = {'90 วันล่าสุด': [d90, cutoff], [`MTD (1–${cd} ${curLbl})`]: [mtd.from, mtd.to], [`เดือนล่าสุดที่ครบ (${prevLbl})`]: [base.from, base.to], 'ทั้งหมดที่มี': [firstDay, cutoff], 'กำหนดเอง': null};
+
+const S = {brand: 'Compare', platform: 'All', from: d90, to: cutoff, format: 'All', noRecruit: false, pillar: 'All', q: '', metric: 'reach', visible: 9};
+const brands = () => S.brand === 'Compare' ? BR : [S.brand], plats = () => S.platform === 'All' ? PL : [S.platform];
+function sel(o = {}) { // every figure on the page goes through this one filter
+  const b = o.brand, pl = o.platform, f = o.from ?? S.from, t = o.to ?? S.to;
+  return P.filter(p => (b ? p.brand === b : brands().includes(p.brand)) && (pl ? p.platform === pl : plats().includes(p.platform)) &&
+    (S.format === 'All' || p.format === S.format) && !(S.noRecruit && p.pillar === 'Recruitment') && (o.noDate || (day(p) >= f && day(p) <= t)));
+}
+function stat(rows) {
+  const r = rows.filter(p => p.reach != null);
+  return {n: rows.length, reach: median(r.map(p => p.reach)), er: median(rows.map(p => p.er)), sum: r.reduce((s, p) => s + p.reach, 0), pending: rows.length - r.length,
+    share: median(r.filter(p => p.shares != null && p.reach > 0).map(p => 100 * p.shares / p.reach))};
+}
+const delta = (a, b) => (a == null || b == null || !b) ? '' : `<span class="delta ${a >= b ? 'up' : 'down'}">${a >= b ? '▲' : '▼'} ${Math.abs(100 * (a - b) / b).toFixed(0)}% เทียบ ${prevLbl}</span>`;
+const thin = n => n < 5 ? ' class="thin"' : '', plabel = (b, k) => (M.pillar_labels[b] || {})[k] || k;
+const head = (n, eb, h2, sub) => `<div class="section-head"><div><p class="eyebrow">${n} / ${eb}</p><h2>${h2}</h2></div><p>${sub || ''}</p></div>`;
+
+function bars(items, unit) {
+  if (!items.length) return '<div class="empty">ไม่มีข้อมูลในตัวกรองนี้</div>';
+  const W = 360, lh = 26, L = 104, max = Math.max(...items.map(i => i.v), 1), H = items.length * lh + 6;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">` + items.map((it, i) => { const w = Math.max(2, (W - L - 78) * it.v / max), y = i * lh + 4;
+    return `<g data-tip="${esc(it.label)}<br>${unit} ค่ากลาง ${n0(it.v)} · n=${it.n}${it.n < 5 ? ' (ตัวอย่างน้อย)' : ''}"><rect x="0" y="${y - 2}" width="${W}" height="${lh}" fill="transparent"/><text x="${L - 8}" y="${y + 13}" text-anchor="end">${esc(it.short)}</text><rect x="${L}" y="${y}" width="${w}" height="${lh - 8}" rx="4" fill="var(--mark)" opacity="${it.n < 5 ? .45 : 1}"/><text x="${L + w + 6}" y="${y + 13}" style="fill:var(--text)">${n0(it.v)} <tspan style="fill:var(--quiet)">n=${it.n}</tspan></text></g>`; }).join('') + '</svg>';
+}
+function lines(months, series) {
+  const W = 380, H = 190, L = 46, R = 12, T = 10, B = 26, max = Math.max(1, ...series.flatMap(s => s.pts.map(p => p.v || 0)));
+  const x = i => L + (W - L - R) * (months.length > 1 ? i / (months.length - 1) : .5), y = v => T + (H - T - B) * (1 - v / max);
+  let g = [0, .5, 1].map(f => `<line x1="${L}" x2="${W - R}" y1="${y(max * f)}" y2="${y(max * f)}" stroke="#2c4458"/><text x="${L - 6}" y="${y(max * f) + 4}" text-anchor="end">${n0(max * f)}</text>`).join('');
+  g += months.map((m, i) => i % 2 === (months.length - 1) % 2 ? `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">${TH[+m.slice(5) - 1]}</text>` : '').join('');
+  for (const s of series) { const pts = s.pts.map((p, i) => p.v == null ? null : [x(i), y(p.v)]); let d = '', pen = false; pts.forEach(pt => { if (!pt) { pen = false; return; } d += (pen ? 'L' : 'M') + pt[0].toFixed(1) + ' ' + pt[1].toFixed(1); pen = true; });
+    g += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2"/>` + pts.map(pt => pt ? `<circle cx="${pt[0]}" cy="${pt[1]}" r="4" fill="${s.color}" stroke="#14283b" stroke-width="2"/>` : '').join(''); }
+  g += months.map((m, i) => `<rect x="${x(i) - 14}" y="${T}" width="28" height="${H - T - B}" fill="transparent" data-tip="<b>${TH[+m.slice(5) - 1]} ${m.slice(0, 4)}</b>${m === cutoff.slice(0, 7) ? ' (ยังไม่ครบเดือน)' : ''}<br>${series.map(s => `${esc(s.name)}: ${n0(s.pts[i].v)} (n=${s.pts[i].n})`).join('<br>')}"/>`).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${g}</svg>`;
+}
+
+// ---------- sections ----------
+function readout() {
+  let items = (I.executive || []).map(i => ({...i, accent: 'var(--surya)'}));
+  if (S.brand !== 'Compare') { const t = (I.brands || {})[S.brand] || {}; items = [...(t.worked || []), ...(t.underperformed || []), ...(t.why || []).map(w => ({...w, type: w.type === 'hypothesis' ? 'inference' : w.type}))].map(i => ({...i, accent: S.brand === 'SURYA' ? 'var(--surya)' : 'var(--monster)'})); }
+  return head('01', 'Meeting readout', S.brand === 'Compare' ? 'อะไรเปลี่ยน และรู้ได้แค่ไหน' : `${S.brand}: อะไรได้ผล อะไรยังต่ำ`, 'Fact → Inference → สิ่งที่ต้องทดสอบ · ข้อความเขียนจากข้อมูล ณ ' + dth(I.written_for_as_of || '')) +
+    `<div class="grid2">${items.map(i => `<article class="insight" style="--accent:${i.accent}"><span class="kind ${i.type}">${KIND[i.type]}</span><p>${esc(i.text)}</p>${i.source ? `<small>ที่มา: ${esc(i.source)}</small>` : ''}</article>`).join('')}</div>`;
+}
+function audience() {
+  const acc = (M.accounts || []).filter(a => brands().includes(a.brand) && plats().includes(a.platform));
+  if (!acc.length) return head('02', 'Audience & account activity', 'ภาพรวมบัญชี') + '<div class="empty card">ไม่มีข้อมูลระดับบัญชีในชุดข้อมูลนี้</div>';
+  return head('02', 'Audience & account activity · Fact', 'ผู้ติดตามของแต่ละบัญชี', 'ตัวเลขทั้งบัญชีจาก Publer แยกจากผลของโพสต์ที่เผยแพร่ในช่วงที่เลือก · ไม่ขึ้นกับตัวกรองช่วงเวลา') +
+    `<div class="grid3">${acc.map(a => { const s = a.series, last = s[s.length - 1], first = s[0], ch = last[1] - first[1], mx = Math.max(...s.map(x => x[1])), mn = Math.min(...s.map(x => x[1]));
+      return `<article class="card kpi ${cls(a.brand)}" data-aud="${short(a.brand)}|${a.platform}"><header><span class="bn">${short(a.brand).toUpperCase()}</span>${badge(a.platform)}</header><div class="big">${n0(last[1])}</div><div class="unit">ผู้ติดตาม · สัปดาห์ของ ${dth(last[0])}<span class="delta ${ch >= 0 ? 'up' : 'down'}">${ch >= 0 ? '+' : ''}${n0(ch)} (${(100 * ch / first[1]).toFixed(1)}%) ตั้งแต่ ${dth(first[0], 1)}</span></div>
+      <div class="spark" aria-hidden="true">${s.map(x => `<i data-tip="สัปดาห์ ${dth(x[0], 1)}: ${n0(x[1])}" style="height:${12 + 88 * (mx === mn ? 1 : (x[1] - mn) / (mx - mn))}%"></i>`).join('')}</div><p class="fine">แท่งแสดงช่วง ${n0(mn)}–${n0(mx)} (ไม่ได้เริ่มจากศูนย์) · อ่านค่าเมื่อ ${dth(a.as_of)}</p></article>`; }).join('')}</div>
+    <p class="fine">ไม่รวมผู้ติดตามข้ามแพลตฟอร์ม เพราะคนเดียวกันติดตามได้หลายช่องทาง · Publer ไม่มีข้อมูลพอจะบอกว่าโพสต์ใดทำให้ผู้ติดตามเพิ่ม</p>`;
+}
+function scorecard() {
+  let h = head('03', 'Account scorecard', `โพสต์ 1–${cd} ${curLbl} เทียบ 1–${+prev.to.slice(8)} ${prevLbl}`, 'ค่ากลางต่อโพสต์ · Reach สำหรับ FB/IG · Views สำหรับ TikTok · ไม่ขึ้นกับตัวกรองช่วงเวลา') +
+    `<div class="legend">${brands().map(b => `<span><i style="background:var(--m-${b === 'SURYA' ? 'surya' : 'monster'})"></i>${short(b)} ${curLbl}</span>`).join('')}<span><i style="background:var(--prev)"></i>ช่วงเดียวกัน ${prevLbl}</span></div><div class="grid3">`;
+  for (const b of brands()) for (const pl of plats()) {
+    const a = stat(sel({brand: b, platform: pl, ...mtd})), c = stat(sel({brand: b, platform: pl, ...prev})), f = stat(sel({brand: b, platform: pl, ...base})), mx = Math.max(a.reach || 0, c.reach || 0, 1);
+    h += `<article class="card kpi ${cls(b)}" data-kpi="${short(b)}|${pl}"><header><span class="bn">${short(b).toUpperCase()}</span>${badge(pl)}</header><div class="big" data-v="reach">${n0(a.reach)}</div><div class="unit">${REACH(pl)} ค่ากลางต่อโพสต์ ${delta(a.reach, c.reach)}</div>
+      <div class="barline"><span>1–${cd} ${curLbl}</span><div class="track"><div class="fill" style="width:${100 * (a.reach || 0) / mx}%"></div></div><b>${n0(a.reach)}</b></div>
+      <div class="barline"><span>1–${+prev.to.slice(8)} ${prevLbl}</span><div class="track"><div class="fill prev" style="width:${100 * (c.reach || 0) / mx}%"></div></div><b data-v="prev">${n0(c.reach)}</b></div>
+      <div class="stats"><div><span>โพสต์ ${curLbl} / ${prevLbl}</span><b data-v="n">${a.n} / ${c.n}</b></div><div><span>ER ค่ากลาง</span><b data-v="er">${p2(a.er)}</b> <small class="unit">(${p2(c.er)})</small></div><div><span>Sum of post ${REACH(pl).toLowerCase()}</span><b data-v="sum">${n0(a.sum)}</b></div></div>
+      <p class="fine">${prevLbl} ทั้งเดือน: ค่ากลาง ${n0(f.reach)} · ${f.n} โพสต์</p>${a.pending ? `<p class="caution">${a.pending} โพสต์ยังไม่มี Reach (รอซิงก์) ไม่นับในค่ากลาง</p>` : ''}${Math.min(a.n, c.n) < 5 ? '<p class="caution">ตัวอย่างน้อยกว่า 5 โพสต์ อ่านเป็นทิศทางเท่านั้น</p>' : ''}</article>`;
+  }
+  return h + `</div><p class="fine">โพสต์เดือนปัจจุบันมีอายุน้อยกว่าโพสต์เดือนก่อน ณ วันที่อ่านค่า ส่วนต่างจึงเอียงไปทางลบ · Sum of post reach ไม่ใช่จำนวนคนไม่ซ้ำ${S.noRecruit ? ' · ตัดโพสต์ Recruitment ออกแล้ว' : ' · รวมโพสต์ Recruitment (ติ๊กด้านบนเพื่อตัดออก)'}</p>`;
+}
+const METRICS = {reach: 'Reach / Views', er: 'Engagement rate', shares: 'Shares', saves: 'Saves (IG, เฉพาะ พ.ย.)', comments: 'Comments', link_clicks: 'Link clicks (FB)', dt: 'วันที่ล่าสุด'};
+const HINT = {reach: 'ผลสะสมของโพสต์ ณ วันที่อ่านค่า · ไม่ใช่คนไม่ซ้ำ · TikTok เป็น Views', er: 'ER ใช้นิยามของ Publer: IG รวม Saves, FB รวม Post clicks · ห้ามเทียบข้ามแพลตฟอร์ม · ระวังโพสต์ Reach ต่ำ', saves: 'Publer CSV ไม่มี Saves จึงมีเฉพาะโพสต์ IG เดือนล่าสุดที่อ่านผ่าน connector/Gemini', link_clicks: 'มีเฉพาะ Facebook', shares: 'จำนวนแชร์สะสม', comments: 'จำนวนคอมเมนต์สะสม', dt: 'เรียงจากโพสต์ล่าสุด'};
+function labRows() { const q = S.q.trim().toLowerCase(), k = S.metric;
+  return sel().filter(p => (S.pillar === 'All' || p.pillar === S.pillar) && (k === 'dt' || p[k] != null) && (!q || p.hook.toLowerCase().includes(q))).sort((a, b) => k === 'dt' ? b.dt.localeCompare(a.dt) : b[k] - a[k] || b.dt.localeCompare(a.dt)); }
+function postCard(p, i, top) {
+  const src = M.sources.find(s => s.id === p.src), direct = src.trust === 'publer_direct', fb = p.platform === 'Facebook';
+  const th = `<div class="thumb${p.thumb ? ' has' : ''}">${p.thumb ? `<img loading="lazy" src="${esc(p.thumb)}" alt="ภาพปกโพสต์">` : `ไม่มีภาพปกในชุดข้อมูล<br>${p.platform} · ${p.format}`}</div>`;
+  const body = `<span class="rank">#${i + 1} · ${esc(METRICS[S.metric].split(' (')[0])}</span><h4>${esc(p.hook) || '(ไม่มีแคปชัน)'}</h4>
+    <div class="meta"><span class="bn">${short(p.brand).toUpperCase()}</span>${badge(p.platform)}<span class="badge">${p.format}</span><span class="badge">${esc(p.pillar)}</span><span>${dth(p.dt)}</span>${p.pending ? '<span class="kind medium">Reach รอซิงก์</span>' : ''}</div>`;
+  const pm = `<div class="pm"><div><span>${REACH(p.platform)}</span><b>${n0(p.reach)}</b></div><div><span>ER</span><b>${p2(p.er)}</b></div><div><span>Shares</span><b>${n0(p.shares)}</b></div><div><span>${fb ? 'Link clicks' : p.platform === 'Instagram' ? 'Saves' : 'Comments'}</span><b>${n0(fb ? p.link_clicks : p.platform === 'Instagram' ? p.saves : p.comments)}</b></div></div>
+    <div class="meta"><span class="kind ${direct ? 'agree' : 'partial'}" data-tip="${esc(src.label)}">${direct ? 'Publer' : 'Gemini'} · อ่านค่า ${dth(p.as_of.slice(0, 10), 1)}</span><span>อายุโพสต์ ${p.age} วัน</span>${p.thumb && p.thumb_from && p.thumb_from !== p.platform ? `<span>ภาพปกจาก ${p.thumb_from}</span>` : ''}${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">เปิดโพสต์ต้นทาง ↗</a>` : '<span>ไม่มีลิงก์</span>'}</div>`;
+  return `<article class="post ${cls(p.brand)}${top ? '' : ' row'}" data-id="${p.id}">${top ? th + body : `<div class="top">${th}<div>${body}</div></div>`}${pm}</article>`;
+}
+function contentLab() {
+  const pillars = ['All', ...new Set(sel({noDate: true}).map(p => p.pillar))].sort((a, b) => a === 'All' ? -1 : b === 'All' ? 1 : a.localeCompare(b));
+  if (!pillars.includes(S.pillar)) S.pillar = 'All';
+  return `<div class="lab">${head('04', 'Content Lab', 'เจาะโพสต์จริง', 'จัดอันดับ ค้นหา และเปิดต้นทางเพื่อตรวจบริบท · ใช้ตัวกรองแบรนด์ แพลตฟอร์ม ช่วงเวลา และ Format ด้านบนร่วมด้วย')}
+    <div class="filters"><label>Content pillar<select id="l-pillar">${pillars.map(v => `<option${v === S.pillar ? ' selected' : ''}>${esc(v)}</option>`).join('')}</select></label>
+    <label>จัดอันดับตาม<select id="l-metric">${Object.entries(METRICS).map(([k, v]) => `<option value="${k}"${k === S.metric ? ' selected' : ''}>${v}</option>`).join('')}</select></label>
+    <label>ค้นหาในแคปชัน<input type="search" id="l-q" value="${esc(S.q)}" placeholder="เช่น GCWM, มัทฉะ"></label></div><div id="lab-out"></div></div>`;
+}
+function renderLab() { const rr = labRows();
+  $('#lab-out').innerHTML = `<p class="hint"><b id="lab-count">${rr.length}</b> โพสต์ที่มีค่านี้ · ${HINT[S.metric]} · — = Publer ไม่ได้รายงาน (ไม่ใช่ศูนย์)</p>` +
+    (rr.length ? `<div class="grid3" id="top3">${rr.slice(0, 3).map((p, i) => postCard(p, i, true)).join('')}</div><div class="grid2" id="ranked" style="margin-top:13px">${rr.slice(3, S.visible).map((p, i) => postCard(p, i + 3, false)).join('')}</div>
+    <div class="more"><span class="fine">แสดง ${Math.min(S.visible, rr.length)} / ${rr.length} โพสต์</span><br>${S.visible < rr.length ? '<button id="l-more">แสดงเพิ่ม</button>' : ''}</div>` : '<div class="empty">ไม่พบโพสต์ตามตัวกรองนี้</div>');
+  document.querySelectorAll('#lab-out .thumb img').forEach(img => img.addEventListener('error', () => { img.parentElement.classList.remove('has'); img.parentElement.textContent = 'โหลดภาพปกไม่ได้'; }, {once: true}));
+  const m = $('#l-more'); if (m) m.onclick = () => { S.visible += 12; renderLab(); };
+}
+function patterns() {
+  let h = head('05', 'Pattern diagnostic', 'อะไรควรทำซ้ำ และอะไรยังตอบไม่ได้', `คำนวณจากโพสต์ ${dth(S.from)} – ${dth(S.to)} · Pillar ติดป้ายจากแคปชัน`) + '<div class="grid2">';
+  for (const b of brands()) for (const pl of plats()) {
+    const g = {}; sel({brand: b, platform: pl}).forEach(p => (g[p.pillar] ||= []).push(p));
+    const ok = Object.entries(g).filter(([k, v]) => v.length >= 5 && k !== 'Other').map(([k, v]) => ({k, ...stat(v)})).filter(x => x.reach != null);
+    if (!ok.length) continue;
+    const r = [...ok].sort((x, y) => y.reach - x.reach)[0], e = [...ok].sort((x, y) => (y.er ?? -1) - (x.er ?? -1))[0];
+    h += `<article class="pattern ${cls(b)}"><span class="lbl">${short(b).toUpperCase()} · ${pl.toUpperCase()} · FACT</span><p class="fact">${esc(r.k)} ได้ ${REACH(pl)} ค่ากลางสูงสุด ${n0(r.reach)}${e.k !== r.k ? ` · ${esc(e.k)} ได้ ER ค่ากลางสูงสุด ${p2(e.er)}` : ` และ ER สูงสุด ${p2(e.er)}`}</p><p>n = ${r.n}${e.k !== r.k ? ` และ ${e.n}` : ''} โพสต์ · เทียบเฉพาะ pillar ที่มีอย่างน้อย 5 โพสต์ใน ${pl} (${ok.length} กลุ่ม) · เป็นความสัมพันธ์ ไม่ได้พิสูจน์ว่า pillar เป็นสาเหตุ</p></article>`;
+  }
+  h += '</div>';
+  for (const b of brands()) {
+    h += `<h3 class="${cls(b)}"><span class="bn">${short(b).toUpperCase()}</span> · Content mix & response</h3><div class="grid3 ${cls(b)}">`;
+    for (const pl of plats()) { const g = {}; sel({brand: b, platform: pl}).forEach(p => (g[p.pillar] ||= []).push(p));
+      h += `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลางต่อโพสต์</span></div>${bars(Object.entries(g).map(([k, v]) => ({short: k, label: plabel(b, k), v: stat(v).reach, n: v.length})).filter(i => i.v != null).sort((a, c) => c.v - a.v), REACH(pl))}</div>`; }
+    const all = sel({brand: b}), g = {}; all.forEach(p => (g[p.pillar + '|' + p.platform] ||= []).push(p));
+    h += `</div><details><summary>ตาราง ${short(b)}: pillar × platform, format และชั่วโมงที่โพสต์</summary><div class="scroll" style="margin-top:12px"><table><tr><th>Pillar</th><th class="l">Platform</th><th>n</th><th>สัดส่วนโพสต์</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th><th>Share rate ค่ากลาง</th></tr>` +
+      Object.entries(g).sort().map(([k, v]) => { const [pi, pl] = k.split('|'), s = stat(v), tot = all.filter(p => p.platform === pl).length; return `<tr${thin(s.n)}><td>${esc(plabel(b, pi))}</td><td class="l">${pl}</td><td>${s.n}</td><td>${(100 * s.n / tot).toFixed(0)}%</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td><td>${p2(s.share)}</td></tr>`; }).join('') + '</table></div>';
+    const f = {}; all.forEach(p => (f[p.platform + '|' + p.format] ||= []).push(p));
+    h += `<div class="scroll" style="margin-top:12px"><table><tr><th>Format</th><th class="l">Platform</th><th>n</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th></tr>${Object.entries(f).sort().map(([k, v]) => { const [pl, fm] = k.split('|'), s = stat(v); return `<tr${thin(s.n)}><td>${fm}</td><td class="l">${pl}</td><td>${s.n}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td></tr>`; }).join('')}</table></div>`;
+    const hr = {}; all.forEach(p => (hr[p.platform + '|' + p.dt.slice(11, 13)] ||= []).push(p));
+    h += `<div class="scroll" style="margin-top:12px"><table><tr><th>ชั่วโมงที่โพสต์ (n ≥ 5)</th><th class="l">Platform</th><th>n</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th></tr>${Object.entries(hr).filter(([, v]) => v.length >= 5).sort().map(([k, v]) => { const [pl, x] = k.split('|'), s = stat(v); return `<tr><td>${x}:00–${x}:59</td><td class="l">${pl}</td><td>${s.n}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td></tr>`; }).join('')}</table></div><p class="fine">Photo รวมรูปเดี่ยวและ Carousel · เวลา Asia/Bangkok · ตัวอักษรจาง = n น้อยกว่า 5</p></details>`;
+  }
+  if (S.brand === 'Compare') { const wk = Math.max(1, (new Date(S.to) - new Date(S.from)) / 6048e5);
+    h += `<h3>เทียบสองแบรนด์ภายในแพลตฟอร์มเดียวกัน</h3><div class="scroll"><table><tr><th>Platform</th><th class="l">Brand</th><th>โพสต์</th><th>โพสต์/สัปดาห์</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th><th>Share rate ค่ากลาง</th></tr>${plats().flatMap(pl => BR.map(b => { const s = stat(sel({brand: b, platform: pl})); return `<tr><td>${pl}</td><td class="l">${b}</td><td>${s.n}</td><td>${(s.n / wk).toFixed(1)}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td><td>${p2(s.share)}</td></tr>`; })).join('')}</table></div><p class="fine">ฐานผู้ติดตามของสองแบรนด์ต่างกัน Reach ที่สูงกว่าไม่ได้แปลว่าคอนเทนต์ดีกว่า</p>`; }
+  return h;
+}
+function trends() {
+  const months = [...new Set(P.map(p => p.dt.slice(0, 7)))].sort(), col = {'SURYA': 'var(--m-surya)', 'Monster and Friends': 'var(--m-monster)'};
+  const ms = (b, pl, m) => stat(sel({brand: b, platform: pl, noDate: true}).filter(p => p.dt.startsWith(m)));
+  let h = head('06', 'Historical trends', 'ค่ากลางต่อโพสต์รายเดือน', 'ทุกเดือนที่มีข้อมูล ไม่ขึ้นกับตัวกรองช่วงเวลา · เดือนสุดท้ายยังไม่ครบ') + `<div class="legend">${brands().map(b => `<span><i style="background:${col[b]}"></i>${b}</span>`).join('')}</div><div class="grid3">`;
+  for (const pl of plats()) h += `<div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px">${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลาง</span></div>${lines(months, brands().map(b => ({name: b, color: col[b], pts: months.map(m => { const s = ms(b, pl, m); return {v: s.reach, n: s.n}; })})))}</div>`;
+  return h + `</div><details><summary>ตารางรายเดือน (ค่ากลาง · จำนวนโพสต์)</summary><div class="scroll" style="margin-top:12px"><table><tr><th>เดือน</th>${brands().flatMap(b => plats().map(pl => `<th>${short(b)} ${pl}</th>`)).join('')}</tr>${months.map(m => `<tr><td>${TH[+m.slice(5) - 1]} ${m.slice(0, 4)}${m === cutoff.slice(0, 7) ? ' (MTD)' : ''}</td>${brands().flatMap(b => plats().map(pl => { const s = ms(b, pl, m); return `<td>${n0(s.reach)} · ${s.n}</td>`; })).join('')}</tr>`).join('')}</table></div></details>`;
+}
+function decisions() {
+  const recs = (I.recommendations || []).filter(r => S.brand === 'Compare' || r.brand === S.brand || r.brand === 'ทั้งสองแบรนด์');
+  const bc = b => b === 'SURYA' ? 'SURYA' : b === 'Monster and Friends' ? 'Monster' : '';
+  return head('07', 'Next month · recommendations & experiments', 'ทดลองให้รู้ แทนการเดา', 'ข้อเสนอของ AI ยังไม่ใช่การอนุมัติของ Michael') +
+    `<h3>ข้อเสนอด้านคอนเทนต์</h3><div class="grid2">${recs.map(r => `<article class="pattern exp ${bc(r.brand)}"><span class="kind ${r.type}">${KIND[r.type]}</span><span class="badge">${esc(r.brand)}</span><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p><p class="measure">หลักฐาน: ${esc(r.evidence)}</p></article>`).join('')}</div>
+    <h3>การทดลองและสิ่งที่ต้องตัดสินใจ</h3><div class="grid2">${(I.next_month || []).filter(x => S.brand === 'Compare' || !/^(SURYA|Monster)/.test(x.title) || x.title.startsWith(short(S.brand))).map(x => `<article class="pattern exp ${/^SURYA/.test(x.title) ? 'SURYA' : /^Monster/.test(x.title) ? 'Monster' : ''}"><span class="kind ${x.type}">${KIND[x.type]}</span><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p><p class="measure">วัดผล: ${esc(x.measure)}</p></article>`).join('')}</div>`;
+}
+function method() {
+  const ST = {agree: 'ตรงกัน', disagree: 'ไม่ตรงกัน', partial: 'เห็นด้วยบางส่วน', minor: 'ต่างเล็กน้อย'};
+  const defs = [['สองฐานข้อมูล', 'Audience = ผู้ติดตามทั้งบัญชีจาก Publer ส่วน Scorecard, Content Lab, Patterns และ Trends = ผลสะสมของโพสต์ที่เผยแพร่ในช่วงนั้น ไม่ใช้สองฐานนี้แทนกัน'], ['ตัดรายการซ้ำ', 'ใช้ platform + ลิงก์โพสต์ (ตัด query string และ / ท้าย) เป็นกุญแจ เนื้อหาเดียวกันที่ลงหลายแพลตฟอร์มนับแยกแพลตฟอร์ม'], ['ค่ากลาง ไม่ใช่ยอดรวม', 'ตัวเลขหลักคือค่ามัธยฐานต่อโพสต์ เพราะโพสต์เดี่ยวยอดสูงบิดยอดรวมได้ Sum of post reach แสดงประกอบและไม่ใช่จำนวนคนไม่ซ้ำ'], ['นิยาม Metric', 'ER ใช้ค่าที่ Publer รายงาน: IG รวม Saves, FB รวม Post clicks จึงห้ามเทียบข้ามแพลตฟอร์ม · TikTok รายงาน Views ในช่อง Reach · Share rate = Shares ÷ Reach'], ['ค่าที่ขาด', '— หมายถึง Publer ไม่ได้รายงานค่านั้น ไม่ใช่ศูนย์ และไม่นับเข้าค่ากลาง โพสต์ที่ Reach ยังไม่ซิงก์ติดป้ายไว้'], ['Fact / Inference / Hypothesis', 'Fact = ตัวเลขที่ตรวจกับข้อมูล Publer · Inference = การตีความที่ยังไม่มีข้อมูลยืนยัน · Hypothesis = ข้อเสนอที่ต้องทดลองก่อนใช้']];
+  return head('08', 'Method, limits & sources', 'อ่านรีพอร์ตนี้อย่างไร') + `<div class="grid3">${defs.map(([t, d], i) => `<article class="card"><h3 style="margin:0 0 8px;color:var(--surya);font-size:.86rem">0${i + 1} · ${t}</h3><p class="fine" style="margin:0;color:var(--muted)">${d}</p></article>`).join('')}</div>
+    <h3>ข้อจำกัดและปัญหาที่พบ</h3><div class="card"><ul class="ins">${(I.data_issues || []).map(i => `<li><span class="kind ${i.level}">${i.level}</span>${esc(i.text)}</li>`).join('')}</ul></div>
+    <h3>แหล่งข้อมูลและความสด</h3><div class="scroll"><table><tr><th>แหล่ง</th><th>อ่านค่าเมื่อ</th><th>ครอบคลุม</th><th>แถวดิบ</th><th>ซ้ำที่ตัด</th><th>โพสต์ใหม่</th><th>อัปเดต</th><th class="l">หมายเหตุ</th></tr>${M.sources.map(s => `<tr><td class="wrap"><b>${esc(s.label)}</b><br><a class="srcfile" href="data/raw/${encodeURIComponent(s.file)}" target="_blank" rel="noopener">${esc(s.file)}</a></td><td>${dth(s.as_of)}</td><td>${dth(s.covers_from, 1)} – ${dth(s.covers_to)}</td><td>${s.raw_rows}</td><td>${(s.exact_duplicates || 0) + s.duplicate_keys_dropped}</td><td>${s.new_posts}</td><td>${s.updated_posts}</td><td class="wrap"><span class="kind ${s.trust === 'publer_direct' ? 'agree' : 'partial'}">${s.trust === 'publer_direct' ? 'Publer โดยตรง' : 'Gemini · ตรวจบางส่วน'}</span> ${esc(s.note)}</td></tr>`).join('')}</table></div>
+    <h3>วันที่ล่าสุดของแต่ละบัญชี</h3><div class="scroll"><table><tr><th>Brand | Platform</th><th>โพสต์</th><th>โพสต์แรก</th><th>โพสต์ล่าสุด</th><th>ล่าสุดที่มี Reach</th><th>Reach ขาด</th><th>อ่านค่าล่าสุด</th></tr>${Object.entries(M.coverage).sort().map(([k, c]) => `<tr><td>${k}</td><td>${c.posts}</td><td>${dth(c.first)}</td><td>${dth(c.last)}</td><td>${c.last_with_reach ? dth(c.last_with_reach) : '—'}</td><td>${c.missing_reach}</td><td>${dth(c.as_of)}</td></tr>`).join('')}</table></div>
+    <p class="fine">Pillar ที่ยังจัดกลุ่มไม่ได้ (Other): ${Object.entries(M.pillar_other_share).map(([b, o]) => `${b} ${o.other}/${o.total} (${(100 * o.other / o.total).toFixed(0)}%)`).join(' · ')} · ติดป้ายด้วยมือ ${M.pillar_overrides.posts} โพสต์ (รอยืนยัน ${M.pillar_overrides.proposed}) · ภาพปกมี ${P.filter(p => p.thumb).length} โพสต์ จาก Publer snapshot 30 ต.ค. ใช้เป็นภาพประกอบเท่านั้น ไม่มีตัวเลขจากชุดนั้น</p>
+    <details><summary>Gemini เทียบกับ Claude (${(I.gemini_vs_claude || []).length} ประเด็น)</summary><div class="scroll" style="margin-top:12px"><table><tr><th>ประเด็น</th><th class="l">สถานะ</th><th class="l">Gemini</th><th class="l">Claude ตรวจกับ Publer</th><th class="l">ผลต่อรายงาน</th></tr>${(I.gemini_vs_claude || []).map(g => `<tr><td class="wrap" style="min-width:130px"><b>${esc(g.topic)}</b></td><td class="l"><span class="kind ${g.status}">${ST[g.status]}</span></td><td class="wrap">${esc(g.gemini)}</td><td class="wrap">${esc(g.claude)}</td><td class="wrap">${esc(g.impact)}</td></tr>`).join('')}</table></div></details>`;
+}
+const SECTIONS = {readout, audience, scorecard, content: contentLab, patterns, trends, decisions, method};
+function render() {
+  $('#tabs').innerHTML = [['Compare', 'สองแบรนด์'], ['SURYA', 'Coffee Explorers'], ['Monster and Friends', 'and Friends']].map(([b, s]) => `<button class="tab" data-brand="${b}" aria-pressed="${S.brand === b}">${b === 'Monster and Friends' ? 'Monster' : b} <small>${s}</small></button>`).join('');
+  $('#main').innerHTML = Object.entries(SECTIONS).map(([id, f]) => `<section id="${id}">${f()}</section>`).join('');
+  $('#l-pillar').onchange = e => { S.pillar = e.target.value; S.visible = 9; renderLab(); };
+  $('#l-metric').onchange = e => { S.metric = e.target.value; S.visible = 9; renderLab(); };
+  $('#l-q').oninput = e => { S.q = e.target.value; S.visible = 9; renderLab(); };
+  renderLab();
+}
+function init() {
+  $('#h-period').textContent = `${EN[cm - 1]} ${cy} MTD`; document.title = `Creative Performance Intelligence · ${EN[cm - 1]} ${cy} MTD | COFFLORER`;
+  $('#h-snap').textContent = `PUBLER SNAPSHOT · ${dth(M.latest_source_as_of)}`;
+  $('#banner').innerHTML = `<strong>${esc(I.status || 'DRAFT')}</strong><span>Refresh ล่าสุด <b>${dth(M.generated_at)}</b></span><span>อ่านค่าจาก Publer ล่าสุด <b>${dth(M.latest_source_as_of)}</b></span><span>โพสต์ล่าสุดในข้อมูล <b>${dth(M.latest_post)}</b></span><span><b>${M.posts.toLocaleString()}</b> โพสต์ไม่ซ้ำ · ${M.timezone}</span><span>เป็น snapshot ไม่ใช่ real-time · เดือนยังไม่ปิด</span>`;
+  if (I.written_for_as_of && I.written_for_as_of < M.latest_source_as_of) { $('#stale').hidden = false; $('#stale').innerHTML = `<strong>ข้อมูลใหม่กว่าบทวิเคราะห์</strong><span>ข้อความสรุปเขียนจากข้อมูล ณ ${dth(I.written_for_as_of)} ตัวเลขในการ์ดและตารางเป็นปัจจุบันกว่า</span>`; }
+  $('#foot').textContent = `COFFLORER · Creative Performance Intelligence · ร่างสำหรับตรวจภายใน · ข้อมูล Publer ณ ${dth(M.latest_source_as_of)} · จำนวนโพสต์นับรายแพลตฟอร์ม ไม่ใช่จำนวนชิ้นงานไม่ซ้ำ`;
+  const fill = (el, list, v) => el.innerHTML = list.map(x => `<option${x === v ? ' selected' : ''}>${esc(x)}</option>`).join('');
+  fill($('#s-platform'), ['All', ...PL], S.platform); fill($('#s-format'), ['All', ...new Set(P.map(p => p.format))], S.format); fill($('#s-preset'), Object.keys(PRESETS), '90 วันล่าสุด');
+  const reset = () => { S.visible = 9; render(); };
+  for (const k of ['from', 'to']) { const el = $('#s-' + k); el.value = S[k]; el.min = firstDay; el.max = cutoff; el.onchange = () => { if (el.value) { S[k] = el.value; $('#s-preset').value = 'กำหนดเอง'; reset(); } }; }
+  $('#s-preset').onchange = e => { const r = PRESETS[e.target.value]; if (r) { [S.from, S.to] = r; $('#s-from').value = S.from; $('#s-to').value = S.to; reset(); } };
+  $('#s-platform').onchange = e => { S.platform = e.target.value; reset(); }; $('#s-format').onchange = e => { S.format = e.target.value; reset(); };
+  $('#s-recruit').onchange = e => { S.noRecruit = e.target.checked; reset(); };
+  $('#tabs').onclick = e => { const b = e.target.closest('button'); if (b) { S.brand = b.dataset.brand; reset(); } };
+  $('#printBtn').onclick = () => { document.querySelectorAll('details').forEach(d => d.open = true); print(); };
+  document.addEventListener('mousemove', e => { const t = e.target.closest?.('[data-tip]'), tip = $('#tip'); if (!t) { tip.style.display = 'none'; return; } tip.innerHTML = t.dataset.tip; tip.style.display = 'block'; tip.style.left = Math.min(e.clientX + 12, innerWidth - 270) + 'px'; tip.style.top = e.clientY + 14 + 'px'; });
+  render();
+}
+init();
+</script>
+</body>
+</html>

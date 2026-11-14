@@ -1,0 +1,84 @@
+{
+  "_about": "Rule-based pillar tagging from caption text. First matching rule wins (top to bottom). Patterns are case-insensitive regular expressions tested against the full caption. This is a labelling aid, not a reviewed taxonomy: edit rules here, then run refresh.py. Posts matching nothing become 'Other'.",
+  "brands": {
+    "SURYA": [
+      {
+        "pillar": "Recruitment",
+        "label": "Recruitment (hiring posts)",
+        "pattern": "รับสมัคร|OUR TEAM IS GROWING|#hiring|#jobs?\b|ร่วมงานกับเรา|we.?re hiring"
+      },
+      {
+        "pillar": "GCWM",
+        "label": "GCWM (Get Coffee With Me)",
+        "pattern": "^\\W*GCWM|#gcwm|#getcoffeewithme"
+      },
+      {
+        "pillar": "BTB",
+        "label": "BTB (Behind The Bean)",
+        "pattern": "^\\W*BTB|#btb\\b|#behindthebean"
+      },
+      {
+        "pillar": "BGR",
+        "label": "BGR (Brew Guide / Brewing with SURYA)",
+        "pattern": "Brewing with SURYA|#brewguide|แจกสูตร"
+      },
+      {
+        "pillar": "COTM",
+        "label": "COTM (Coffee of the Month)",
+        "pattern": "อัปเดตเมล็ดกาแฟ|#coffeeofthemonth|coffee of (the month|january|february|march|april|may|june|july|august|september|october|november|december)"
+      },
+      {
+        "pillar": "Notice",
+        "label": "Notice / Admin",
+        "pattern": "ประกาศ|แจ้งปิด|รับสมัคร|Opening Hours|ปิดร้าน"
+      },
+      {
+        "pillar": "POV",
+        "label": "POV / Barista humour",
+        "pattern": "^\\W*POV|#pov\\b|#ตลก|#baristalife"
+      }
+    ],
+    "Monster and Friends": [
+      {
+        "pillar": "Recruitment",
+        "label": "Recruitment (hiring posts)",
+        "pattern": "รับสมัคร|OUR TEAM IS GROWING|#hiring|#jobs?\b|ร่วมงานกับเรา|we.?re hiring"
+      },
+      {
+        "pillar": "Notice",
+        "label": "Notice / Winner announcement",
+        "pattern": "ประกาศ(ราย)?ชื่อ|ผู้โชคดี|ขอแสดงความยินดี|ปุกาศ|รับสมัคร"
+      },
+      {
+        "pillar": "RDM",
+        "label": "RDM (Random posts)",
+        "pattern": "\\bRDM\\b|#random\\b|#randompost"
+      },
+      {
+        "pillar": "Interactive",
+        "label": "Interactive (tarot, games, hunts)",
+        "pattern": "Tarot|ไพ่|กดหยุด|ดูดวง|ดวง|สายมู|ช่วย.{0,14}หา|กี่(อัน|พวง|ตัว|ชิ้น|ใบ)|ทายสิ|ทายว่า|comment เพื่อ|ร่วมสนุก|อะไรเอ่ย"
+      },
+      {
+        "pillar": "Barista",
+        "label": "Monster The Barista (recipes)",
+        "pattern": "Monster The Barista|#monsterthebarista"
+      },
+      {
+        "pillar": "Campaign",
+        "label": "Campaign / collab / seasonal",
+        "pattern": "#intothedreamwood|Dreamwood|#thailandcoffeefest|Sunkist|Yoku|yoguruto|#caseclub|Halloween|ฮาโลวีน|Christmas|Meowy|Valentine|butterbeer"
+      },
+      {
+        "pillar": "Character",
+        "label": "Character-driven (POV, gang, greetings)",
+        "pattern": "^\\W*POV|#pov\\b|^\\W*Happy|^\\W*Hello|วันเกิด|#birthday|แก๊ง|#officelife|#catlover|^\\W*Meet"
+      },
+      {
+        "pillar": "Product",
+        "label": "Product storytelling",
+        "pattern": "Gift Set|Collection|ราคา|บาท|Shopee|Lazada|LINE SHOPPING|วางจำหน่าย|^\\W*NEW|#bluematcha|#montaromatcha|#angusmatcha|#monsumomatcha|#dripbag|#thaitea"
+      }
+    ]
+  }
+}

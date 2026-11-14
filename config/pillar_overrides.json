@@ -1,0 +1,94 @@
+{
+  "_about": "Manual pillar tags that win over the caption rules in pillars.json. A post matches when its brand matches, its caption contains the text in 'contains', and its date is inside from/to (inclusive). One entry covers the same caption on every platform. status: 'proposed' = Claude's pick, not yet confirmed by Michael; 'confirmed' = Michael agreed. Remove an entry to fall back to the rules.",
+  "overrides": [
+    {
+      "brand": "SURYA",
+      "pillar": "Contest",
+      "contains": "ถ้ามีพิพิธภัณฑ์",
+      "from": "2026-10-01",
+      "to": "2026-10-31",
+      "status": "confirmed",
+      "note": "SURYA Art Contest 2026 call for entries; the word รับสมัคร matched the Recruitment rule but this is not a hiring post."
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "วันนี้วันแมวโลก",
+      "from": "2026-08-01",
+      "to": "2026-08-31",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "1 day with Monster and Friends",
+      "from": "2026-08-01",
+      "to": "2026-08-31",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "Introvert vs Extrovert",
+      "from": "2026-09-01",
+      "to": "2026-09-30",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "Happy International Coffee Day",
+      "from": "2026-10-01",
+      "to": "2026-10-02",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "Hello October",
+      "from": "2026-10-01",
+      "to": "2026-10-05",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "แต่ละคนพกอะไรไว้ในกระเป๋า",
+      "from": "2026-10-01",
+      "to": "2026-10-31",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "แองกัสแวะมาแจกหัวใจ",
+      "from": "2026-10-01",
+      "to": "2026-10-31",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "Happy National Dessert Day",
+      "from": "2026-10-01",
+      "to": "2026-10-31",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "Hello November",
+      "from": "2026-11-01",
+      "to": "2026-11-10",
+      "status": "confirmed"
+    },
+    {
+      "brand": "Monster and Friends",
+      "pillar": "RDM",
+      "contains": "แก๊ง Monster ใช้ AI ทำอะไร",
+      "from": "2026-11-01",
+      "to": "2026-11-30",
+      "status": "confirmed"
+    }
+  ]
+}

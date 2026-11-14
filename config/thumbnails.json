@@ -1,0 +1,237 @@
+{
+ "_about": "Cover images only, keyed by platform|post URL. Copied from the October reference site (Publer covers, snapshot 2026-10-30). No metrics come from that package. cover_from = platform whose cover image is shown.",
+ "thumbnails": {
+  "Facebook|https://www.facebook.com/reel/1217808657594393": {
+   "file": "assets/thumbnails/thumb_6ae3243bab0a9e760625e4ed.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/29446201971644245": {
+   "file": "assets/thumbnails/thumb_6ae1ca3e91fbd2831578af5c.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/2093625187926019": {
+   "file": "assets/thumbnails/thumb_6adf2c5c8945d24da9129358.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/1585243959540775": {
+   "file": "assets/thumbnails/thumb_6ad8a2c482c277e813e61a02.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/1343624857214663/posts/1739795967597548": {
+   "file": "assets/thumbnails/thumb_6ad5a7506eaa1a0d210e5fc2.jpg",
+   "cover_from": "Instagram"
+  },
+  "Facebook|https://www.facebook.com/1343624857214663/posts/1732816994962112": {
+   "file": "assets/thumbnails/thumb_6acd16dba5f34a30988c1a0c.jpg",
+   "cover_from": "Instagram"
+  },
+  "Facebook|https://www.facebook.com/reel/2092103541414400": {
+   "file": "assets/thumbnails/thumb_6ac5ee0b382e667d88473409.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/1086243404120386": {
+   "file": "assets/thumbnails/thumb_6ac4c7a7d268c877ee8b7f12.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/1568578034586155": {
+   "file": "assets/thumbnails/thumb_6ac36c72c481a08b21358b55.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/1402651378064420": {
+   "file": "assets/thumbnails/thumb_6abe2cd21f87bb4c4bf503de.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/dffcohhctwe": {
+   "file": "assets/thumbnails/thumb_6ae3243bab0a9e760625e4ed.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/dfczp-bjqhg": {
+   "file": "assets/thumbnails/thumb_6ae1ca3e91fbd2831578af5c.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/de9ujrsltwb": {
+   "file": "assets/thumbnails/thumb_6adf2c5c8945d24da9129358.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/dewcdrlgggj": {
+   "file": "assets/thumbnails/thumb_6ad8a2c482c277e813e61a02.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/p/deqdzsmfnvz": {
+   "file": "assets/thumbnails/thumb_6ad5a7506eaa1a0d210e5fc2.jpg",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/p/deznzv9lfni": {
+   "file": "assets/thumbnails/thumb_6acd16dba5f34a30988c1a0c.jpg",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/reel/demwt3sjtwz": {
+   "file": "assets/thumbnails/thumb_6ac5ee0b382e667d88473409.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/dejwx-rdnfl": {
+   "file": "assets/thumbnails/thumb_6ac4c7a7d268c877ee8b7f12.jpg",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/reel/dehoy-sdrt6": {
+   "file": "assets/thumbnails/thumb_6ac36c72c481a08b21358b55.jpg",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/reel/dd9dh3srihb": {
+   "file": "assets/thumbnails/thumb_6abe2cd21f87bb4c4bf503de.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7702071880752106759": {
+   "file": "assets/thumbnails/thumb_6ae3243bab0a9e760625e4ed.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7701701479769443604": {
+   "file": "assets/thumbnails/thumb_6ae1ca3e91fbd2831578af5c.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7700955087811661108": {
+   "file": "assets/thumbnails/thumb_6adf2c5c8945d24da9129358.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7699105050727058706": {
+   "file": "assets/thumbnails/thumb_6ad8a2c482c277e813e61a02.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7698298974637247764": {
+   "file": "assets/thumbnails/thumb_6ad5a7506eaa1a0d210e5fc2.jpg",
+   "cover_from": "Instagram"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7695753887415831829": {
+   "file": "assets/thumbnails/thumb_6acd16dba5f34a30988c1a0c.jpg",
+   "cover_from": "Instagram"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7693901098297462037": {
+   "file": "assets/thumbnails/thumb_6ac5ee0b382e667d88473409.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7693526408370474261": {
+   "file": "assets/thumbnails/thumb_6ac4c7a7d268c877ee8b7f12.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7693161590174092550": {
+   "file": "assets/thumbnails/thumb_6ac36c72c481a08b21358b55.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@surya.coffee.explorers/video/7691677712930376961": {
+   "file": "assets/thumbnails/thumb_6abe2cd21f87bb4c4bf503de.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/1628787562576833": {
+   "file": "assets/thumbnails/thumb_6ae1c9dc91fbd2831578aee9.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/727693983343852/posts/1106617508784829": {
+   "file": "assets/thumbnails/thumb_6adf8b78849c9a24250a5329.jpg",
+   "cover_from": "Instagram"
+  },
+  "Facebook|https://www.facebook.com/727693983343852/posts/1102797852500128": {
+   "file": "assets/thumbnails/thumb_6ada467ea36d454b2346dd85.jpg",
+   "cover_from": "Instagram"
+  },
+  "Facebook|https://www.facebook.com/reel/1816753646233642": {
+   "file": "assets/thumbnails/thumb_6ad723e5a69ca53d6755a624.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/1569808664919239": {
+   "file": "assets/thumbnails/thumb_6ad1e0d5bead93e66cb448d5.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/109685874989942_1095059479940632": {
+   "file": "assets/thumbnails/thumb_6acde46b084614215135705c.png",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/2091461298138210": {
+   "file": "assets/thumbnails/thumb_6ac8be3f7c250c6095ef280c.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/reel/2707399413043232": {
+   "file": "assets/thumbnails/thumb_6ac768e2d268c877ee9193c6.jpg",
+   "cover_from": "TikTok"
+  },
+  "Facebook|https://www.facebook.com/727693983343852/posts/1086982044081709": {
+   "file": "assets/thumbnails/thumb_6ac3dd1e88b2e650f4a394ff.jpg",
+   "cover_from": "Instagram"
+  },
+  "Facebook|https://www.facebook.com/109685874989942_1083870334392880": {
+   "file": "assets/thumbnails/thumb_6abf5ab85670410032fa62d2.png",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/reel/dfcy0ijjp4g": {
+   "file": "assets/thumbnails/thumb_6ae1c9dc91fbd2831578aee9.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/p/de8z3ekdc9e": {
+   "file": "assets/thumbnails/thumb_6adf8b78849c9a24250a5329.jpg",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/p/deygst7awtf": {
+   "file": "assets/thumbnails/thumb_6ada467ea36d454b2346dd85.jpg",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/reel/detyvhfevze": {
+   "file": "assets/thumbnails/thumb_6ad723e5a69ca53d6755a624.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/dejg-5kfo-d": {
+   "file": "assets/thumbnails/thumb_6ad1e0d5bead93e66cb448d5.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/p/dedytraitsd": {
+   "file": "assets/thumbnails/thumb_6acde46b084614215135705c.png",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/derm93htuej": {
+   "file": "assets/thumbnails/thumb_6ac8be3f7c250c6095ef280c.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/reel/deo5bwnaupd": {
+   "file": "assets/thumbnails/thumb_6ac768e2d268c877ee9193c6.jpg",
+   "cover_from": "TikTok"
+  },
+  "Instagram|https://www.instagram.com/p/dehu6qmfpst": {
+   "file": "assets/thumbnails/thumb_6ac3dd1e88b2e650f4a394ff.jpg",
+   "cover_from": "Instagram"
+  },
+  "Instagram|https://www.instagram.com/p/dd_acandplw": {
+   "file": "assets/thumbnails/thumb_6abf5ab85670410032fa62d2.png",
+   "cover_from": "Instagram"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7701691201614875912": {
+   "file": "assets/thumbnails/thumb_6ae1c9dc91fbd2831578aee9.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7700886473574305044": {
+   "file": "assets/thumbnails/thumb_6adf8b78849c9a24250a5329.jpg",
+   "cover_from": "Instagram"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7698661651150556434": {
+   "file": "assets/thumbnails/thumb_6ad723e5a69ca53d6755a624.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7697181013264403730": {
+   "file": "assets/thumbnails/thumb_6ad1e0d5bead93e66cb448d5.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7696355553005604116": {
+   "file": "assets/thumbnails/thumb_6acde46b084614215135705c.png",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7694641988276178183": {
+   "file": "assets/thumbnails/thumb_6ac8be3f7c250c6095ef280c.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7694266524340620552": {
+   "file": "assets/thumbnails/thumb_6ac768e2d268c877ee9193c6.jpg",
+   "cover_from": "TikTok"
+  },
+  "TikTok|https://www.tiktok.com/@monstercoffeeroasters/video/7691977459884920084": {
+   "file": "assets/thumbnails/thumb_6abf5ab85670410032fa62d2.png",
+   "cover_from": "TikTok"
+  }
+ }
+}
