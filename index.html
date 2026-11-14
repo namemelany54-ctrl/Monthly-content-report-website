@@ -7,20 +7,29 @@
 <title>Creative Performance Intelligence | COFFLORER</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1725;--panel:#14283b;--panel2:#102338;--line:#2f4a61;--text:#f4f7f7;--muted:#b6c7d1;--quiet:#8ea2b5;
---surya:#efbd6c;--monster:#70d8ed;--monster2:#fed347;--m-surya:#c98500;--m-monster:#3987e5;--prev:#70899a;--up:#74d3b0;--down:#f29e9e;--warn:#ffdc9c;--link:#8fe1f0;
---ig:#d55181;--fb:#6da7ec;--tt:#199e70}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:130px}
-body{margin:0;background:radial-gradient(circle at 92% 0%,#203d55 0,transparent 30rem),var(--bg);color:var(--text);font:16px/1.6 "Noto Sans Thai","Leelawadee UI",Tahoma,Arial,sans-serif}
+--surya:#c58246;--surya-cream:#FFF9EE;--surya-brown:#76431C;--surya-dark:#1C1A1A;
+--monster:#7ea4f5;--monster-blue:#385397;--monster2:#FED347;--monster-cream:#FFF7D6;--monster-gray:#919193;--monster-green:#B4D7AC;--monster-pink:#EBBBC6;
+--m-surya:#a86428;--m-monster:#385397;--prev:#70899a;--up:#74d3b0;--down:#f29e9e;--warn:#ffdc9c;--link:#8fe1f0;
+--ig:#d55181;--fb:#6da7ec;--tt:#199e70;--glow:rgba(32,61,85,.92)}
+*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{margin:0;background:radial-gradient(circle at 92% 0%,var(--glow) 0,transparent 34rem),var(--bg);color:var(--text);font:16px/1.6 "Noto Sans Thai","Leelawadee UI",Tahoma,Arial,sans-serif;transition:background .35s ease;cursor:url("data:image/png;base64,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") 8 4,auto}
+body[data-brand-theme="SURYA"]{--glow:rgba(118,67,28,.38)}
+body[data-brand-theme="Monster and Friends"]{--glow:rgba(56,83,151,.42)}
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-button,input,select{font:inherit}button{cursor:pointer}
+button,input,select,textarea{font:inherit}
+a,button,select,summary,.drillable,.pbar-row,[role="button"]{cursor:url("data:image/png;base64,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") 8 4,pointer}
 :focus-visible{outline:2px solid #65d9ec;outline-offset:3px}
 .shell{width:min(1400px,calc(100% - 48px));margin:auto}
+
+/* ---------- Analysis Mode Chrome & Base Styles ---------- */
 .masthead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:34px 0 22px;border-bottom:1px solid var(--line)}
 .eyebrow{color:#a8c6d6;font-size:.74rem;font-weight:800;letter-spacing:.16em;margin:0 0 8px;text-transform:uppercase}
 h1{font-size:clamp(1.9rem,4vw,3.6rem);line-height:1.1;letter-spacing:-.04em;margin:0;font-weight:900;overflow-wrap:anywhere}h1 em{color:var(--surya);font-style:normal}
 .subhead{color:var(--muted);margin:10px 0 0}
-.head-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}
-.head-actions>*{font-size:.8rem;font-weight:700;border:1px solid var(--line);background:#193249;border-radius:999px;color:var(--text);padding:9px 14px;white-space:nowrap}
+.head-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+.head-actions>*{font-size:.82rem;font-weight:700;border:1px solid var(--line);background:#193249;border-radius:999px;color:var(--text);padding:9px 15px;white-space:nowrap}
+.head-actions button.primary-pill{background:var(--surya);color:#122232;border-color:var(--surya)}
+.head-actions button.primary-pill:hover{filter:brightness(1.06)}
 .banner{display:flex;gap:8px 22px;flex-wrap:wrap;align-items:center;padding:12px 16px;border:1px solid #e8bd7240;background:#e8bd7209;border-radius:10px;color:#c2cbd5;font-size:.8rem;margin:18px 0 0}
 .banner strong{color:var(--surya)}.banner b{color:var(--text);font-variant-numeric:tabular-nums}
 .banner[hidden]{display:none}.stale{border-color:#f29e9e66;background:#f29e9e12;color:#ffd9d9}
@@ -30,7 +39,7 @@ h1{font-size:clamp(1.9rem,4vw,3.6rem);line-height:1.1;letter-spacing:-.04em;marg
 .tab{border:1px solid var(--line);border-radius:12px;background:transparent;color:#e7eff2;text-align:left;font-weight:800;padding:7px 14px;white-space:nowrap}
 .tab small{display:block;color:var(--quiet);font-size:.68rem;font-weight:600}
 .tab[aria-pressed=true]{background:#f0f4ef;color:#12283b;border-color:#f0f4ef}.tab[aria-pressed=true] small{color:#526b7b}
-.tab[data-brand="SURYA"][aria-pressed=true]{background:var(--surya);border-color:var(--surya)}.tab[data-brand^="Monster"][aria-pressed=true]{background:var(--monster);border-color:var(--monster2);box-shadow:inset 0 -4px 0 var(--monster2)}
+.tab[data-brand="SURYA"][aria-pressed=true]{background:var(--surya-brown);color:#FFF9EE;border-color:var(--surya)}.tab[data-brand="SURYA"][aria-pressed=true] small{color:#f2dfcc}.tab[data-brand^="Monster"][aria-pressed=true]{background:var(--monster);border-color:var(--monster2);box-shadow:inset 0 -4px 0 var(--monster2)}
 .scope{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:end}
 .scope label,.filters label{font-size:.68rem;color:var(--quiet);display:flex;flex-direction:column;gap:2px}
 .scope label.chk{flex-direction:row;align-items:center;gap:7px;font-size:.78rem;color:var(--muted);padding-bottom:6px}.chk input{accent-color:var(--surya);width:16px;height:16px}
@@ -46,30 +55,46 @@ h3{font-size:1rem;margin:22px 0 10px}
 .insight{background:linear-gradient(155deg,#1d374c,#14283b);border:1px solid var(--line);border-radius:16px;padding:18px 20px 18px 24px;position:relative;overflow:hidden}
 .insight:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--accent,var(--surya))}
 .insight p{font-size:.9rem;color:#d6e2e8;margin:8px 0 0}.insight small{display:block;color:var(--quiet);font-size:.72rem;margin-top:10px}
-.kind{font-size:.68rem;font-weight:800;letter-spacing:.1em;padding:2px 8px;border-radius:5px;display:inline-block;margin-right:6px;text-transform:uppercase}
-.kind.verified{background:#74d3b022;color:#9be6c8}.kind.hypothesis{background:#e8bd7222;color:#f3d39a}.kind.inference{background:#b99cf022;color:#d3c1f7}.kind.experiment,.kind.decision{background:#70d8ed22;color:#a8e9f5}
-.kind.disagree,.kind.high{background:#f29e9e22;color:#ffc4c4}.kind.partial,.kind.minor,.kind.medium{background:#e8bd7222;color:#f3d39a}.kind.agree,.kind.low{background:#74d3b022;color:#9be6c8}
-.badge{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--muted);white-space:nowrap}
-.badge i{width:7px;height:7px;border-radius:50%}.b-Instagram i{background:var(--ig)}.b-Facebook i{background:var(--fb)}.b-TikTok i{background:var(--tt)}
+.kind{font-size:.68rem;font-weight:800;letter-spacing:.08em;padding:2px 9px;border-radius:6px;display:inline-block;margin-right:6px;text-transform:uppercase}
+.kind.verified{background:#74d3b024;color:#9be6c8}.kind.hypothesis{background:#e8bd7224;color:#f3d39a}.kind.inference{background:#b99cf024;color:#d3c1f7}.kind.experiment,.kind.decision{background:#70d8ed24;color:#a8e9f5}
+.kind.disagree,.kind.high{background:#f29e9e24;color:#ffc4c4}.kind.partial,.kind.minor,.kind.medium{background:#e8bd7224;color:#f3d39a}.kind.agree,.kind.low{background:#74d3b024;color:#9be6c8}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted);white-space:nowrap}
+.badge i{width:8px;height:8px;border-radius:50%;flex-shrink:0}.b-Instagram i{background:var(--ig)}.b-Facebook i{background:var(--fb)}.b-TikTok i{background:var(--tt)}
 .bn{font-size:.72rem;letter-spacing:.1em;font-weight:900;color:var(--accent)}
-.SURYA{--accent:var(--surya);--mark:var(--m-surya);--brand-bg:#2a2a22;--brand-line:#6b5a36}.Monster{--accent:var(--monster);--mark:var(--m-monster);--brand-bg:#15304a;--brand-line:#2f5d7c}
+.bn-wrap{display:inline-flex;align-items:center;gap:7px}
+.bmark{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;line-height:0}
+.SURYA{--accent:#d08e52;--mark:#9e5a24;--brand-bg:rgba(118,67,28,.24);--brand-line:rgba(197,130,70,.45)}.Monster{--accent:var(--monster);--mark:var(--monster-blue);--brand-bg:rgba(56,83,151,.22);--brand-line:rgba(126,164,245,.38)}
+.card.SURYA,.insight.SURYA{border-top:3px solid var(--surya-brown);box-shadow:inset 0 2px 0 rgba(197,130,70,.35);background:linear-gradient(180deg,var(--brand-bg) 0,transparent 84px),var(--panel)}
+.card.Monster,.insight.Monster{border-top:3px solid var(--monster-blue);box-shadow:inset 0 2px 0 rgba(254,211,71,.35);background:linear-gradient(180deg,var(--brand-bg) 0,transparent 84px),var(--panel)}
+.plat-Instagram{--plat-rgb:249,115,22;--plat-stroke:rgba(249,115,22,.62);--plat-tint:rgba(249,115,22,.075)}
+.plat-Facebook{--plat-rgb:59,130,246;--plat-stroke:rgba(59,130,246,.65);--plat-tint:rgba(59,130,246,.08)}
+.plat-TikTok{--plat-rgb:168,85,247;--plat-stroke:rgba(168,85,247,.65);--plat-tint:rgba(168,85,247,.08)}
+.card.plat-Instagram,.card.plat-Facebook,.card.plat-TikTok,
+.post.plat-Instagram,.post.plat-Facebook,.post.plat-TikTok{border:1.5px solid var(--plat-stroke);background:linear-gradient(0deg,var(--plat-tint),var(--plat-tint)),var(--panel)}
+.card.SURYA.plat-Instagram,.card.SURYA.plat-Facebook,.card.SURYA.plat-TikTok{border-top:3px solid var(--surya-brown);box-shadow:inset 0 2px 0 rgba(197,130,70,.35);background:linear-gradient(180deg,var(--brand-bg) 0,transparent 84px),linear-gradient(0deg,var(--plat-tint),var(--plat-tint)),var(--panel)}
+.card.Monster.plat-Instagram,.card.Monster.plat-Facebook,.card.Monster.plat-TikTok{border-top:3px solid var(--monster-blue);background:linear-gradient(180deg,var(--brand-bg) 0,transparent 84px),linear-gradient(0deg,var(--plat-tint),var(--plat-tint)),var(--panel)}
+.p-brand-hero{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.p-brand-tag{font-size:14px;font-weight:800;letter-spacing:.06em;padding:4px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:6px}
+.p-brand-tag.SURYA{background:#76431C;color:#FFF9EE;border:1px solid #c58246}
+.p-brand-tag.Monster{background:#385397;color:#FFF7D6;border:1px solid #FED347}
 .kpi header{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .kpi .big{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums;margin-top:12px}
 .kpi .unit{color:var(--muted);font-size:.74rem}
-.delta{font-size:.74rem;padding:3px 7px;border-radius:5px;background:#ffffff0a;margin-left:6px;white-space:nowrap}.up{color:var(--up)}.down{color:var(--down)}
+.delta{font-size:.74rem;padding:3px 8px;border-radius:6px;background:#ffffff0d;margin-left:6px;white-space:nowrap;display:inline-block}.up{color:var(--up)}.down{color:var(--down)}
 .barline{display:grid;grid-template-columns:62px 1fr 64px;align-items:center;gap:8px;font-size:.7rem;color:var(--muted);margin-top:5px}
 .track{height:9px;border-radius:20px;background:#294253;overflow:hidden}.fill{height:100%;border-radius:4px;background:var(--mark)}.fill.prev{background:var(--prev)}
 .barline b{color:#e5eff2;text-align:right;font-variant-numeric:tabular-nums}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid var(--line);padding-top:10px;margin-top:12px}
 .stats span{display:block;color:var(--quiet);font-size:.68rem}.stats b{font-size:.86rem;font-variant-numeric:tabular-nums}
 .fine{color:var(--quiet);font-size:.72rem;margin:10px 0 0}.caution{color:var(--warn);font-size:.72rem;margin:6px 0 0}
-.spark{display:flex;gap:4px;align-items:flex-end;height:44px;margin-top:12px}.spark i{flex:1;background:var(--mark);border-radius:3px 3px 0 0;min-height:3px;opacity:.85}
+.spark{display:flex;gap:4px;align-items:flex-end;height:44px;margin-top:12px}.spark i{flex:1;background:var(--mark);border-radius:3px 3px 0 0;min-height:3px;opacity:.88;transition:opacity .15s}
+.spark i:hover{opacity:1}
 .lab{background:#102538;border:1px solid var(--line);border-radius:20px;padding:22px}
 .filters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:end;margin-bottom:6px}.filters input[type=search]{width:220px}
 .hint{color:var(--quiet);font-size:.74rem;margin:6px 0 14px}
 .post{background:linear-gradient(145deg,var(--brand-bg),#102338);border:1px solid var(--brand-line);border-radius:14px;padding:15px;min-width:0;display:flex;flex-direction:column;gap:9px}
-.thumb{aspect-ratio:4/3;border-radius:10px;background:#15283a;display:grid;place-items:center;overflow:hidden;color:var(--quiet);font-size:.72rem;text-align:center;border:1px dashed var(--line)}
-.thumb img{width:100%;height:100%;object-fit:contain}.thumb.has{border-style:solid}
+.thumb{aspect-ratio:4/3;border-radius:10px;background:#15283a;display:grid;place-items:center;overflow:hidden;color:var(--quiet);font-size:.72rem;text-align:center;border:1px dashed var(--line);padding:8px}
+.thumb img{width:100%;height:100%;object-fit:contain}.thumb.has{border-style:solid;padding:0}
 .rank{color:var(--surya);letter-spacing:.1em;font-size:.7rem;font-weight:800}
 .post h4{font-size:.92rem;line-height:1.5;margin:0;overflow-wrap:anywhere}
 .meta{display:flex;flex-wrap:wrap;gap:6px;font-size:.68rem;color:var(--quiet);align-items:center}
@@ -88,31 +113,378 @@ th:first-child,td:first-child,.l{text-align:left}td.wrap{white-space:normal;min-
 details{border:1px solid #2b3c4e;border-radius:12px;padding:14px 16px;margin-top:14px}summary{cursor:pointer;color:var(--surya);font-size:.86rem}
 .legend{display:flex;gap:16px;font-size:.76rem;color:var(--muted);margin:0 0 10px;flex-wrap:wrap}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
 svg text{font:11px "Leelawadee UI","Segoe UI",sans-serif;fill:var(--muted)}
-#tip{position:fixed;pointer-events:none;background:#f0f4ef;color:#12283b;font-size:.76rem;padding:6px 9px;border-radius:6px;display:none;z-index:99;max-width:260px}
+#tip{position:fixed;pointer-events:none;background:#f0f4ef;color:#12283b;font-size:.82rem;padding:7px 11px;border-radius:8px;display:none;z-index:200;max-width:280px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
 .empty{padding:28px;text-align:center;color:var(--quiet)}
 footer{margin:50px 0 40px;color:var(--quiet);font-size:.74rem;border-top:1px solid var(--line);padding-top:16px}
+
+/* ---------- Mode Visibility ---------- */
+body.present-mode #analysis-chrome,
+body.present-mode #foot{display:none}
+body.analysis-mode #present-chrome{display:none}
+
+/* ---------- Presenter Mode Chrome ---------- */
+#present-chrome{position:sticky;top:0;z-index:40;background:rgba(11,23,37,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.p-bar{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;padding:10px 24px;flex-wrap:wrap;max-width:1680px;margin:auto}
+.p-nav-grp,.p-tool-grp{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.p-btn{border:1px solid var(--line);background:#152a3e;color:var(--text);border-radius:999px;padding:7px 15px;font-size:17px;font-weight:700;display:inline-flex;align-items:center;gap:7px;transition:transform .12s,background .15s,border-color .15s;white-space:nowrap}
+.p-btn:hover{background:#1d3852;border-color:#4b6c88}
+.p-btn:active{transform:scale(.97)}
+.p-btn[disabled]{opacity:.38;cursor:not-allowed;transform:none}
+.p-btn.active{background:#f0f4ef;color:#12283b;border-color:#f0f4ef}
+.p-btn.brand-surya.active{background:var(--surya-brown);color:#FFF9EE;border-color:var(--surya)}
+.p-btn.brand-monster.active{background:var(--monster);color:#0e2234;border-color:var(--monster2)}
+.p-btn.accent-reset{border-color:var(--surya);color:var(--surya);background:#efbd6c16}
+.p-btn.accent-reset:hover{background:#efbd6c2a}
+.p-btn.mode-btn{background:#1d3b52;border-color:#486985}
+.p-step-pill{background:#1b3349;border:1px solid #456582;border-radius:999px;padding:6px 16px;font-size:18px;font-weight:800;color:var(--surya);display:inline-flex;align-items:center;gap:10px}
+.p-dots{display:inline-flex;align-items:center;gap:6px;margin-left:2px}
+.p-dot{width:10px;height:10px;border-radius:999px;border:none;padding:0;background:#355168;transition:all .18s}
+.p-dot:hover{background:#6d8da7}
+.p-dot.active{width:26px;background:var(--surya)}
+.p-seg{display:inline-flex;background:#0e1d2c;border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px}
+.p-seg .p-btn{border:none;background:transparent;padding:6px 14px;font-size:18px}
+.p-seg .p-btn:hover{background:#193046}
+.p-select{font-size:18px;font-weight:700;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#152a3e;color:var(--text)}
+.p-tray{border-top:1px solid var(--line);background:#0f2032;padding:14px 24px}
+.p-tray-in{max-width:1680px;margin:auto;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+.p-tray-lbl{font-size:16px;color:var(--quiet);font-weight:700;margin-right:4px}
+.p-tray-in label{font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.p-tray-in input[type=date],.p-tray-in select{font-size:17px;padding:7px 12px;border-radius:10px}
+.p-tray-in label.chk{font-size:18px;color:var(--text)}
+.p-meta{background:#09131f;border-top:1px solid #22384b;padding:6px 24px;font-size:15px;color:#c2d0dc}
+.p-meta-in{max-width:1680px;margin:auto;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;justify-content:space-between}
+.p-meta-facts{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+.p-draft{background:#efbd6c22;color:var(--surya);border:1px solid #efbd6c55;border-radius:6px;padding:1px 9px;font-weight:800;font-size:14px}
+.p-stale{background:#f29e9e22;color:#ffd0d0;border:1px solid #f29e9e66;border-radius:6px;padding:1px 9px;font-weight:700;font-size:14px}
+.p-kbd-hint{color:var(--quiet);font-size:14px}
+
+/* ---------- Presenter Stage Readability (>=18px Rule) ---------- */
+body.present-mode{font-size:18px;line-height:1.55}
+body.present-mode .shell{width:min(1600px,calc(100% - 48px))}
+body.present-mode main{padding:22px 0 44px}
+.p-stage{display:flex;flex-direction:column;gap:18px;animation:fadeSlide .18s ease-out}
+@keyframes fadeSlide{from{opacity:.55;transform:translateY(6px)}to{opacity:1;transform:none}}
+.p-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;border-bottom:1px solid #284259;padding-bottom:14px}
+.p-kicker{display:inline-flex;align-items:center;gap:8px;font-size:18px;font-weight:800;color:var(--surya);letter-spacing:.04em;margin:0 0 6px}
+.p-head h2{font-size:clamp(2rem,3vw,2.85rem);line-height:1.15;letter-spacing:-.025em;margin:0;font-weight:900}
+.p-sub{font-size:1.05rem;color:var(--muted);margin:6px 0 0}
+.p-head-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* Sub-tabs inside a stop (keeps screens focused & fun) */
+.p-subtabs{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.p-subtab{border:1px solid var(--line);background:#122436;color:var(--muted);border-radius:999px;padding:9px 18px;font-size:18px;font-weight:700;transition:all .15s}
+.p-subtab:hover{border-color:#5b7d99;color:var(--text)}
+.p-subtab[aria-selected="true"]{background:#f0f4ef;color:#112334;border-color:#f0f4ef}
+.SURYA-theme .p-subtab[aria-selected="true"]{background:var(--surya-brown);color:#FFF9EE;border-color:var(--surya)}
+.Monster-theme .p-subtab[aria-selected="true"]{background:var(--monster);color:#0f2336;border-color:var(--monster2)}
+
+/* Presenter Cards & Typography (>=18px everywhere important) */
+body.present-mode .card,
+body.present-mode .insight,
+body.present-mode .pattern,
+body.present-mode .post{border-radius:20px;padding:20px 22px}
+body.present-mode .kind,
+body.present-mode .badge,
+body.present-mode .bn,
+body.present-mode .rank{font-size:18px;line-height:1.3}
+body.present-mode .kind{padding:4px 12px;border-radius:8px}
+body.present-mode .badge{padding:4px 12px}
+body.present-mode .badge i{width:10px;height:10px}
+body.present-mode .insight p,
+body.present-mode .exp p,
+body.present-mode .pattern p,
+body.present-mode .fine,
+body.present-mode .caution,
+body.present-mode .hint,
+body.present-mode .unit,
+body.present-mode .delta{font-size:18px;line-height:1.55}
+body.present-mode .insight small{font-size:18px;color:var(--muted);margin-top:12px}
+body.present-mode .kpi .big{font-size:clamp(2.35rem,3.3vw,3.1rem);margin-top:10px}
+body.present-mode .barline{grid-template-columns:108px 1fr 90px;font-size:18px;gap:10px;margin-top:8px}
+body.present-mode .track{height:12px}
+body.present-mode .stats{padding-top:14px;margin-top:14px;gap:12px}
+body.present-mode .stats span,
+body.present-mode .stats b{font-size:18px}
+body.present-mode .spark{height:68px;gap:6px;margin-top:16px}
+body.present-mode .exp h3{font-size:1.25rem;margin:10px 0 8px}
+body.present-mode .exp .measure{font-size:18px;padding-top:12px;margin-top:10px}
+body.present-mode .post h4{font-size:1.08rem;line-height:1.45}
+body.present-mode .thumb:not(.has){aspect-ratio:auto;min-height:48px;padding:8px 12px;font-size:15px}
+body.present-mode .podium .pm{grid-template-columns:repeat(2,1fr);gap:8px 12px}
+body.present-mode .pm span,
+body.present-mode .pm b{font-size:18px}
+body.present-mode .pm b{font-size:1.2rem}
+body.present-mode .meta{font-size:18px;gap:8px 12px}
+body.present-mode .post-ext{padding:3px 12px;border-radius:999px;background:#8fe1f01a;border:1px solid #8fe1f055;font-weight:700}
+body.present-mode .legend{font-size:18px;gap:20px}
+body.present-mode .legend i{width:14px;height:14px}
+body.present-mode table{font-size:18px}
+body.present-mode th,body.present-mode td{font-size:18px;padding:11px 14px}
+
+/* Clickable Drill-Down Cards */
+.drillable{cursor:pointer;position:relative;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.drillable:hover{transform:translateY(-2px);border-color:#6895b8;box-shadow:0 10px 26px rgba(0,0,0,.28)}
+.drillable:focus-visible{outline:3px solid #65d9ec}
+.drill-hint{display:inline-flex;align-items:center;gap:5px;color:var(--link);font-size:18px;font-weight:700;margin-top:8px}
+
+/* Spotlight Executive Fact Card on Stop 1 */
+.spotlight{background:linear-gradient(135deg,#1c384f,#12263a);border:1px solid #416582;border-radius:20px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.spotlight-body{flex:1;min-width:0}
+.spotlight-body p{margin:8px 0 0;font-size:1.15rem;line-height:1.5;color:#eef5f8}
+.spotlight-nav{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.icon-circle{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#163047;color:var(--text);font-size:20px;display:grid;place-items:center}
+.icon-circle:hover{background:#234766}
+
+/* Interactive HTML Pillar Bars (Guaranteed >=18px at any viewport) */
+.pillar-bars{display:flex;flex-direction:column;gap:10px}
+.pbar-row{display:grid;grid-template-columns:130px 1fr 118px;align-items:center;gap:12px;background:#0e2031;border:1px solid #243f56;border-radius:12px;padding:10px 14px;text-align:left;color:var(--text);transition:border-color .15s,background .15s;width:100%}
+.pbar-row:hover{border-color:var(--accent,var(--surya));background:#142b40}
+.pbar-row.thin-row{opacity:.68}
+.pbar-lbl{font-size:18px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pbar-track{display:block;height:16px;background:#1e364a;border-radius:999px;overflow:hidden}
+.pbar-fill{display:block;height:100%;border-radius:999px;background:var(--mark,var(--m-surya));transition:width .25s ease}
+.pbar-val{font-size:18px;font-weight:800;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pbar-val span{color:var(--muted);font-weight:600}
+
+/* Month Chips for Trends Drill-Down */
+.month-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.m-chip{border:1px solid var(--line);background:#112538;color:var(--text);border-radius:999px;padding:6px 14px;font-size:18px;font-weight:700}
+.m-chip:hover{border-color:var(--surya);color:var(--surya)}
+
+/* Content Lab Metric Pills */
+.metric-pills{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.m-pill{border:1px solid var(--line);background:#122537;color:var(--muted);border-radius:999px;padding:8px 16px;font-size:18px;font-weight:700}
+.m-pill[aria-pressed="true"]{background:var(--surya);color:#122232;border-color:var(--surya)}
+.lab-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#102336;border:1px solid var(--line);border-radius:18px;padding:14px 18px}
+.lab-inputs{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.lab-inputs select,.lab-inputs input{font-size:18px;padding:8px 14px;border-radius:12px}
+.lab-inputs input[type=search]{min-width:320px}
+
+/* Stop 7 Decision Board & Meeting Notes */
+.dec-card{background:linear-gradient(155deg,#173046,#102234);border:1px solid var(--line);border-radius:20px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+.dec-card.owner-hero{border:2px solid var(--surya);background:linear-gradient(145deg,#25333f,#122436)}
+.dec-card[data-status="approved"]{border-color:#74d3b088}
+.dec-card[data-status="revise"]{border-color:#fed34788}
+.dec-card[data-status="skip"]{opacity:.72}
+.dec-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.dec-statuses{display:flex;flex-wrap:wrap;gap:6px}
+.st-btn{border:1px solid var(--line);background:#0f2031;color:var(--muted);border-radius:999px;padding:6px 14px;font-size:18px;font-weight:700}
+.st-btn[aria-pressed="true"][data-st="pending"]{background:#294156;color:#fff;border-color:#6888a3}
+.st-btn[aria-pressed="true"][data-st="approved"]{background:#74d3b0;color:#0b241b;border-color:#74d3b0}
+.st-btn[aria-pressed="true"][data-st="revise"]{background:#fed347;color:#241c06;border-color:#fed347}
+.st-btn[aria-pressed="true"][data-st="skip"]{background:#6b7d8d;color:#fff;border-color:#8fa3b5}
+.note-box{width:100%;background:#0a1826;border:1px solid #35526b;border-radius:12px;color:var(--text);padding:10px 14px;font-size:18px}
+.note-box:focus{border-color:var(--surya)}
+.notes-bar{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:#0e1e2e;border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+
+/* ---------- Drill-Down Drawer & Stop Jumper Modal ---------- */
+.drawer-backdrop{position:fixed;inset:0;background:rgba(4,10,18,.72);backdrop-filter:blur(6px);z-index:80;display:flex;justify-content:flex-end}
+.drawer-backdrop[hidden]{display:none}
+.drawer{width:min(880px,95vw);height:100%;background:#0d1c2c;border-left:1px solid #3c5b75;display:flex;flex-direction:column;box-shadow:-16px 0 48px rgba(0,0,0,.5)}
+.drawer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:18px 24px;border-bottom:1px solid var(--line);background:#102336}
+.drawer-head h3{margin:4px 0 0;font-size:1.35rem}
+.drawer-body{flex:1;overflow:auto;padding:20px 24px;display:flex;flex-direction:column;gap:16px}
+.drawer-stats{display:flex;flex-wrap:wrap;gap:10px 18px;background:#132a3f;border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:18px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(4,10,18,.78);backdrop-filter:blur(8px);z-index:90;display:grid;place-items:center;padding:20px}
+.modal-backdrop[hidden]{display:none}
+.modal{width:min(960px,96vw);max-height:90vh;overflow:auto;background:#102234;border:1px solid #42637f;border-radius:24px;padding:24px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.jumper-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:16px}
+.j-card{background:#152c42;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:left;color:var(--text);display:flex;flex-direction:column;gap:6px}
+.j-card:hover{border-color:var(--surya);background:#1b3650}
+.j-card.current{border:2px solid var(--surya);background:#22384c}
+.j-num{font-size:18px;font-weight:900;color:var(--surya)}
+.j-title{font-size:1.12rem;font-weight:800;line-height:1.35}
+.j-src{font-size:16px;color:var(--muted)}
+#toast{position:fixed;bottom:24px;right:24px;background:#f0f4ef;color:#112334;padding:10px 18px;border-radius:999px;font-size:18px;font-weight:800;z-index:120;box-shadow:0 10px 30px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:1}
+
+/* Brand Spotlight 2-column layout */
+.split-2{display:grid;grid-template-columns:1.05fr 1fr;gap:18px;align-items:start}
+
+/* Print-only deck & notes */
+#print-deck,#print-notes{display:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1440px){
+  .p-bar{padding:8px 16px;gap:8px 10px}
+  .p-nav-grp,.p-tool-grp{gap:6px}
+  .p-btn{padding:6px 11px;font-size:15px}
+  .p-seg .p-btn{padding:5px 10px;font-size:15px}
+  .p-select{font-size:15px;padding:6px 10px}
+  .p-step-pill{font-size:16px;padding:5px 12px;gap:8px}
+  .p-meta{padding:5px 16px}
+  .p-kbd-hint{display:none}
+}
+@media(max-width:960px){.split-2{grid-template-columns:1fr}}
 @media(max-width:1000px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:700px){.shell{width:calc(100% - 28px)}.masthead{flex-direction:column;align-items:flex-start}.grid3,.grid2{grid-template-columns:1fr}.section-head{flex-direction:column;align-items:flex-start}.section-head>p{text-align:left}.brand-nav{flex-direction:column;align-items:stretch}.filters input[type=search]{width:100%}.filters label,.scope label{flex:1 1 44%}.lab{padding:14px}.sticky{position:static}.pm b{font-size:.86rem}html{scroll-padding-top:10px}}
-@media print{:root{--bg:#fff;--panel:#fff;--panel2:#fff;--line:#c9d2da;--text:#111;--muted:#444;--quiet:#555;--surya:#8a5a00;--monster:#0c5f8a;--link:#0c5f8a;--warn:#7a4b00;--up:#0a6b45;--down:#a02626}
-body{background:#fff;font-size:11pt}.sticky,.head-actions button,.filters,.more,#tip{display:none!important}.card,.insight,.post,.pattern,.lab{background:#fff!important;break-inside:avoid;border-color:#c9d2da}.insight p,ul.ins li,.pattern p,.exp p,td{color:#222}th{background:#eef2f5;color:#333}.shell{width:100%}section{margin-top:22px}.kind{border:1px solid #999}.grid3{grid-template-columns:repeat(3,1fr)}.thumb{border-color:#c9d2da;background:#f3f5f7}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+@media(max-width:720px){
+  .shell,body.present-mode .shell{width:calc(100% - 24px)}
+  .masthead{flex-direction:column;align-items:flex-start}
+  .grid3,.grid2{grid-template-columns:1fr}
+  .section-head{flex-direction:column;align-items:flex-start}.section-head>p{text-align:left}
+  .brand-nav{flex-direction:column;align-items:stretch}
+  .filters input[type=search]{width:100%}.filters label,.scope label{flex:1 1 44%}.lab{padding:14px}.sticky{position:static}
+  .lab-inputs input[type=search]{min-width:0;width:100%}
+  .pm{grid-template-columns:repeat(2,1fr)}
+  #present-chrome{position:static}
+  .p-bar{padding:10px 12px}.p-meta{padding:6px 12px}.p-kbd-hint{display:none}
+  .p-bar .p-btn,.p-step-pill{padding:5px 10px;font-size:14px}
+  .p-bar .p-seg .p-btn,.p-bar .p-select{padding:4px 9px;font-size:14px}
+  .p-dots{display:none}
+  .pbar-row{grid-template-columns:92px 1fr 98px;gap:8px;padding:9px 10px}
+  .spotlight{flex-direction:column;align-items:flex-start}
+  body.present-mode .barline{grid-template-columns:94px 1fr 78px}
+  html{scroll-padding-top:10px}
+}
+
+/* ---------- Print / PDF ---------- */
+@media print{
+  :root{--bg:#fff;--panel:#fff;--panel2:#fff;--line:#c9d2da;--text:#111;--muted:#333;--quiet:#444;--surya:#76431C;--monster:#0c5f8a;--link:#0c5f8a;--warn:#7a4b00;--up:#0a6b45;--down:#a02626;--m-surya:#76431C;--m-monster:#1d6cb8}
+  body,body.present-mode{background:#fff!important;color:#111!important;font-size:10.5pt!important;line-height:1.45!important}
+  #present-chrome,.sticky,.head-actions button,.filters,.more,#tip,#drawer,#stop-jumper,#toast,.p-subtabs,.p-head-actions,.spotlight-nav,.lab-controls,.notes-bar,.st-btn,.m-chip,.drill-hint,.p-btn{display:none!important}
+  body.present-mode #analysis-chrome{display:block!important}
+  body.present-mode #main>div.p-stage{display:none!important}
+  body.present-mode #print-deck{display:block!important}
+  #print-notes{display:block!important;margin-top:22px}
+  .shell,body.present-mode .shell{width:100%!important;max-width:none!important}
+  .masthead{padding:10px 0 12px}.banner{color:#222!important;background:#f7f8fa!important;border-color:#c9d2da!important;font-size:9.5pt!important}
+  .banner strong{color:#8a5a00!important}.banner b{color:#111!important}
+  .card,.insight,.post,.pattern,.lab,.dec-card,.spotlight,.pbar-row{background:#fff!important;color:#111!important;break-inside:avoid;border-color:#c9d2da!important;box-shadow:none!important}
+  .insight p,ul.ins li,.pattern p,.exp p,.spotlight-body p,.dec-card p,.note-box,td,th,.barline b,.pbar-lbl,.pbar-val{color:#111!important}
+  .note-box{background:#f7f9fb!important;border-color:#b8c4d0!important;font-size:9.5pt!important}
+  .pbar-track{background:#dfe6ec!important}
+  body.present-mode .pm span,body.present-mode .pm b,body.present-mode .post .meta,body.present-mode .section-head>p,body.present-mode .unit,body.present-mode .fine,body.present-mode .caution{font-size:8.5pt!important}
+  body.present-mode .post h4{font-size:10pt!important}
+  th{background:#eef2f5!important;color:#222!important}
+  td,th{white-space:normal!important;font-size:8.5pt!important;padding:6px 8px!important}
+  .scroll{overflow:visible!important;border-color:#c9d2da!important}
+  .kind{border:1px solid #888;color:#111!important;background:#f1f4f7!important}
+  .badge{border-color:#999;color:#222!important}
+  .grid3{grid-template-columns:repeat(3,1fr)}.grid2{grid-template-columns:repeat(2,1fr)}
+  .thumb{border-color:#c9d2da;background:#f3f5f7;color:#444}
+  .print-stop{break-inside:avoid;margin-top:18px;padding-top:12px;border-top:2px solid #c9d2da}
+  .print-stop h2{font-size:14pt!important;margin:0 0 8px}
+  svg text{fill:#333!important}
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
 </style>
 </head>
-<body>
-<div class="shell">
-<header class="masthead"><div><p class="eyebrow">COFFLORER · Creative Performance Intelligence</p><h1>Social Performance <em id="h-period"></em></h1><p class="subhead">SURYA Coffee Explorers + Monster and Friends · Publer workspace COFFLORER</p></div>
-<div class="head-actions"><span id="h-snap"></span><button id="printBtn">พิมพ์ / บันทึก PDF</button></div></header>
-<div class="banner" id="banner"></div><div class="banner stale" id="stale" hidden></div>
+<body class="present-mode">
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true"><defs><linearGradient id="ig-brand-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#feda75"/><stop offset="25%" stop-color="#fa7e1e"/><stop offset="50%" stop-color="#d62976"/><stop offset="75%" stop-color="#962fbf"/><stop offset="100%" stop-color="#4f5bd5"/></linearGradient></defs></svg>
+
+<!-- ==================== ANALYSIS MODE CHROME ==================== -->
+<div id="analysis-chrome">
+  <div class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">COFFLORER · Creative Performance Intelligence</p>
+        <h1>Social Performance <em id="h-period"></em></h1>
+        <p class="subhead">SURYA Coffee Explorers + Monster and Friends · Publer workspace COFFLORER</p>
+      </div>
+      <div class="head-actions">
+        <span id="h-snap"></span>
+        <button id="toPresentBtn" class="primary-pill">🎬 โหมดนำเสนอ (Presenter)</button>
+        <button id="printBtn">พิมพ์ / บันทึก PDF</button>
+      </div>
+    </header>
+    <div class="banner" id="banner"></div>
+    <div class="banner stale" id="stale" hidden></div>
+  </div>
+  <div class="sticky">
+    <div class="shell">
+      <nav class="brand-nav" aria-label="มุมมองแบรนด์">
+        <div class="tabs" role="group" aria-label="เลือกแบรนด์" id="tabs"></div>
+        <div class="scope">
+          <label>Platform<select id="s-platform"></select></label>
+          <label>ช่วงเวลา<select id="s-preset"></select></label>
+          <label>From<input type="date" id="s-from"></label>
+          <label>To<input type="date" id="s-to"></label>
+          <label>Format<select id="s-format"></select></label>
+          <label class="chk"><input type="checkbox" id="s-recruit"> ตัดโพสต์ Recruitment ออก</label>
+        </div>
+      </nav>
+      <nav class="jump" aria-label="ส่วนของรายงาน">
+        <a href="#readout">Readout</a><a href="#audience">Audience</a><a href="#scorecard">Scorecard</a>
+        <a href="#content">Content Lab</a><a href="#patterns">Patterns</a><a href="#trends">Trends</a>
+        <a href="#decisions">Next month</a><a href="#method">Method & sources</a>
+      </nav>
+    </div>
+  </div>
 </div>
-<div class="sticky"><div class="shell">
-<nav class="brand-nav" aria-label="มุมมองแบรนด์"><div class="tabs" role="group" aria-label="เลือกแบรนด์" id="tabs"></div>
-<div class="scope">
-<label>Platform<select id="s-platform"></select></label><label>ช่วงเวลา<select id="s-preset"></select></label><label>From<input type="date" id="s-from"></label><label>To<input type="date" id="s-to"></label><label>Format<select id="s-format"></select></label>
-<label class="chk"><input type="checkbox" id="s-recruit"> ตัดโพสต์ Recruitment ออก</label></div></nav>
-<nav class="jump" aria-label="ส่วนของรายงาน"><a href="#readout">Readout</a><a href="#audience">Audience</a><a href="#scorecard">Scorecard</a><a href="#content">Content Lab</a><a href="#patterns">Patterns</a><a href="#trends">Trends</a><a href="#decisions">Next month</a><a href="#method">Method & sources</a></nav>
-</div></div>
-<div class="shell"><main id="main"></main>
-<footer id="foot"></footer></div>
+
+<!-- ==================== PRESENTER MODE CHROME ==================== -->
+<div id="present-chrome">
+  <div class="p-bar">
+    <div class="p-nav-grp">
+      <button class="p-btn" id="p-prev" title="ก่อนหน้า (← / ↑)">‹ ก่อนหน้า</button>
+      <button class="p-step-pill" id="p-where" aria-expanded="false" title="กด G เพื่อเลือกหน้า">
+        <span id="p-where-txt">1 / 7</span>
+        <span class="p-dots" id="p-dots"></span>
+      </button>
+      <button class="p-btn" id="p-next" title="ถัดไป (→ / Space)">ถัดไป ›</button>
+    </div>
+
+    <div class="p-tool-grp">
+      <button class="p-btn" id="p-more-btn" aria-expanded="false" title="เปิด/ปิดตัวกรอง (F)">🎚️ ตัวกรอง (F)</button>
+      <button class="p-btn accent-reset" id="p-reset" hidden title="กลับค่าเริ่มต้น (R)">↺ รีเซ็ต (R)</button>
+      <button class="p-btn" id="p-method-btn" title="อ่านนิยามและแหล่งข้อมูล (M)">Method (M)</button>
+      <button class="p-btn" id="p-fs-btn" title="เต็มจอ">⛶ เต็มจอ</button>
+      <button class="p-btn mode-btn" id="toAnalysisBtn" title="สลับเป็นหน้าวิเคราะห์แบบเลื่อน (P)">📊 โหมดวิเคราะห์</button>
+    </div>
+  </div>
+
+  <div class="p-tray" id="p-filter-tray" hidden>
+    <div class="p-tray-in">
+      <div class="p-seg" id="p-brands" role="group" aria-label="เลือกแบรนด์"></div>
+      <div class="p-seg" id="p-plats" role="group" aria-label="เลือกแพลตฟอร์ม"></div>
+      <select id="p-preset" class="p-select" aria-label="ช่วงเวลา"></select>
+      <label>From<input type="date" id="p-from"></label>
+      <label>To<input type="date" id="p-to"></label>
+      <label>Format<select id="p-format"></select></label>
+      <label class="chk"><input type="checkbox" id="p-recruit"> ตัดโพสต์ Recruitment ออก</label>
+      <button class="p-btn accent-reset" id="p-tray-reset">↺ รีเซ็ตตัวกรองทั้งหมด (R)</button>
+    </div>
+  </div>
+
+  <div class="p-meta" id="present-meta"></div>
+</div>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<div class="shell">
+  <main id="main"></main>
+  <footer id="foot"></footer>
+</div>
+
+<!-- ==================== OVERLAYS & UTILITIES ==================== -->
+<div id="stop-jumper" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="jumper-title">
+  <div class="modal">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div>
+        <p class="eyebrow" style="margin:0">PRESENTER FLOW · 7 STOPS</p>
+        <h2 id="jumper-title" style="margin:4px 0 0;font-size:1.5rem">ข้ามไปยังหัวข้อที่ต้องการ (กดเลข 1–7 ได้ทันที)</h2>
+      </div>
+      <button class="p-btn" id="jumper-close">✕ ปิด (Esc)</button>
+    </div>
+    <div class="jumper-grid" id="jumper-grid"></div>
+  </div>
+</div>
+
+<aside id="drawer" class="drawer-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer">
+    <div class="drawer-head">
+      <div>
+        <p class="eyebrow" id="drawer-kicker" style="margin:0"></p>
+        <h3 id="drawer-title"></h3>
+      </div>
+      <button class="p-btn" id="drawer-close">✕ ปิด (Esc)</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+  </div>
+</aside>
+
+<div id="toast" role="status" aria-live="polite"></div>
 <div id="tip"></div>
+
 <script>/* cache-bust so a refresh always shows the newest data file */document.write('<script src="data/dashboard-data.js?t=' + Date.now() + '"><\/script>')</script>
 <script>
 const D = window.CPI_DATA, P = D.posts, M = D.meta, I = D.insights || {};
@@ -126,7 +498,13 @@ const median = a => { a = a.filter(v => v != null).sort((x, y) => x - y); if (!a
 const n0 = v => v == null ? '—' : Math.round(v).toLocaleString('en-US'), p2 = v => v == null ? '—' : v.toFixed(2) + '%';
 const day = p => p.dt.slice(0, 10), pad = n => String(n).padStart(2, '0'), iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 const dth = (s, noYear) => { s = s.replace('T', ' '); const [y, m, d] = s.slice(0, 10).split('-'); return `${+d} ${TH[m - 1]}${noYear ? '' : ' ' + y}` + (s.length > 10 ? ' ' + s.slice(11, 16) : ''); };
-const badge = pl => `<span class="badge b-${pl}"><i></i>${pl}</span>`;
+const platLogo = (pl, size = 15) => {
+  if (pl === 'Instagram') return `<span class="bmark"><svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig-brand-grad)"/><rect x="6.2" y="6.2" width="11.6" height="11.6" rx="3.4" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="15.8" cy="8.2" r="1.05" fill="#fff"/></svg></span>`;
+  if (pl === 'Facebook') return `<span class="bmark"><svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#1877F2"/><path d="M15.1 12.6l.4-2.6h-2.5V8.3c0-.7.3-1.4 1.4-1.4h1.1V4.7s-1-.2-2-.2c-2 0-3.3 1.2-3.3 3.4V10H7.9v2.6h2.3V21h2.8v-8.4h2.1z" fill="#fff"/></svg></span>`;
+  if (pl === 'TikTok') return `<span class="bmark"><svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="#010101" stroke="#ffffff38" stroke-width="1"/><path d="M14.3 5.2v9.1a2.9 2.9 0 1 1-2.1-2.8V9.2a5.2 5.2 0 1 0 4.3 5.1V9.5c1 .7 2.2 1.1 3.5 1.1V8.4a3.9 3.9 0 0 1-3.5-3.2h-2.2z" fill="#25F4EE" transform="translate(-.6,-.5)"/><path d="M14.3 5.2v9.1a2.9 2.9 0 1 1-2.1-2.8V9.2a5.2 5.2 0 1 0 4.3 5.1V9.5c1 .7 2.2 1.1 3.5 1.1V8.4a3.9 3.9 0 0 1-3.5-3.2h-2.2z" fill="#FE2C55" transform="translate(.6,.5)"/><path d="M14.3 5.2v9.1a2.9 2.9 0 1 1-2.1-2.8V9.2a5.2 5.2 0 1 0 4.3 5.1V9.5c1 .7 2.2 1.1 3.5 1.1V8.4a3.9 3.9 0 0 1-3.5-3.2h-2.2z" fill="#fff"/></svg></span>`;
+  return '';
+};
+const badge = pl => `<span class="badge b-${pl}">${platLogo(pl, 15)}${pl}</span>`;
 
 // reporting periods come from the data, never hardcoded
 const cutoff = M.latest_post.slice(0, 10), [cy, cm, cd] = cutoff.split('-').map(Number);
@@ -135,8 +513,14 @@ const prev = {from: iso(pm), to: iso(new Date(pm.getFullYear(), pm.getMonth(), M
 const firstDay = P[0].dt.slice(0, 10), d90 = iso(new Date(new Date(cutoff).getTime() - 89 * 864e5));
 const curLbl = TH[cm - 1], prevLbl = TH[pm.getMonth()];
 const PRESETS = {'90 วันล่าสุด': [d90, cutoff], [`MTD (1–${cd} ${curLbl})`]: [mtd.from, mtd.to], [`เดือนล่าสุดที่ครบ (${prevLbl})`]: [base.from, base.to], 'ทั้งหมดที่มี': [firstDay, cutoff], 'กำหนดเอง': null};
+const FORMATS = ['All', ...new Set(P.map(p => p.format))];
+const METRICS = {reach: 'Reach / Views', er: 'Engagement rate', shares: 'Shares', saves: 'Saves (IG, เฉพาะ พ.ย.)', comments: 'Comments', link_clicks: 'Link clicks (FB)', dt: 'วันที่ล่าสุด'};
+const HINT = {reach: 'ผลสะสมของโพสต์ ณ วันที่อ่านค่า · ไม่ใช่คนไม่ซ้ำ · TikTok เป็น Views', er: 'ER ใช้นิยามของ Publer: IG รวม Saves, FB รวม Post clicks · ห้ามเทียบข้ามแพลตฟอร์ม · ระวังโพสต์ Reach ต่ำ', saves: 'Publer CSV ไม่มี Saves จึงมีเฉพาะโพสต์ IG เดือนล่าสุดที่อ่านผ่าน connector/Gemini', link_clicks: 'มีเฉพาะ Facebook', shares: 'จำนวนแชร์สะสม', comments: 'จำนวนคอมเมนต์สะสม', dt: 'เรียงจากโพสต์ล่าสุด'};
 
-const S = {brand: 'Compare', platform: 'All', from: d90, to: cutoff, format: 'All', noRecruit: false, pillar: 'All', q: '', metric: 'reach', visible: 9};
+const DEFAULT_S = {mode: 'present', stop: 1, brand: 'Compare', platform: 'All', from: d90, to: cutoff, format: 'All', noRecruit: false, pillar: 'All', q: '', metric: 'reach', visible: 9};
+const S = {...DEFAULT_S, sub: {1: 'score', 2: 'aud', 3: 'worked', 4: 'worked', 6: 'recs', 7: 'all'}, execIdx: 0, trendPlat: 'All'};
+
+// ---------- Single filter & stats path (preserved untouched) ----------
 const brands = () => S.brand === 'Compare' ? BR : [S.brand], plats = () => S.platform === 'All' ? PL : [S.platform];
 function sel(o = {}) { // every figure on the page goes through this one filter
   const b = o.brand, pl = o.platform, f = o.from ?? S.from, t = o.to ?? S.to;
@@ -152,24 +536,115 @@ const delta = (a, b) => (a == null || b == null || !b) ? '' : `<span class="delt
 const thin = n => n < 5 ? ' class="thin"' : '', plabel = (b, k) => (M.pillar_labels[b] || {})[k] || k;
 const head = (n, eb, h2, sub) => `<div class="section-head"><div><p class="eyebrow">${n} / ${eb}</p><h2>${h2}</h2></div><p>${sub || ''}</p></div>`;
 
+// ---------- URL State Sync ----------
+function matchingPreset() {
+  for (const [k, r] of Object.entries(PRESETS)) if (r && r[0] === S.from && r[1] === S.to) return k;
+  return 'กำหนดเอง';
+}
+function hasCustomFilters() {
+  return S.brand !== DEFAULT_S.brand || S.platform !== DEFAULT_S.platform || S.from !== DEFAULT_S.from || S.to !== DEFAULT_S.to ||
+    S.format !== DEFAULT_S.format || S.noRecruit !== DEFAULT_S.noRecruit || S.pillar !== DEFAULT_S.pillar || S.q !== '' || S.metric !== DEFAULT_S.metric;
+}
+function readURL() {
+  const sp = new URLSearchParams(location.search || (location.hash.startsWith('#?') ? location.hash.slice(1) : ''));
+  const m = sp.get('mode'); if (m === 'present' || m === 'analysis') S.mode = m;
+  const st = parseInt(sp.get('stop'), 10); if (st >= 1 && st <= 7) S.stop = st;
+  const b = sp.get('brand'); if (b && ['Compare', ...BR].includes(b)) S.brand = b;
+  const pl = sp.get('platform'); if (pl && ['All', ...PL].includes(pl)) S.platform = pl;
+  const fm = sp.get('format'); if (fm && FORMATS.includes(fm)) S.format = fm;
+  const fr = sp.get('from'); if (fr && /^\d{4}-\d{2}-\d{2}$/.test(fr)) S.from = fr;
+  const to = sp.get('to'); if (to && /^\d{4}-\d{2}-\d{2}$/.test(to)) S.to = to;
+  if (S.from > S.to) [S.from, S.to] = [DEFAULT_S.from, DEFAULT_S.to];
+  if (sp.has('noRecruit')) S.noRecruit = sp.get('noRecruit') === '1' || sp.get('noRecruit') === 'true';
+  const pi = sp.get('pillar'); if (pi) S.pillar = pi;
+  const mt = sp.get('metric'); if (mt && METRICS[mt]) S.metric = mt;
+  if (sp.has('q')) S.q = sp.get('q') || '';
+}
+function syncURL() {
+  const sp = new URLSearchParams();
+  sp.set('mode', S.mode);
+  if (S.mode === 'present') sp.set('stop', String(S.stop));
+  sp.set('brand', S.brand);
+  sp.set('platform', S.platform);
+  sp.set('from', S.from);
+  sp.set('to', S.to);
+  if (S.format !== 'All') sp.set('format', S.format);
+  if (S.noRecruit) sp.set('noRecruit', '1');
+  if (S.pillar !== 'All') sp.set('pillar', S.pillar);
+  if (S.metric !== 'reach') sp.set('metric', S.metric);
+  if (S.q.trim()) sp.set('q', S.q.trim());
+  const next = '?' + sp.toString();
+  try { history.replaceState(null, '', next); } catch { location.hash = next; }
+}
+window.addEventListener('popstate', () => { readURL(); syncFilterInputs(); render(); });
+
+// ---------- Meeting Decision Notes (localStorage) ----------
+const NOTES_KEY = 'cpi_v2_meeting_notes';
+const STATUS_LABELS = {pending: '⏳ รอตัดสินใจ', approved: '✅ อนุมัติ', revise: '✏️ ปรับแก้', skip: '⏭️ ข้าม'};
+function loadNotes() {
+  try { const raw = localStorage.getItem(NOTES_KEY); return raw ? JSON.parse(raw) : {updated_at: null, items: {}}; }
+  catch { return {updated_at: null, items: {}}; }
+}
+function saveNotes(data) {
+  data.updated_at = new Date().toISOString();
+  try { localStorage.setItem(NOTES_KEY, JSON.stringify(data)); } catch {}
+  return data;
+}
+let NOTES = loadNotes();
+function noteKey(kind, title) { return `${kind}:${title}`; }
+function getNote(key) { return NOTES.items[key] || {status: 'pending', note: ''}; }
+function setNoteStatus(key, status) {
+  const cur = getNote(key);
+  NOTES.items[key] = {...cur, status};
+  saveNotes(NOTES);
+}
+function setNoteText(key, note) {
+  const cur = getNote(key);
+  NOTES.items[key] = {...cur, note};
+  saveNotes(NOTES);
+}
+function allDecisionItems() {
+  const out = [];
+  (I.next_month || []).filter(x => x.type === 'decision').forEach(x => out.push({key: noteKey('decision', x.title), group: 'decision', brand: 'ทั้งสองแบรนด์', type: x.type, title: x.title, text: x.text, detail: `วัดผล: ${x.measure}`}));
+  (I.recommendations || []).forEach(r => out.push({key: noteKey('rec', r.title), group: 'rec', brand: r.brand, type: r.type, title: r.title, text: r.text, detail: `หลักฐาน: ${r.evidence}`}));
+  (I.next_month || []).filter(x => x.type !== 'decision').forEach(x => out.push({key: noteKey('exp', x.title), group: 'exp', brand: /^SURYA/.test(x.title) ? 'SURYA' : /^Monster/.test(x.title) ? 'Monster and Friends' : 'ทั้งสองแบรนด์', type: x.type, title: x.title, text: x.text, detail: `วัดผล: ${x.measure}`}));
+  return out;
+}
+
+// ---------- Toast Helper ----------
+let toastTimer;
+function showToast(msg) {
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ---------- SVG Charts (used in Analysis & Stop 2) ----------
 function bars(items, unit) {
   if (!items.length) return '<div class="empty">ไม่มีข้อมูลในตัวกรองนี้</div>';
   const W = 360, lh = 26, L = 104, max = Math.max(...items.map(i => i.v), 1), H = items.length * lh + 6;
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">` + items.map((it, i) => { const w = Math.max(2, (W - L - 78) * it.v / max), y = i * lh + 4;
     return `<g data-tip="${esc(it.label)}<br>${unit} ค่ากลาง ${n0(it.v)} · n=${it.n}${it.n < 5 ? ' (ตัวอย่างน้อย)' : ''}"><rect x="0" y="${y - 2}" width="${W}" height="${lh}" fill="transparent"/><text x="${L - 8}" y="${y + 13}" text-anchor="end">${esc(it.short)}</text><rect x="${L}" y="${y}" width="${w}" height="${lh - 8}" rx="4" fill="var(--mark)" opacity="${it.n < 5 ? .45 : 1}"/><text x="${L + w + 6}" y="${y + 13}" style="fill:var(--text)">${n0(it.v)} <tspan style="fill:var(--quiet)">n=${it.n}</tspan></text></g>`; }).join('') + '</svg>';
 }
-function lines(months, series) {
-  const W = 380, H = 190, L = 46, R = 12, T = 10, B = 26, max = Math.max(1, ...series.flatMap(s => s.pts.map(p => p.v || 0)));
+function lines(months, series, big = false) {
+  const W = big ? 560 : 380, H = big ? 235 : 190, L = big ? 64 : 46, R = 16, T = 14, B = big ? 34 : 26;
+  const max = Math.max(1, ...series.flatMap(s => s.pts.map(p => p.v || 0)));
   const x = i => L + (W - L - R) * (months.length > 1 ? i / (months.length - 1) : .5), y = v => T + (H - T - B) * (1 - v / max);
-  let g = [0, .5, 1].map(f => `<line x1="${L}" x2="${W - R}" y1="${y(max * f)}" y2="${y(max * f)}" stroke="#2c4458"/><text x="${L - 6}" y="${y(max * f) + 4}" text-anchor="end">${n0(max * f)}</text>`).join('');
-  g += months.map((m, i) => i % 2 === (months.length - 1) % 2 ? `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">${TH[+m.slice(5) - 1]}</text>` : '').join('');
+  const fs = big ? 'style="font-size:13px;font-weight:600"' : '';
+  let g = [0, .5, 1].map(f => `<line x1="${L}" x2="${W - R}" y1="${y(max * f)}" y2="${y(max * f)}" stroke="#2c4458"/><text ${fs} x="${L - 8}" y="${y(max * f) + 5}" text-anchor="end">${n0(max * f)}</text>`).join('');
+  g += months.map((m, i) => (big || i % 2 === (months.length - 1) % 2) ? `<text ${fs} x="${x(i)}" y="${H - 8}" text-anchor="middle">${TH[+m.slice(5) - 1]}</text>` : '').join('');
   for (const s of series) { const pts = s.pts.map((p, i) => p.v == null ? null : [x(i), y(p.v)]); let d = '', pen = false; pts.forEach(pt => { if (!pt) { pen = false; return; } d += (pen ? 'L' : 'M') + pt[0].toFixed(1) + ' ' + pt[1].toFixed(1); pen = true; });
-    g += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2"/>` + pts.map(pt => pt ? `<circle cx="${pt[0]}" cy="${pt[1]}" r="4" fill="${s.color}" stroke="#14283b" stroke-width="2"/>` : '').join(''); }
-  g += months.map((m, i) => `<rect x="${x(i) - 14}" y="${T}" width="28" height="${H - T - B}" fill="transparent" data-tip="<b>${TH[+m.slice(5) - 1]} ${m.slice(0, 4)}</b>${m === cutoff.slice(0, 7) ? ' (ยังไม่ครบเดือน)' : ''}<br>${series.map(s => `${esc(s.name)}: ${n0(s.pts[i].v)} (n=${s.pts[i].n})`).join('<br>')}"/>`).join('');
+    g += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${big ? 3 : 2}"/>` + pts.map(pt => pt ? `<circle cx="${pt[0]}" cy="${pt[1]}" r="${big ? 5 : 4}" fill="${s.color}" stroke="#14283b" stroke-width="2"/>` : '').join(''); }
+  g += months.map((m, i) => `<rect class="month-hit" data-month="${m}" x="${x(i) - 16}" y="${T}" width="32" height="${H - T - B}" fill="transparent" style="cursor:pointer" data-tip="<b>${TH[+m.slice(5) - 1]} ${m.slice(0, 4)}</b>${m === cutoff.slice(0, 7) ? ' (ยังไม่ครบเดือน)' : ''}<br>${series.map(s => `${esc(s.name)}: ${n0(s.pts[i].v)} (n=${s.pts[i].n})`).join('<br>')}<br><i>คลิกเพื่อดูโพสต์เดือนนี้</i>"/>`).join('');
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${g}</svg>`;
 }
 
-// ---------- sections ----------
+// ---------- Original Analysis Sections (kept 100% intact) ----------
+function brandMark(b, size = 20) {
+  if (b === 'SURYA') {
+    return `<span class="bmark">${`<svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="5" fill="#1C1A1A" stroke="#DAC259" stroke-width="1.5"/><path d="M2.25 13.5H21.75V18A4.25 4.25 0 0 1 17.5 22.25H6.5A4.25 4.25 0 0 1 2.25 18Z" fill="#76431C"/><path d="M2.25 6.5A4.25 4.25 0 0 1 6.5 2.25H17.5A4.25 4.25 0 0 1 21.75 6.5V13.5H2.25Z" fill="#FFF9EE"/><circle cx="7.5" cy="8.2" r="2.6" fill="#DAC259"/><path d="M9.5 22.25A2.5 2.5 0 0 1 14.5 22.25Z" fill="#FFF9EE"/></svg>`}</span>`;
+  }
+  return `<span class="bmark"><img src="data:image/png;base64,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" width="${size}" height="${Math.round(size * 36 / 42)}" alt="" style="display:block;object-fit:contain"></span>`;
+}
 function readout() {
   let items = (I.executive || []).map(i => ({...i, accent: 'var(--surya)'}));
   if (S.brand !== 'Compare') { const t = (I.brands || {})[S.brand] || {}; items = [...(t.worked || []), ...(t.underperformed || []), ...(t.why || []).map(w => ({...w, type: w.type === 'hypothesis' ? 'inference' : w.type}))].map(i => ({...i, accent: S.brand === 'SURYA' ? 'var(--surya)' : 'var(--monster)'})); }
@@ -181,35 +656,39 @@ function audience() {
   if (!acc.length) return head('02', 'Audience & account activity', 'ภาพรวมบัญชี') + '<div class="empty card">ไม่มีข้อมูลระดับบัญชีในชุดข้อมูลนี้</div>';
   return head('02', 'Audience & account activity · Fact', 'ผู้ติดตามของแต่ละบัญชี', 'ตัวเลขทั้งบัญชีจาก Publer แยกจากผลของโพสต์ที่เผยแพร่ในช่วงที่เลือก · ไม่ขึ้นกับตัวกรองช่วงเวลา') +
     `<div class="grid3">${acc.map(a => { const s = a.series, last = s[s.length - 1], first = s[0], ch = last[1] - first[1], mx = Math.max(...s.map(x => x[1])), mn = Math.min(...s.map(x => x[1]));
-      return `<article class="card kpi ${cls(a.brand)}" data-aud="${short(a.brand)}|${a.platform}"><header><span class="bn">${short(a.brand).toUpperCase()}</span>${badge(a.platform)}</header><div class="big">${n0(last[1])}</div><div class="unit">ผู้ติดตาม · สัปดาห์ของ ${dth(last[0])}<span class="delta ${ch >= 0 ? 'up' : 'down'}">${ch >= 0 ? '+' : ''}${n0(ch)} (${(100 * ch / first[1]).toFixed(1)}%) ตั้งแต่ ${dth(first[0], 1)}</span></div>
+      return `<article class="card kpi ${cls(a.brand)} plat-${a.platform}" data-aud="${short(a.brand)}|${a.platform}"><header><span class="bn-wrap">${brandMark(a.brand, 18)}<span class="bn">${short(a.brand).toUpperCase()}</span></span>${badge(a.platform)}</header><div class="big">${n0(last[1])}</div><div class="unit">ผู้ติดตาม · สัปดาห์ของ ${dth(last[0])}<span class="delta ${ch >= 0 ? 'up' : 'down'}">${ch >= 0 ? '+' : ''}${n0(ch)} (${(100 * ch / first[1]).toFixed(1)}%) ตั้งแต่ ${dth(first[0], 1)}</span></div>
       <div class="spark" aria-hidden="true">${s.map(x => `<i data-tip="สัปดาห์ ${dth(x[0], 1)}: ${n0(x[1])}" style="height:${12 + 88 * (mx === mn ? 1 : (x[1] - mn) / (mx - mn))}%"></i>`).join('')}</div><p class="fine">แท่งแสดงช่วง ${n0(mn)}–${n0(mx)} (ไม่ได้เริ่มจากศูนย์) · อ่านค่าเมื่อ ${dth(a.as_of)}</p></article>`; }).join('')}</div>
     <p class="fine">ไม่รวมผู้ติดตามข้ามแพลตฟอร์ม เพราะคนเดียวกันติดตามได้หลายช่องทาง · Publer ไม่มีข้อมูลพอจะบอกว่าโพสต์ใดทำให้ผู้ติดตามเพิ่ม</p>`;
+}
+function scorecardCardHTML(b, pl, interactive = false) {
+  const a = stat(sel({brand: b, platform: pl, ...mtd})), c = stat(sel({brand: b, platform: pl, ...prev})), f = stat(sel({brand: b, platform: pl, ...base})), mx = Math.max(a.reach || 0, c.reach || 0, 1);
+  const tag = interactive ? 'button type="button"' : 'article';
+  const endTag = interactive ? 'button' : 'article';
+  const attrs = interactive ? `class="card kpi ${cls(b)} plat-${pl} drillable" style="text-align:left;color:inherit;width:100%" data-drill="kpi" data-brand="${esc(b)}" data-platform="${esc(pl)}"` : `class="card kpi ${cls(b)} plat-${pl}"`;
+  return `<${tag} ${attrs} data-kpi="${short(b)}|${pl}"><header><span class="bn-wrap">${brandMark(b, 18)}<span class="bn">${short(b).toUpperCase()}</span></span>${badge(pl)}</header><div class="big" data-v="reach">${n0(a.reach)}</div><div class="unit">${REACH(pl)} ค่ากลางต่อโพสต์ ${delta(a.reach, c.reach)}</div>
+    <div class="barline"><span>1–${cd} ${curLbl}</span><div class="track"><div class="fill" style="width:${100 * (a.reach || 0) / mx}%"></div></div><b>${n0(a.reach)}</b></div>
+    <div class="barline"><span>1–${+prev.to.slice(8)} ${prevLbl}</span><div class="track"><div class="fill prev" style="width:${100 * (c.reach || 0) / mx}%"></div></div><b data-v="prev">${n0(c.reach)}</b></div>
+    <div class="stats"><div><span>โพสต์ ${curLbl} / ${prevLbl}</span><b data-v="n">${a.n} / ${c.n}</b></div><div><span>ER ค่ากลาง</span><b data-v="er">${p2(a.er)}</b> <small class="unit">(${p2(c.er)})</small></div><div><span>Sum of post ${REACH(pl).toLowerCase()}</span><b data-v="sum">${n0(a.sum)}</b></div></div>
+    <p class="fine">${prevLbl} ทั้งเดือน: ค่ากลาง ${n0(f.reach)} · ${f.n} โพสต์</p>${a.pending ? `<p class="caution">${a.pending} โพสต์ยังไม่มี Reach (รอซิงก์) ไม่นับในค่ากลาง</p>` : ''}${Math.min(a.n, c.n) < 5 ? '<p class="caution">ตัวอย่างน้อยกว่า 5 โพสต์ อ่านเป็นทิศทางเท่านั้น</p>' : ''}${interactive ? `<span class="drill-hint">ดูโพสต์เบื้องหลังตัวเลข (${a.n}) →</span>` : ''}</${endTag}>`;
 }
 function scorecard() {
   let h = head('03', 'Account scorecard', `โพสต์ 1–${cd} ${curLbl} เทียบ 1–${+prev.to.slice(8)} ${prevLbl}`, 'ค่ากลางต่อโพสต์ · Reach สำหรับ FB/IG · Views สำหรับ TikTok · ไม่ขึ้นกับตัวกรองช่วงเวลา') +
     `<div class="legend">${brands().map(b => `<span><i style="background:var(--m-${b === 'SURYA' ? 'surya' : 'monster'})"></i>${short(b)} ${curLbl}</span>`).join('')}<span><i style="background:var(--prev)"></i>ช่วงเดียวกัน ${prevLbl}</span></div><div class="grid3">`;
-  for (const b of brands()) for (const pl of plats()) {
-    const a = stat(sel({brand: b, platform: pl, ...mtd})), c = stat(sel({brand: b, platform: pl, ...prev})), f = stat(sel({brand: b, platform: pl, ...base})), mx = Math.max(a.reach || 0, c.reach || 0, 1);
-    h += `<article class="card kpi ${cls(b)}" data-kpi="${short(b)}|${pl}"><header><span class="bn">${short(b).toUpperCase()}</span>${badge(pl)}</header><div class="big" data-v="reach">${n0(a.reach)}</div><div class="unit">${REACH(pl)} ค่ากลางต่อโพสต์ ${delta(a.reach, c.reach)}</div>
-      <div class="barline"><span>1–${cd} ${curLbl}</span><div class="track"><div class="fill" style="width:${100 * (a.reach || 0) / mx}%"></div></div><b>${n0(a.reach)}</b></div>
-      <div class="barline"><span>1–${+prev.to.slice(8)} ${prevLbl}</span><div class="track"><div class="fill prev" style="width:${100 * (c.reach || 0) / mx}%"></div></div><b data-v="prev">${n0(c.reach)}</b></div>
-      <div class="stats"><div><span>โพสต์ ${curLbl} / ${prevLbl}</span><b data-v="n">${a.n} / ${c.n}</b></div><div><span>ER ค่ากลาง</span><b data-v="er">${p2(a.er)}</b> <small class="unit">(${p2(c.er)})</small></div><div><span>Sum of post ${REACH(pl).toLowerCase()}</span><b data-v="sum">${n0(a.sum)}</b></div></div>
-      <p class="fine">${prevLbl} ทั้งเดือน: ค่ากลาง ${n0(f.reach)} · ${f.n} โพสต์</p>${a.pending ? `<p class="caution">${a.pending} โพสต์ยังไม่มี Reach (รอซิงก์) ไม่นับในค่ากลาง</p>` : ''}${Math.min(a.n, c.n) < 5 ? '<p class="caution">ตัวอย่างน้อยกว่า 5 โพสต์ อ่านเป็นทิศทางเท่านั้น</p>' : ''}</article>`;
-  }
+  for (const b of brands()) for (const pl of plats()) h += scorecardCardHTML(b, pl, false);
   return h + `</div><p class="fine">โพสต์เดือนปัจจุบันมีอายุน้อยกว่าโพสต์เดือนก่อน ณ วันที่อ่านค่า ส่วนต่างจึงเอียงไปทางลบ · Sum of post reach ไม่ใช่จำนวนคนไม่ซ้ำ${S.noRecruit ? ' · ตัดโพสต์ Recruitment ออกแล้ว' : ' · รวมโพสต์ Recruitment (ติ๊กด้านบนเพื่อตัดออก)'}</p>`;
 }
-const METRICS = {reach: 'Reach / Views', er: 'Engagement rate', shares: 'Shares', saves: 'Saves (IG, เฉพาะ พ.ย.)', comments: 'Comments', link_clicks: 'Link clicks (FB)', dt: 'วันที่ล่าสุด'};
-const HINT = {reach: 'ผลสะสมของโพสต์ ณ วันที่อ่านค่า · ไม่ใช่คนไม่ซ้ำ · TikTok เป็น Views', er: 'ER ใช้นิยามของ Publer: IG รวม Saves, FB รวม Post clicks · ห้ามเทียบข้ามแพลตฟอร์ม · ระวังโพสต์ Reach ต่ำ', saves: 'Publer CSV ไม่มี Saves จึงมีเฉพาะโพสต์ IG เดือนล่าสุดที่อ่านผ่าน connector/Gemini', link_clicks: 'มีเฉพาะ Facebook', shares: 'จำนวนแชร์สะสม', comments: 'จำนวนคอมเมนต์สะสม', dt: 'เรียงจากโพสต์ล่าสุด'};
 function labRows() { const q = S.q.trim().toLowerCase(), k = S.metric;
   return sel().filter(p => (S.pillar === 'All' || p.pillar === S.pillar) && (k === 'dt' || p[k] != null) && (!q || p.hook.toLowerCase().includes(q))).sort((a, b) => k === 'dt' ? b.dt.localeCompare(a.dt) : b[k] - a[k] || b.dt.localeCompare(a.dt)); }
-function postCard(p, i, top) {
-  const src = M.sources.find(s => s.id === p.src), direct = src.trust === 'publer_direct', fb = p.platform === 'Facebook';
+function postCard(p, i, top, metricKey = S.metric) {
+  const src = M.sources.find(s => s.id === p.src), direct = src && src.trust === 'publer_direct', fb = p.platform === 'Facebook';
+  const medals = ['🥇 ', '🥈 ', '🥉 '];
+  const medal = top && i < 3 ? medals[i] : '';
   const th = `<div class="thumb${p.thumb ? ' has' : ''}">${p.thumb ? `<img loading="lazy" src="${esc(p.thumb)}" alt="ภาพปกโพสต์">` : `ไม่มีภาพปกในชุดข้อมูล<br>${p.platform} · ${p.format}`}</div>`;
-  const body = `<span class="rank">#${i + 1} · ${esc(METRICS[S.metric].split(' (')[0])}</span><h4>${esc(p.hook) || '(ไม่มีแคปชัน)'}</h4>
-    <div class="meta"><span class="bn">${short(p.brand).toUpperCase()}</span>${badge(p.platform)}<span class="badge">${p.format}</span><span class="badge">${esc(p.pillar)}</span><span>${dth(p.dt)}</span>${p.pending ? '<span class="kind medium">Reach รอซิงก์</span>' : ''}</div>`;
+  const body = `<span class="rank">${medal}#${i + 1} · ${esc((METRICS[metricKey] || METRICS.reach).split(' (')[0])}</span><h4>${esc(p.hook) || '(ไม่มีแคปชัน)'}</h4>
+    <div class="meta"><span class="bn-wrap">${brandMark(p.brand, 16)}<span class="bn">${short(p.brand).toUpperCase()}</span></span>${badge(p.platform)}<span class="badge">${p.format}</span><span class="badge">${esc(p.pillar)}</span><span>${dth(p.dt)}</span>${p.pending ? '<span class="kind medium">Reach รอซิงก์</span>' : ''}</div>`;
   const pm = `<div class="pm"><div><span>${REACH(p.platform)}</span><b>${n0(p.reach)}</b></div><div><span>ER</span><b>${p2(p.er)}</b></div><div><span>Shares</span><b>${n0(p.shares)}</b></div><div><span>${fb ? 'Link clicks' : p.platform === 'Instagram' ? 'Saves' : 'Comments'}</span><b>${n0(fb ? p.link_clicks : p.platform === 'Instagram' ? p.saves : p.comments)}</b></div></div>
-    <div class="meta"><span class="kind ${direct ? 'agree' : 'partial'}" data-tip="${esc(src.label)}">${direct ? 'Publer' : 'Gemini'} · อ่านค่า ${dth(p.as_of.slice(0, 10), 1)}</span><span>อายุโพสต์ ${p.age} วัน</span>${p.thumb && p.thumb_from && p.thumb_from !== p.platform ? `<span>ภาพปกจาก ${p.thumb_from}</span>` : ''}${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">เปิดโพสต์ต้นทาง ↗</a>` : '<span>ไม่มีลิงก์</span>'}</div>`;
-  return `<article class="post ${cls(p.brand)}${top ? '' : ' row'}" data-id="${p.id}">${top ? th + body : `<div class="top">${th}<div>${body}</div></div>`}${pm}</article>`;
+    <div class="meta"><span class="kind ${direct ? 'agree' : 'partial'}" data-tip="${esc(src ? src.label : p.src)}">${direct ? 'Publer' : 'Gemini'} · อ่านค่า ${dth(p.as_of.slice(0, 10), 1)}</span><span>อายุโพสต์ ${p.age} วัน</span>${p.thumb && p.thumb_from && p.thumb_from !== p.platform ? `<span>ภาพปกจาก ${p.thumb_from}</span>` : ''}${p.url ? `<a class="post-ext" href="${esc(p.url)}" target="_blank" rel="noopener">เปิดโพสต์ต้นทาง ↗</a>` : '<span>ไม่มีลิงก์</span>'}</div>`;
+  return `<article class="post ${cls(p.brand)} plat-${p.platform}${top ? '' : ' row'}" data-id="${p.id}">${top ? th + body : `<div class="top">${th}<div>${body}</div></div>`}${pm}</article>`;
 }
 function contentLab() {
   const pillars = ['All', ...new Set(sel({noDate: true}).map(p => p.pillar))].sort((a, b) => a === 'All' ? -1 : b === 'All' ? 1 : a.localeCompare(b));
@@ -220,11 +699,21 @@ function contentLab() {
     <label>ค้นหาในแคปชัน<input type="search" id="l-q" value="${esc(S.q)}" placeholder="เช่น GCWM, มัทฉะ"></label></div><div id="lab-out"></div></div>`;
 }
 function renderLab() { const rr = labRows();
+  if (!$('#lab-out')) return;
   $('#lab-out').innerHTML = `<p class="hint"><b id="lab-count">${rr.length}</b> โพสต์ที่มีค่านี้ · ${HINT[S.metric]} · — = Publer ไม่ได้รายงาน (ไม่ใช่ศูนย์)</p>` +
     (rr.length ? `<div class="grid3" id="top3">${rr.slice(0, 3).map((p, i) => postCard(p, i, true)).join('')}</div><div class="grid2" id="ranked" style="margin-top:13px">${rr.slice(3, S.visible).map((p, i) => postCard(p, i + 3, false)).join('')}</div>
     <div class="more"><span class="fine">แสดง ${Math.min(S.visible, rr.length)} / ${rr.length} โพสต์</span><br>${S.visible < rr.length ? '<button id="l-more">แสดงเพิ่ม</button>' : ''}</div>` : '<div class="empty">ไม่พบโพสต์ตามตัวกรองนี้</div>');
-  document.querySelectorAll('#lab-out .thumb img').forEach(img => img.addEventListener('error', () => { img.parentElement.classList.remove('has'); img.parentElement.textContent = 'โหลดภาพปกไม่ได้'; }, {once: true}));
+  bindThumbFallbacks('#lab-out');
   const m = $('#l-more'); if (m) m.onclick = () => { S.visible += 12; renderLab(); };
+}
+function brandTablesHTML(b) {
+  const all = sel({brand: b}), g = {}; all.forEach(p => (g[p.pillar + '|' + p.platform] ||= []).push(p));
+  const f = {}; all.forEach(p => (f[p.platform + '|' + p.format] ||= []).push(p));
+  const hr = {}; all.forEach(p => (hr[p.platform + '|' + p.dt.slice(11, 13)] ||= []).push(p));
+  return `<div class="scroll" style="margin-top:12px"><table><tr><th>Pillar</th><th class="l">Platform</th><th>n</th><th>สัดส่วนโพสต์</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th><th>Share rate ค่ากลาง</th></tr>` +
+    Object.entries(g).sort().map(([k, v]) => { const [pi, pl] = k.split('|'), s = stat(v), tot = all.filter(p => p.platform === pl).length; return `<tr${thin(s.n)}><td>${esc(plabel(b, pi))}</td><td class="l">${pl}</td><td>${s.n}</td><td>${(100 * s.n / tot).toFixed(0)}%</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td><td>${p2(s.share)}</td></tr>`; }).join('') + '</table></div>' +
+    `<div class="scroll" style="margin-top:12px"><table><tr><th>Format</th><th class="l">Platform</th><th>n</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th></tr>${Object.entries(f).sort().map(([k, v]) => { const [pl, fm] = k.split('|'), s = stat(v); return `<tr${thin(s.n)}><td>${fm}</td><td class="l">${pl}</td><td>${s.n}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td></tr>`; }).join('')}</table></div>` +
+    `<div class="scroll" style="margin-top:12px"><table><tr><th>ชั่วโมงที่โพสต์ (n ≥ 5)</th><th class="l">Platform</th><th>n</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th></tr>${Object.entries(hr).filter(([, v]) => v.length >= 5).sort().map(([k, v]) => { const [pl, x] = k.split('|'), s = stat(v); return `<tr><td>${x}:00–${x}:59</td><td class="l">${pl}</td><td>${s.n}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td></tr>`; }).join('')}</table></div><p class="fine">Photo รวมรูปเดี่ยวและ Carousel · เวลา Asia/Bangkok · ตัวอักษรจาง = n น้อยกว่า 5</p>`;
 }
 function patterns() {
   let h = head('05', 'Pattern diagnostic', 'อะไรควรทำซ้ำ และอะไรยังตอบไม่ได้', `คำนวณจากโพสต์ ${dth(S.from)} – ${dth(S.to)} · Pillar ติดป้ายจากแคปชัน`) + '<div class="grid2">';
@@ -239,25 +728,24 @@ function patterns() {
   for (const b of brands()) {
     h += `<h3 class="${cls(b)}"><span class="bn">${short(b).toUpperCase()}</span> · Content mix & response</h3><div class="grid3 ${cls(b)}">`;
     for (const pl of plats()) { const g = {}; sel({brand: b, platform: pl}).forEach(p => (g[p.pillar] ||= []).push(p));
-      h += `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลางต่อโพสต์</span></div>${bars(Object.entries(g).map(([k, v]) => ({short: k, label: plabel(b, k), v: stat(v).reach, n: v.length})).filter(i => i.v != null).sort((a, c) => c.v - a.v), REACH(pl))}</div>`; }
-    const all = sel({brand: b}), g = {}; all.forEach(p => (g[p.pillar + '|' + p.platform] ||= []).push(p));
-    h += `</div><details><summary>ตาราง ${short(b)}: pillar × platform, format และชั่วโมงที่โพสต์</summary><div class="scroll" style="margin-top:12px"><table><tr><th>Pillar</th><th class="l">Platform</th><th>n</th><th>สัดส่วนโพสต์</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th><th>Share rate ค่ากลาง</th></tr>` +
-      Object.entries(g).sort().map(([k, v]) => { const [pi, pl] = k.split('|'), s = stat(v), tot = all.filter(p => p.platform === pl).length; return `<tr${thin(s.n)}><td>${esc(plabel(b, pi))}</td><td class="l">${pl}</td><td>${s.n}</td><td>${(100 * s.n / tot).toFixed(0)}%</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td><td>${p2(s.share)}</td></tr>`; }).join('') + '</table></div>';
-    const f = {}; all.forEach(p => (f[p.platform + '|' + p.format] ||= []).push(p));
-    h += `<div class="scroll" style="margin-top:12px"><table><tr><th>Format</th><th class="l">Platform</th><th>n</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th></tr>${Object.entries(f).sort().map(([k, v]) => { const [pl, fm] = k.split('|'), s = stat(v); return `<tr${thin(s.n)}><td>${fm}</td><td class="l">${pl}</td><td>${s.n}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td></tr>`; }).join('')}</table></div>`;
-    const hr = {}; all.forEach(p => (hr[p.platform + '|' + p.dt.slice(11, 13)] ||= []).push(p));
-    h += `<div class="scroll" style="margin-top:12px"><table><tr><th>ชั่วโมงที่โพสต์ (n ≥ 5)</th><th class="l">Platform</th><th>n</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th></tr>${Object.entries(hr).filter(([, v]) => v.length >= 5).sort().map(([k, v]) => { const [pl, x] = k.split('|'), s = stat(v); return `<tr><td>${x}:00–${x}:59</td><td class="l">${pl}</td><td>${s.n}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td></tr>`; }).join('')}</table></div><p class="fine">Photo รวมรูปเดี่ยวและ Carousel · เวลา Asia/Bangkok · ตัวอักษรจาง = n น้อยกว่า 5</p></details>`;
+      h += `<div class="card plat-${pl}"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลางต่อโพสต์</span></div>${bars(Object.entries(g).map(([k, v]) => ({short: k, label: plabel(b, k), v: stat(v).reach, n: v.length})).filter(i => i.v != null).sort((a, c) => c.v - a.v), REACH(pl))}</div>`; }
+    h += `</div><details><summary>ตาราง ${short(b)}: pillar × platform, format และชั่วโมงที่โพสต์</summary>${brandTablesHTML(b)}</details>`;
   }
   if (S.brand === 'Compare') { const wk = Math.max(1, (new Date(S.to) - new Date(S.from)) / 6048e5);
-    h += `<h3>เทียบสองแบรนด์ภายในแพลตฟอร์มเดียวกัน</h3><div class="scroll"><table><tr><th>Platform</th><th class="l">Brand</th><th>โพสต์</th><th>โพสต์/สัปดาห์</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th><th>Share rate ค่ากลาง</th></tr>${plats().flatMap(pl => BR.map(b => { const s = stat(sel({brand: b, platform: pl})); return `<tr><td>${pl}</td><td class="l">${b}</td><td>${s.n}</td><td>${(s.n / wk).toFixed(1)}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td><td>${p2(s.share)}</td></tr>`; })).join('')}</table></div><p class="fine">ฐานผู้ติดตามของสองแบรนด์ต่างกัน Reach ที่สูงกว่าไม่ได้แปลว่าคอนเทนต์ดีกว่า</p>`; }
+    h += `<h3>เทียบสองแบรนด์ภายในแพลตฟอร์มเดียวกัน</h3><div class="scroll"><table><tr><th>Platform</th><th class="l">Brand</th><th>โพสต์</th><th>โพสต์/สัปดาห์</th><th>Reach/Views ค่ากลาง</th><th>ER ค่ากลาง</th><th>Share rate ค่ากลาง</th></tr>${plats().flatMap(pl => BR.map(b => { const s = stat(sel({brand: b, platform: pl})); return `<tr><td><span class="bn-wrap">${platLogo(pl, 15)}<span>${pl}</span></span></td><td class="l">${b}</td><td>${s.n}</td><td>${(s.n / wk).toFixed(1)}</td><td>${n0(s.reach)}</td><td>${p2(s.er)}</td><td>${p2(s.share)}</td></tr>`; })).join('')}</table></div><p class="fine">ฐานผู้ติดตามของสองแบรนด์ต่างกัน Reach ที่สูงกว่าไม่ได้แปลว่าคอนเทนต์ดีกว่า</p>`; }
   return h;
+}
+function trendsTableHTML() {
+  const months = [...new Set(P.map(p => p.dt.slice(0, 7)))].sort();
+  const ms = (b, pl, m) => stat(sel({brand: b, platform: pl, noDate: true}).filter(p => p.dt.startsWith(m)));
+  return `<div class="scroll" style="margin-top:12px"><table><tr><th>เดือน</th>${brands().flatMap(b => plats().map(pl => `<th><span class="bn-wrap">${platLogo(pl, 14)}<span>${short(b)} ${pl}</span></span></th>`)).join('')}</tr>${months.map(m => `<tr><td>${TH[+m.slice(5) - 1]} ${m.slice(0, 4)}${m === cutoff.slice(0, 7) ? ' (MTD)' : ''}</td>${brands().flatMap(b => plats().map(pl => { const s = ms(b, pl, m); return `<td>${n0(s.reach)} · ${s.n}</td>`; })).join('')}</tr>`).join('')}</table></div>`;
 }
 function trends() {
   const months = [...new Set(P.map(p => p.dt.slice(0, 7)))].sort(), col = {'SURYA': 'var(--m-surya)', 'Monster and Friends': 'var(--m-monster)'};
   const ms = (b, pl, m) => stat(sel({brand: b, platform: pl, noDate: true}).filter(p => p.dt.startsWith(m)));
   let h = head('06', 'Historical trends', 'ค่ากลางต่อโพสต์รายเดือน', 'ทุกเดือนที่มีข้อมูล ไม่ขึ้นกับตัวกรองช่วงเวลา · เดือนสุดท้ายยังไม่ครบ') + `<div class="legend">${brands().map(b => `<span><i style="background:${col[b]}"></i>${b}</span>`).join('')}</div><div class="grid3">`;
-  for (const pl of plats()) h += `<div class="card"><div style="display:flex;justify-content:space-between;margin-bottom:6px">${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลาง</span></div>${lines(months, brands().map(b => ({name: b, color: col[b], pts: months.map(m => { const s = ms(b, pl, m); return {v: s.reach, n: s.n}; })})))}</div>`;
-  return h + `</div><details><summary>ตารางรายเดือน (ค่ากลาง · จำนวนโพสต์)</summary><div class="scroll" style="margin-top:12px"><table><tr><th>เดือน</th>${brands().flatMap(b => plats().map(pl => `<th>${short(b)} ${pl}</th>`)).join('')}</tr>${months.map(m => `<tr><td>${TH[+m.slice(5) - 1]} ${m.slice(0, 4)}${m === cutoff.slice(0, 7) ? ' (MTD)' : ''}</td>${brands().flatMap(b => plats().map(pl => { const s = ms(b, pl, m); return `<td>${n0(s.reach)} · ${s.n}</td>`; })).join('')}</tr>`).join('')}</table></div></details>`;
+  for (const pl of plats()) h += `<div class="card plat-${pl}"><div style="display:flex;justify-content:space-between;margin-bottom:6px">${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลาง</span></div>${lines(months, brands().map(b => ({name: b, color: col[b], pts: months.map(m => { const s = ms(b, pl, m); return {v: s.reach, n: s.n}; })})))}</div>`;
+  return h + `</div><details><summary>ตารางรายเดือน (ค่ากลาง · จำนวนโพสต์)</summary>${trendsTableHTML()}</details>`;
 }
 function decisions() {
   const recs = (I.recommendations || []).filter(r => S.brand === 'Compare' || r.brand === S.brand || r.brand === 'ทั้งสองแบรนด์');
@@ -266,10 +754,10 @@ function decisions() {
     `<h3>ข้อเสนอด้านคอนเทนต์</h3><div class="grid2">${recs.map(r => `<article class="pattern exp ${bc(r.brand)}"><span class="kind ${r.type}">${KIND[r.type]}</span><span class="badge">${esc(r.brand)}</span><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p><p class="measure">หลักฐาน: ${esc(r.evidence)}</p></article>`).join('')}</div>
     <h3>การทดลองและสิ่งที่ต้องตัดสินใจ</h3><div class="grid2">${(I.next_month || []).filter(x => S.brand === 'Compare' || !/^(SURYA|Monster)/.test(x.title) || x.title.startsWith(short(S.brand))).map(x => `<article class="pattern exp ${/^SURYA/.test(x.title) ? 'SURYA' : /^Monster/.test(x.title) ? 'Monster' : ''}"><span class="kind ${x.type}">${KIND[x.type]}</span><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p><p class="measure">วัดผล: ${esc(x.measure)}</p></article>`).join('')}</div>`;
 }
-function method() {
+function method(includeHead = true) {
   const ST = {agree: 'ตรงกัน', disagree: 'ไม่ตรงกัน', partial: 'เห็นด้วยบางส่วน', minor: 'ต่างเล็กน้อย'};
   const defs = [['สองฐานข้อมูล', 'Audience = ผู้ติดตามทั้งบัญชีจาก Publer ส่วน Scorecard, Content Lab, Patterns และ Trends = ผลสะสมของโพสต์ที่เผยแพร่ในช่วงนั้น ไม่ใช้สองฐานนี้แทนกัน'], ['ตัดรายการซ้ำ', 'ใช้ platform + ลิงก์โพสต์ (ตัด query string และ / ท้าย) เป็นกุญแจ เนื้อหาเดียวกันที่ลงหลายแพลตฟอร์มนับแยกแพลตฟอร์ม'], ['ค่ากลาง ไม่ใช่ยอดรวม', 'ตัวเลขหลักคือค่ามัธยฐานต่อโพสต์ เพราะโพสต์เดี่ยวยอดสูงบิดยอดรวมได้ Sum of post reach แสดงประกอบและไม่ใช่จำนวนคนไม่ซ้ำ'], ['นิยาม Metric', 'ER ใช้ค่าที่ Publer รายงาน: IG รวม Saves, FB รวม Post clicks จึงห้ามเทียบข้ามแพลตฟอร์ม · TikTok รายงาน Views ในช่อง Reach · Share rate = Shares ÷ Reach'], ['ค่าที่ขาด', '— หมายถึง Publer ไม่ได้รายงานค่านั้น ไม่ใช่ศูนย์ และไม่นับเข้าค่ากลาง โพสต์ที่ Reach ยังไม่ซิงก์ติดป้ายไว้'], ['Fact / Inference / Hypothesis', 'Fact = ตัวเลขที่ตรวจกับข้อมูล Publer · Inference = การตีความที่ยังไม่มีข้อมูลยืนยัน · Hypothesis = ข้อเสนอที่ต้องทดลองก่อนใช้']];
-  return head('08', 'Method, limits & sources', 'อ่านรีพอร์ตนี้อย่างไร') + `<div class="grid3">${defs.map(([t, d], i) => `<article class="card"><h3 style="margin:0 0 8px;color:var(--surya);font-size:.86rem">0${i + 1} · ${t}</h3><p class="fine" style="margin:0;color:var(--muted)">${d}</p></article>`).join('')}</div>
+  return (includeHead ? head('08', 'Method, limits & sources', 'อ่านรีพอร์ตนี้อย่างไร') : '') + `<div class="grid3">${defs.map(([t, d], i) => `<article class="card"><h3 style="margin:0 0 8px;color:var(--surya);font-size:1rem">0${i + 1} · ${t}</h3><p class="fine" style="margin:0;color:var(--muted)">${d}</p></article>`).join('')}</div>
     <h3>ข้อจำกัดและปัญหาที่พบ</h3><div class="card"><ul class="ins">${(I.data_issues || []).map(i => `<li><span class="kind ${i.level}">${i.level}</span>${esc(i.text)}</li>`).join('')}</ul></div>
     <h3>แหล่งข้อมูลและความสด</h3><div class="scroll"><table><tr><th>แหล่ง</th><th>อ่านค่าเมื่อ</th><th>ครอบคลุม</th><th>แถวดิบ</th><th>ซ้ำที่ตัด</th><th>โพสต์ใหม่</th><th>อัปเดต</th><th class="l">หมายเหตุ</th></tr>${M.sources.map(s => `<tr><td class="wrap"><b>${esc(s.label)}</b><br><a class="srcfile" href="data/raw/${encodeURIComponent(s.file)}" target="_blank" rel="noopener">${esc(s.file)}</a></td><td>${dth(s.as_of)}</td><td>${dth(s.covers_from, 1)} – ${dth(s.covers_to)}</td><td>${s.raw_rows}</td><td>${(s.exact_duplicates || 0) + s.duplicate_keys_dropped}</td><td>${s.new_posts}</td><td>${s.updated_posts}</td><td class="wrap"><span class="kind ${s.trust === 'publer_direct' ? 'agree' : 'partial'}">${s.trust === 'publer_direct' ? 'Publer โดยตรง' : 'Gemini · ตรวจบางส่วน'}</span> ${esc(s.note)}</td></tr>`).join('')}</table></div>
     <h3>วันที่ล่าสุดของแต่ละบัญชี</h3><div class="scroll"><table><tr><th>Brand | Platform</th><th>โพสต์</th><th>โพสต์แรก</th><th>โพสต์ล่าสุด</th><th>ล่าสุดที่มี Reach</th><th>Reach ขาด</th><th>อ่านค่าล่าสุด</th></tr>${Object.entries(M.coverage).sort().map(([k, c]) => `<tr><td>${k}</td><td>${c.posts}</td><td>${dth(c.first)}</td><td>${dth(c.last)}</td><td>${c.last_with_reach ? dth(c.last_with_reach) : '—'}</td><td>${c.missing_reach}</td><td>${dth(c.as_of)}</td></tr>`).join('')}</table></div>
@@ -277,30 +765,839 @@ function method() {
     <details><summary>Gemini เทียบกับ Claude (${(I.gemini_vs_claude || []).length} ประเด็น)</summary><div class="scroll" style="margin-top:12px"><table><tr><th>ประเด็น</th><th class="l">สถานะ</th><th class="l">Gemini</th><th class="l">Claude ตรวจกับ Publer</th><th class="l">ผลต่อรายงาน</th></tr>${(I.gemini_vs_claude || []).map(g => `<tr><td class="wrap" style="min-width:130px"><b>${esc(g.topic)}</b></td><td class="l"><span class="kind ${g.status}">${ST[g.status]}</span></td><td class="wrap">${esc(g.gemini)}</td><td class="wrap">${esc(g.claude)}</td><td class="wrap">${esc(g.impact)}</td></tr>`).join('')}</table></div></details>`;
 }
 const SECTIONS = {readout, audience, scorecard, content: contentLab, patterns, trends, decisions, method};
-function render() {
-  $('#tabs').innerHTML = [['Compare', 'สองแบรนด์'], ['SURYA', 'Coffee Explorers'], ['Monster and Friends', 'and Friends']].map(([b, s]) => `<button class="tab" data-brand="${b}" aria-pressed="${S.brand === b}">${b === 'Monster and Friends' ? 'Monster' : b} <small>${s}</small></button>`).join('');
-  $('#main').innerHTML = Object.entries(SECTIONS).map(([id, f]) => `<section id="${id}">${f()}</section>`).join('');
-  $('#l-pillar').onchange = e => { S.pillar = e.target.value; S.visible = 9; renderLab(); };
-  $('#l-metric').onchange = e => { S.metric = e.target.value; S.visible = 9; renderLab(); };
-  $('#l-q').oninput = e => { S.q = e.target.value; S.visible = 9; renderLab(); };
-  renderLab();
+
+// ---------- Presenter Stops Definition ----------
+const STOPS = [
+  {id: 1, title: 'อะไรเปลี่ยน และรู้ได้แค่ไหน', kicker: 'STOP 01 / 07 · READOUT & SCORECARD', src: '01 Readout + 03 Scorecard', sub: () => `ค่ากลางต่อโพสต์ 1–${cd} ${curLbl} เทียบ 1–${+prev.to.slice(8)} ${prevLbl} · Reach (FB/IG) · Views (TikTok)`},
+  {id: 2, title: 'ผู้ติดตามของแต่ละบัญชี · ค่ากลางต่อโพสต์รายเดือน', kicker: 'STOP 02 / 07 · AUDIENCE & TRENDS', src: '02 Audience + 06 Trends', sub: () => 'แยกตัวเลขผู้ติดตามระดับบัญชีออกจากผลรายโพสต์ · กดสลับมุมมองด้านล่าง'},
+  {id: 3, title: 'SURYA: อะไรได้ผล อะไรยังต่ำ', kicker: 'STOP 03 / 07 · SURYA SPOTLIGHT', src: '01 Readout (SURYA) + 05 Patterns', sub: () => `SURYA Coffee Explorers · ข้อมูลโพสต์ ${dth(S.from)} – ${dth(S.to)}`},
+  {id: 4, title: 'Monster and Friends: อะไรได้ผล อะไรยังต่ำ', kicker: 'STOP 04 / 07 · MONSTER SPOTLIGHT', src: '01 Readout (Monster) + 05 Patterns', sub: () => `Monster and Friends · ข้อมูลโพสต์ ${dth(S.from)} – ${dth(S.to)}`},
+  {id: 5, title: 'เจาะโพสต์จริง', kicker: 'STOP 05 / 07 · CONTENT LAB', src: '04 Content Lab', sub: () => `Top 3 โพสต์ตามตัวชี้วัด · กดดูทั้งหมดเพื่อเปิดรายการทั้งหมดในหน้าต่างข้าง`},
+  {id: 6, title: 'ทดลองให้รู้ แทนการเดา', kicker: 'STOP 06 / 07 · NEXT MONTH', src: '07 Next month (Recommendations & Experiments)', sub: () => 'ข้อเสนอของ AI ยังไม่ใช่การอนุมัติของ Michael'},
+  {id: 7, title: `สิ่งที่ต้องให้ Michael ตัดสินใจก่อนรายงาน 1 ธ.ค.`, kicker: 'STOP 07 / 07 · DECISIONS NEEDED', src: '07 Next month (Decisions) + บันทึกประชุม', sub: () => 'เลือกสถานะและบันทึกข้อตกลงไว้ท้ายประชุม · บันทึกอัตโนมัติในเบราว์เซอร์เครื่องนี้'}
+];
+
+function bindThumbFallbacks(rootSelector) {
+  document.querySelectorAll(`${rootSelector} .thumb img`).forEach(img => {
+    img.addEventListener('error', () => { img.parentElement.classList.remove('has'); img.parentElement.textContent = 'โหลดภาพปกไม่ได้'; }, {once: true});
+  });
 }
+
+// ---------- Presenter Stop Renderers ----------
+function renderStop1() {
+  const execs = I.executive || [];
+  const idx = ((S.execIdx % execs.length) + execs.length) % Math.max(1, execs.length);
+  const activeTab = S.sub[1] || 'score';
+  const subtabs = `<div class="p-subtabs" role="tablist">
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'score'}" data-sub="1:score">📊 ตัวเลขเดือนนี้ (1–${cd} ${curLbl})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'facts'}" data-sub="1:facts">📌 สรุปประเด็นสำคัญ (${execs.length} Fact)</button>
+  </div>`;
+
+  if (activeTab === 'facts') {
+    return `${subtabs}
+      <div class="grid2">${execs.map(i => `<article class="insight" style="--accent:var(--surya)"><span class="kind ${i.type}">${KIND[i.type]}</span><p>${esc(i.text)}</p>${i.source ? `<small>ที่มา: ${esc(i.source)}</small>` : ''}</article>`).join('')}</div>
+      <p class="fine">ข้อความสรุปเขียนจากข้อมูล ณ ${dth(I.written_for_as_of || '')}</p>`;
+  }
+
+  const curEx = execs[idx];
+  const spotlight = curEx ? `<div class="spotlight">
+    <div class="spotlight-body">
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span class="kind ${curEx.type}">${KIND[curEx.type]}</span>
+        <span class="badge">ประเด็น ${idx + 1} / ${execs.length}</span>
+        ${curEx.source ? `<span class="badge">${esc(curEx.source)}</span>` : ''}
+      </div>
+      <p>${esc(curEx.text)}</p>
+    </div>
+    <div class="spotlight-nav">
+      <button class="icon-circle" id="ex-prev" title="ประเด็นก่อนหน้า">‹</button>
+      <button class="icon-circle" id="ex-next" title="ประเด็นถัดไป">›</button>
+      <button class="p-btn" data-sub="1:facts">ดูทั้งหมด ${execs.length} ข้อ</button>
+    </div>
+  </div>` : '';
+
+  let cards = '';
+  for (const b of brands()) for (const pl of plats()) cards += scorecardCardHTML(b, pl, true);
+
+  return `${subtabs}${spotlight}
+    <div class="legend" style="margin:0">${brands().map(b => `<span><i style="background:var(--m-${b === 'SURYA' ? 'surya' : 'monster'})"></i>${short(b)} ${curLbl}</span>`).join('')}<span><i style="background:var(--prev)"></i>ช่วงเดียวกัน ${prevLbl}</span></div>
+    <div class="grid3">${cards}</div>
+    <p class="fine">โพสต์เดือนปัจจุบันมีอายุน้อยกว่าโพสต์เดือนก่อน ณ วันที่อ่านค่า ส่วนต่างจึงเอียงไปทางลบ · Sum of post reach ไม่ใช่จำนวนคนไม่ซ้ำ · กดที่การ์ดเพื่อเปิดดูโพสต์เบื้องหลังตัวเลข</p>`;
+}
+
+function renderStop2() {
+  const activeTab = S.sub[2] || 'aud';
+  const subtabs = `<div class="p-subtabs" role="tablist">
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'aud'}" data-sub="2:aud">👥 ผู้ติดตามแต่ละบัญชี (Account-level)</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'trends'}" data-sub="2:trends">📈 ค่ากลางต่อโพสต์รายเดือน (Post-level)</button>
+  </div>`;
+
+  if (activeTab === 'aud') {
+    const acc = (M.accounts || []).filter(a => brands().includes(a.brand) && plats().includes(a.platform));
+    if (!acc.length) return `${subtabs}<div class="empty card">ไม่มีข้อมูลระดับบัญชีในชุดข้อมูลนี้</div>`;
+    return `${subtabs}
+      <div class="grid3">${acc.map(a => {
+        const s = a.series, last = s[s.length - 1], first = s[0], ch = last[1] - first[1], mx = Math.max(...s.map(x => x[1])), mn = Math.min(...s.map(x => x[1]));
+        return `<article class="card kpi ${cls(a.brand)} plat-${a.platform}"><header><span class="bn-wrap">${brandMark(a.brand, 18)}<span class="bn">${short(a.brand).toUpperCase()}</span></span>${badge(a.platform)}</header><div class="big">${n0(last[1])}</div><div class="unit">ผู้ติดตาม · สัปดาห์ของ ${dth(last[0])}<span class="delta ${ch >= 0 ? 'up' : 'down'}">${ch >= 0 ? '+' : ''}${n0(ch)} (${(100 * ch / first[1]).toFixed(1)}%) ตั้งแต่ ${dth(first[0], 1)}</span></div>
+        <div class="spark" aria-hidden="true">${s.map(x => `<i data-tip="สัปดาห์ ${dth(x[0], 1)}: ${n0(x[1])}" style="height:${12 + 88 * (mx === mn ? 1 : (x[1] - mn) / (mx - mn))}%"></i>`).join('')}</div><p class="fine">ช่วง ${n0(mn)}–${n0(mx)} (ไม่ได้เริ่มจากศูนย์) · อ่านค่า ${dth(a.as_of)}</p></article>`;
+      }).join('')}</div>
+      <p class="fine">ไม่รวมผู้ติดตามข้ามแพลตฟอร์ม เพราะคนเดียวกันติดตามได้หลายช่องทาง · Publer ไม่มีข้อมูลพอจะบอกว่าโพสต์ใดทำให้ผู้ติดตามเพิ่ม</p>`;
+  }
+
+  const months = [...new Set(P.map(p => p.dt.slice(0, 7)))].sort(), col = {'SURYA': 'var(--m-surya)', 'Monster and Friends': 'var(--m-monster)'};
+  const ms = (b, pl, m) => stat(sel({brand: b, platform: pl, noDate: true}).filter(p => p.dt.startsWith(m)));
+  const availPlats = plats();
+  const focusPlat = availPlats.includes(S.trendPlat) ? S.trendPlat : 'All';
+  const showPlats = focusPlat === 'All' ? availPlats : [focusPlat];
+
+  const platSwitch = availPlats.length > 1 ? `<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+    <button class="p-btn ${focusPlat === 'All' ? 'active' : ''}" data-tplat="All">ทุกแพลตฟอร์ม (${availPlats.length})</button>
+    ${availPlats.map(pl => `<button class="p-btn ${focusPlat === pl ? 'active' : ''}" data-tplat="${pl}">${platLogo(pl, 15)}${pl}</button>`).join('')}
+    <button class="p-btn" data-drawer="trends-table">📋 ดูตารางรายเดือน</button>
+  </div>` : `<button class="p-btn" data-drawer="trends-table">📋 ดูตารางรายเดือน</button>`;
+
+  const charts = `<div class="${showPlats.length === 1 ? '' : 'grid3'}">${showPlats.map(pl => `
+    <div class="card plat-${pl}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลางต่อโพสต์</span></div>
+      ${lines(months, brands().map(b => ({name: b, color: col[b], pts: months.map(m => { const s = ms(b, pl, m); return {v: s.reach, n: s.n}; })})), showPlats.length === 1)}
+    </div>`).join('')}</div>`;
+
+  const monthChips = `<div class="card" style="padding:14px 18px"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><span class="unit">คลิกเดือนเพื่อดูโพสต์เบื้องหลังค่ากลางในเดือนนั้น:</span><div class="month-chips">${months.map(m => `<button class="m-chip" data-drill="month" data-month="${m}">${TH[+m.slice(5) - 1]} ${m.slice(2, 4)}${m === cutoff.slice(0, 7) ? ' (MTD)' : ''}</button>`).join('')}</div></div></div>`;
+
+  return `<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">${subtabs}${platSwitch}</div>
+    <div class="legend" style="margin:0">${brands().map(b => `<span><i style="background:${col[b]}"></i>${b}</span>`).join('')}<span>· เดือนสุดท้ายยังไม่ครบ</span></div>
+    ${charts}${monthChips}`;
+}
+
+function renderBrandSpotlight(targetBrand, stopNum) {
+  const t = (I.brands || {})[targetBrand] || {};
+  const worked = t.worked || [], under = t.underperformed || [], why = (t.why || []).map(w => ({...w, type: w.type === 'hypothesis' ? 'inference' : w.type}));
+  const allItems = [...worked, ...under, ...why];
+  const activeTab = S.sub[stopNum] || 'worked';
+  const shown = activeTab === 'worked' ? worked : activeTab === 'under' ? under : activeTab === 'why' ? why : allItems;
+  const accent = targetBrand === 'SURYA' ? 'var(--surya)' : 'var(--monster)';
+  const themeCls = cls(targetBrand) + '-theme';
+
+  let notice = '';
+  if (S.brand !== 'Compare' && S.brand !== targetBrand) {
+    const otherStop = targetBrand === 'SURYA' ? 4 : 3;
+    notice = `<div class="banner" style="margin:0;border-color:var(--warn)">
+      <strong>ตัวกรองแบรนด์ตอนนี้เลือก ${esc(short(S.brand))} อยู่</strong>
+      <span>หน้านี้แสดงผลของ ${esc(short(targetBrand))}</span>
+      <button class="p-btn" data-setbrand="${esc(targetBrand)}">สลับตัวกรองเป็น ${esc(short(targetBrand))}</button>
+      <button class="p-btn" data-jump="${otherStop}">ไป Stop ${otherStop} (${esc(short(S.brand))}) →</button>
+    </div>`;
+  }
+
+  const subtabs = `<div class="p-subtabs ${themeCls}" role="tablist">
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'worked'}" data-sub="${stopNum}:worked">✅ ได้ผลดี (${worked.length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'under'}" data-sub="${stopNum}:under">⚠️ ยังต่ำ (${under.length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'why'}" data-sub="${stopNum}:why">💡 สมมติฐาน (${why.length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'all'}" data-sub="${stopNum}:all">ทั้งหมด (${allItems.length})</button>
+  </div>`;
+
+  const leftCol = `<div style="display:flex;flex-direction:column;gap:14px">
+    ${subtabs}
+    ${shown.map(i => `<article class="insight ${cls(targetBrand)}" style="--accent:${accent}"><span class="kind ${i.type}">${KIND[i.type]}</span><p>${esc(i.text)}</p></article>`).join('')}
+  </div>`;
+
+  // Right Zone: Pillar interactive HTML bar charts per active platform (via sel() + stat())
+  const plList = plats();
+  const blocks = plList.map(pl => {
+    const rows = sel({brand: targetBrand, platform: pl});
+    const g = {}; rows.forEach(p => (g[p.pillar] ||= []).push(p));
+    const items = Object.entries(g).map(([k, v]) => { const st = stat(v); return {k, label: plabel(targetBrand, k), v: st.reach, n: st.n, er: st.er}; }).filter(i => i.v != null).sort((a, b) => b.v - a.v);
+    const max = Math.max(...items.map(i => i.v), 1);
+    const ok = Object.entries(g).filter(([k, v]) => v.length >= 5 && k !== 'Other').map(([k, v]) => ({k, ...stat(v)})).filter(x => x.reach != null);
+    let factLine = '';
+    if (ok.length) {
+      const r = [...ok].sort((x, y) => y.reach - x.reach)[0], e = [...ok].sort((x, y) => (y.er ?? -1) - (x.er ?? -1))[0];
+      factLine = `<p class="fine" style="margin:6px 0 10px;color:var(--accent)"><b>FACT:</b> ${esc(r.k)} ${REACH(pl)} ค่ากลางสูงสุด ${n0(r.reach)} (n=${r.n})${e.k !== r.k ? ` · ${esc(e.k)} ER สูงสุด ${p2(e.er)} (n=${e.n})` : ` · ER สูงสุด ${p2(e.er)}`}</p>`;
+    }
+    return `<div class="card ${cls(targetBrand)} plat-${pl}">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+        ${badge(pl)}<span class="unit">${REACH(pl)} ค่ากลางต่อโพสต์ · กดแถบเพื่อดูโพสต์</span>
+      </div>
+      ${factLine}
+      ${items.length ? `<div class="pillar-bars">${items.map(it => `
+        <button type="button" class="pbar-row${it.n < 5 ? ' thin-row' : ''}" data-drill="pillar" data-brand="${esc(targetBrand)}" data-platform="${esc(pl)}" data-pillar="${esc(it.k)}" title="${esc(it.label)} · ER ค่ากลาง ${p2(it.er)}">
+          <span class="pbar-lbl">${esc(it.k)}</span>
+          <span class="pbar-track"><span class="pbar-fill" style="width:${Math.max(4, 100 * it.v / max)}%"></span></span>
+          <span class="pbar-val">${n0(it.v)} <span>(n=${it.n})</span></span>
+        </button>`).join('')}</div>` : '<div class="empty">ไม่มีข้อมูลในตัวกรองนี้</div>'}
+    </div>`;
+  }).join('');
+
+  const rightCol = `<div style="display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+      <span class="unit">Pillar breakdown (n&lt;5 แสดงจาง · อ่านเป็นทิศทาง)</span>
+      <button class="p-btn" data-drawer="brand-tables" data-brand="${esc(targetBrand)}">📋 ดูตารางละเอียด ${esc(short(targetBrand))}</button>
+    </div>
+    ${blocks}
+  </div>`;
+
+  return `${notice}<div class="split-2">${leftCol}${rightCol}</div>`;
+}
+
+function renderStop5() {
+  const pillars = ['All', ...new Set(sel({noDate: true}).map(p => p.pillar))].sort((a, b) => a === 'All' ? -1 : b === 'All' ? 1 : a.localeCompare(b));
+  if (!pillars.includes(S.pillar)) S.pillar = 'All';
+  const rr = labRows();
+  const pillMetrics = [
+    ['reach', '🔥 Reach / Views'],
+    ['er', '💬 ER'],
+    ['shares', '🔁 Shares'],
+    ['saves', '🔖 Saves (IG)'],
+    ['link_clicks', '🔗 Link clicks (FB)'],
+    ['comments', '💭 Comments'],
+    ['dt', '🕒 ล่าสุด']
+  ];
+
+  const controls = `<div class="lab-controls">
+    <div class="metric-pills">${pillMetrics.map(([k, lbl]) => `<button type="button" class="m-pill" data-metric="${k}" aria-pressed="${S.metric === k}">${lbl}</button>`).join('')}</div>
+    <div class="lab-inputs">
+      <select id="p-pillar" aria-label="Content pillar">${pillars.map(v => `<option${v === S.pillar ? ' selected' : ''}>${esc(v)}</option>`).join('')}</select>
+      <input type="search" id="p-q" value="${esc(S.q)}" placeholder="ค้นหาแคปชัน (เช่น GCWM, มัทฉะ)" aria-label="ค้นหาในแคปชัน">
+    </div>
+  </div>`;
+
+  const top3 = rr.length
+    ? `<div class="grid3">${rr.slice(0, 3).map((p, i) => postCard(p, i, true)).join('')}</div>`
+    : `<div class="card empty">ไม่พบโพสต์ตามตัวกรองนี้ (${esc(METRICS[S.metric])}) ${S.metric !== 'reach' ? '<br><br><button class="p-btn" data-metric="reach">กลับไปเรียงตาม Reach / Views</button>' : ''}</div>`;
+
+  const footer = `<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <span class="fine" style="margin:0">พบ <b>${rr.length}</b> โพสต์ · ${HINT[S.metric]} · — = Publer ไม่ได้รายงาน</span>
+    ${rr.length ? `<button class="p-btn" data-drawer="all-posts">🗂️ ดูโพสต์ทั้งหมด (${rr.length} โพสต์) ในแผงด้านข้าง →</button>` : ''}
+  </div>`;
+
+  return `${controls}${top3}${footer}`;
+}
+
+function renderStop6() {
+  const recs = (I.recommendations || []).filter(r => S.brand === 'Compare' || r.brand === S.brand || r.brand === 'ทั้งสองแบรนด์');
+  const exps = (I.next_month || []).filter(x => x.type === 'experiment' && (S.brand === 'Compare' || !/^(SURYA|Monster)/.test(x.title) || x.title.startsWith(short(S.brand))));
+  const activeTab = S.sub[6] || 'recs';
+  const bc = b => b === 'SURYA' ? 'SURYA' : b === 'Monster and Friends' ? 'Monster' : '';
+
+  const subtabs = `<div class="p-subtabs" role="tablist">
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'recs'}" data-sub="6:recs">🎯 ข้อเสนอด้านคอนเทนต์ (${recs.length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'exps'}" data-sub="6:exps">🧪 การทดลองเดือนหน้า (${exps.length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'all'}" data-sub="6:all">ทั้งหมด (${recs.length + exps.length})</button>
+  </div>`;
+
+  const recHTML = `<div class="grid2">${recs.map(r => `<article class="pattern exp ${bc(r.brand)}"><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="kind ${r.type}">${KIND[r.type]}</span><span class="badge">${esc(r.brand)}</span></div><h3>${esc(r.title)}</h3><p>${esc(r.text)}</p><p class="measure">หลักฐาน: ${esc(r.evidence)}</p></article>`).join('')}</div>`;
+  const expHTML = `<div class="grid2">${exps.map(x => `<article class="pattern exp ${/^SURYA/.test(x.title) ? 'SURYA' : /^Monster/.test(x.title) ? 'Monster' : ''}"><span class="kind ${x.type}">${KIND[x.type]}</span><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p><p class="measure">วัดผล: ${esc(x.measure)}</p></article>`).join('')}</div>`;
+
+  if (activeTab === 'recs') return `${subtabs}${recHTML}`;
+  if (activeTab === 'exps') return `${subtabs}${expHTML}`;
+  return `${subtabs}<h3 style="margin:0">ข้อเสนอด้านคอนเทนต์</h3>${recHTML}<h3 style="margin:6px 0 0">การทดลองเดือนหน้า</h3>${expHTML}`;
+}
+
+function renderStop7() {
+  const items = allDecisionItems().filter(it => S.brand === 'Compare' || it.brand === S.brand || it.brand === 'ทั้งสองแบรนด์');
+  const activeTab = S.sub[7] || 'all';
+  const decItems = items.filter(it => it.group === 'decision');
+  const restItems = items.filter(it => it.group !== 'decision').filter(it => {
+    if (activeTab === 'exps') return it.group === 'exp';
+    if (activeTab === 'recs') return it.group === 'rec';
+    if (activeTab === 'pending') return getNote(it.key).status === 'pending';
+    return true;
+  });
+
+  const cardFor = (it, isHero = false) => {
+    const cur = getNote(it.key);
+    return `<article class="dec-card${isHero ? ' owner-hero' : ''}" data-key="${esc(it.key)}" data-status="${esc(cur.status)}">
+      <div class="dec-top">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <span class="kind ${it.type}">${KIND[it.type]}</span>
+          <span class="badge">${esc(it.brand)}</span>
+        </div>
+        <div class="dec-statuses">
+          ${Object.entries(STATUS_LABELS).map(([st, lbl]) => `<button type="button" class="st-btn" data-st="${st}" data-notekey="${esc(it.key)}" aria-pressed="${cur.status === st}">${lbl}</button>`).join('')}
+        </div>
+      </div>
+      <h3 style="margin:2px 0;font-size:1.2rem">${esc(it.title)}</h3>
+      <p style="margin:0;font-size:18px;color:#dbe6ec">${esc(it.text)}</p>
+      <p class="fine" style="margin:0;color:var(--surya)">${esc(it.detail)}</p>
+      <input type="text" class="note-box" data-noteinput="${esc(it.key)}" value="${esc(cur.note)}" placeholder="บันทึกมติ / ผู้รับผิดชอบ / กำหนดเวลา...">
+    </article>`;
+  };
+
+  const approvedN = items.filter(it => getNote(it.key).status === 'approved').length;
+  const savedTime = NOTES.updated_at ? `บันทึกล่าสุด ${dth(NOTES.updated_at.slice(0, 16))}` : 'ยังไม่มีการแก้ไข';
+
+  const subtabs = `<div class="p-subtabs" role="tablist">
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'all'}" data-sub="7:all">ทั้งหมด (${items.length - decItems.length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'exps'}" data-sub="7:exps">🧪 การทดลอง (${items.filter(i => i.group === 'exp').length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'recs'}" data-sub="7:recs">🎯 ข้อเสนอ (${items.filter(i => i.group === 'rec').length})</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'pending'}" data-sub="7:pending">⏳ รอตัดสินใจ</button>
+  </div>`;
+
+  const storageBar = `<div class="notes-bar">
+    <div style="font-size:18px">💾 บันทึกอัตโนมัติในเบราว์เซอร์เครื่องนี้ (<code>localStorage: cpi_v2_meeting_notes</code>) · อนุมัติแล้ว <b>${approvedN}/${items.length}</b> · <span id="notes-ts">${savedTime}</span></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button type="button" class="p-btn" id="copy-notes-btn">📋 คัดลอกสรุป (Markdown)</button>
+      <button type="button" class="p-btn" id="export-notes-btn">⬇️ ดาวน์โหลด JSON</button>
+      <button type="button" class="p-btn" id="print-notes-btn">🖨️ พิมพ์ / PDF</button>
+      <button type="button" class="p-btn" id="clear-notes-btn">🗑️ ล้างบันทึก</button>
+    </div>
+  </div>`;
+
+  return `${decItems.map(it => cardFor(it, true)).join('')}
+    ${storageBar}
+    ${subtabs}
+    <div class="grid2">${restItems.length ? restItems.map(it => cardFor(it, false)).join('') : '<div class="card empty">ไม่มีรายการในมุมมองนี้</div>'}</div>`;
+}
+
+// ---------- Print Summary of Meeting Notes & Presenter Deck ----------
+function renderPrintNotes() {
+  const items = allDecisionItems();
+  const hasAny = items.some(it => { const n = getNote(it.key); return n.status !== 'pending' || n.note.trim(); });
+  if (!hasAny) return '';
+  return `<section id="print-notes"><h2>บันทึกมติจากที่ประชุม (${dth(NOTES.updated_at ? NOTES.updated_at.slice(0, 16) : cutoff)})</h2>
+    <div class="scroll"><table><tr><th class="l">ประเภท</th><th class="l">แบรนด์</th><th class="l">รายการ</th><th class="l">สถานะ</th><th class="l">บันทึกเพิ่มเติม</th></tr>
+    ${items.map(it => { const n = getNote(it.key); return `<tr><td class="l">${KIND[it.type]}</td><td class="l">${esc(it.brand)}</td><td class="l wrap">${esc(it.title)}</td><td class="l">${STATUS_LABELS[n.status] || n.status}</td><td class="l wrap">${esc(n.note || '—')}</td></tr>`; }).join('')}
+    </table></div></section>`;
+}
+
+function buildPrintDeck() {
+  const savedSub = {...S.sub};
+  S.sub = {1: 'score', 2: 'aud', 3: 'all', 4: 'all', 6: 'all', 7: 'all'};
+  const execHtml = `<div class="print-stop"><h2>Stop 1 · สรุปประเด็นสำคัญ (Executive Readout)</h2><div class="grid2">${(I.executive || []).map(i => `<article class="insight"><span class="kind ${i.type}">${KIND[i.type]}</span><p>${esc(i.text)}</p>${i.source ? `<small>ที่มา: ${esc(i.source)}</small>` : ''}</article>`).join('')}</div></div>`;
+  const stopsHtml = [
+    `<div class="print-stop"><h2>Stop 1 · Scorecard (1–${cd} ${curLbl} เทียบ ${prevLbl})</h2><div class="grid3">${brands().flatMap(b => plats().map(pl => scorecardCardHTML(b, pl, false))).join('')}</div></div>` + execHtml,
+    `<div class="print-stop">${audience()}</div><div class="print-stop">${trends()}</div>`,
+    `<div class="print-stop"><h2>Stop 3 · ${STOPS[2].title}</h2>${renderBrandSpotlight('SURYA', 3)}</div>`,
+    `<div class="print-stop"><h2>Stop 4 · ${STOPS[3].title}</h2>${renderBrandSpotlight('Monster and Friends', 4)}</div>`,
+    `<div class="print-stop"><h2>Stop 5 · ${STOPS[4].title}</h2>${renderStop5()}</div>`,
+    `<div class="print-stop"><h2>Stop 6 · ${STOPS[5].title}</h2>${renderStop6()}</div>`,
+    `<div class="print-stop"><h2>Stop 7 · ${STOPS[6].title}</h2>${renderStop7()}</div>`
+  ].join('');
+  S.sub = savedSub;
+  return stopsHtml + renderPrintNotes();
+}
+
+// ---------- Drill-Down Drawer Controller ----------
+function openDrawer({kicker, title, html, bind}) {
+  $('#drawer-kicker').textContent = kicker;
+  $('#drawer-title').textContent = title;
+  $('#drawer-body').innerHTML = html;
+  $('#drawer').hidden = false;
+  $('#drawer-body').scrollTop = 0;
+  bindThumbFallbacks('#drawer-body');
+  if (bind) bind();
+}
+function closeDrawer() { $('#drawer').hidden = true; }
+
+function openPostsDrawer({kicker, title, rows, metric = 'reach', periodSwitch = null}) {
+  const s = stat(rows);
+  const plSet = new Set(rows.map(r => r.platform));
+  const plLabel = plSet.size === 1 ? REACH([...plSet][0]) : 'Reach / Views';
+  const sorted = [...rows].sort((a, b) => metric === 'dt' ? b.dt.localeCompare(a.dt) : (b[metric] ?? -1) - (a[metric] ?? -1) || b.dt.localeCompare(a.dt));
+
+  const switchBar = periodSwitch ? `<div class="p-subtabs">${periodSwitch.map(opt => `<button type="button" class="p-subtab" aria-selected="${opt.active}" data-dperiod="${opt.id}">${esc(opt.label)}</button>`).join('')}</div>` : '';
+
+  const html = `${switchBar}
+    <div class="drawer-stats">
+      <span>โพสต์: <b>${s.n}</b></span>
+      <span>${plLabel} ค่ากลาง: <b>${n0(s.reach)}</b></span>
+      ${plSet.size === 1 ? `<span>ER ค่ากลาง: <b>${p2(s.er)}</b></span>` : '<span>ER: ไม่เทียบข้ามแพลตฟอร์ม</span>'}
+      <span>Sum of post ${plLabel.toLowerCase()}: <b>${n0(s.sum)}</b></span>
+      ${s.pending ? `<span class="caution" style="margin:0">รอซิงก์ ${s.pending} โพสต์</span>` : ''}
+    </div>
+    ${sorted.length ? sorted.map((p, i) => postCard(p, i, false, metric)).join('') : '<div class="empty">ไม่มีโพสต์ในช่วงตัวกรองนี้</div>'}`;
+
+  openDrawer({
+    kicker, title, html,
+    bind: () => {
+      document.querySelectorAll('#drawer-body [data-dperiod]').forEach(btn => {
+        btn.onclick = () => {
+          const opt = periodSwitch.find(o => o.id === btn.dataset.dperiod);
+          if (opt) opt.open();
+        };
+      });
+    }
+  });
+}
+
+function openKpiDrawer(brand, platform, periodId = 'mtd') {
+  const opts = [
+    {id: 'mtd', label: `1–${cd} ${curLbl} (${stat(sel({brand, platform, ...mtd})).n})`, range: mtd},
+    {id: 'prev', label: `1–${+prev.to.slice(8)} ${prevLbl} (${stat(sel({brand, platform, ...prev})).n})`, range: prev},
+    {id: 'base', label: `${prevLbl} ทั้งเดือน (${stat(sel({brand, platform, ...base})).n})`, range: base}
+  ];
+  const active = opts.find(o => o.id === periodId) || opts[0];
+  const rows = sel({brand, platform, ...active.range});
+  openPostsDrawer({
+    kicker: `DRILL-DOWN · ${short(brand).toUpperCase()} · ${platform.toUpperCase()}`,
+    title: `${brand} · ${platform} (${active.label.split(' (')[0]})`,
+    rows,
+    periodSwitch: opts.map(o => ({id: o.id, label: o.label, active: o.id === active.id, open: () => openKpiDrawer(brand, platform, o.id)}))
+  });
+}
+
+function openPillarDrawer(brand, platform, pillar) {
+  const rows = sel({brand, platform}).filter(p => p.pillar === pillar);
+  openPostsDrawer({
+    kicker: `PILLAR DRILL-DOWN · ${short(brand).toUpperCase()} · ${platform.toUpperCase()}`,
+    title: `${plabel(brand, pillar)} · ${dth(S.from)} – ${dth(S.to)}`,
+    rows
+  });
+}
+
+function openMonthDrawer(month) {
+  const rows = sel({noDate: true}).filter(p => p.dt.startsWith(month));
+  openPostsDrawer({
+    kicker: `MONTHLY DRILL-DOWN · ${TH[+month.slice(5) - 1]} ${month.slice(0, 4)}`,
+    title: `โพสต์เดือน ${TH[+month.slice(5) - 1]} ${month.slice(0, 4)} (${brands().map(short).join(' + ')} · ${S.platform})`,
+    rows
+  });
+}
+
+function openAllPostsDrawer() {
+  const rows = labRows();
+  openPostsDrawer({
+    kicker: `CONTENT LAB · RANKED POSTS (${rows.length})`,
+    title: `จัดอันดับตาม ${METRICS[S.metric]}`,
+    rows: rows.slice(0, 80),
+    metric: S.metric
+  });
+}
+
+function openMethodDrawer() {
+  openDrawer({
+    kicker: '08 / METHOD, LIMITS & SOURCES',
+    title: 'อ่านรีพอร์ตนี้อย่างไร · แหล่งข้อมูลและข้อจำกัด',
+    html: method(false)
+  });
+}
+
+// ---------- Stop Navigation & Chrome Rendering ----------
+function goToStop(n) {
+  S.stop = Math.max(1, Math.min(STOPS.length, n));
+  closeDrawer();
+  $('#stop-jumper').hidden = true;
+  syncURL();
+  render();
+  window.scrollTo({top: 0, behavior: 'instant'});
+}
+
+function renderPresenterChrome() {
+  $('#p-where-txt').textContent = `${S.stop} / ${STOPS.length}`;
+  $('#p-dots').innerHTML = STOPS.map(st => `<span class="p-dot${st.id === S.stop ? ' active' : ''}" data-dot="${st.id}" title="${st.id}. ${esc(st.title)}"></span>`).join('');
+  $('#p-prev').disabled = S.stop <= 1;
+  $('#p-next').disabled = S.stop >= STOPS.length;
+
+  $('#p-brands').innerHTML = [['Compare', 'Compare'], ['SURYA', 'SURYA'], ['Monster and Friends', 'Monster']].map(([b, lbl]) => {
+    const bCls = b === 'SURYA' ? 'brand-surya' : b === 'Monster and Friends' ? 'brand-monster' : '';
+    return `<button type="button" class="p-btn ${bCls} ${S.brand === b ? 'active' : ''}" data-pbrand="${b}">${lbl}</button>`;
+  }).join('');
+
+  $('#p-plats').innerHTML = [['All', 'All'], ['Instagram', 'IG'], ['Facebook', 'FB'], ['TikTok', 'TikTok']].map(([pl, lbl]) =>
+    `<button type="button" class="p-btn ${S.platform === pl ? 'active' : ''}" data-pplat="${pl}">${pl === 'All' ? lbl : platLogo(pl, 15) + lbl}</button>`).join('');
+
+  const curPreset = matchingPreset();
+  $('#p-preset').innerHTML = Object.keys(PRESETS).map(k => `<option value="${esc(k)}"${k === curPreset ? ' selected' : ''}>${esc(k)}</option>`).join('');
+
+  const custom = hasCustomFilters();
+  $('#p-reset').hidden = !custom;
+  const scopeParts = [];
+  if (S.brand !== 'Compare') scopeParts.push(short(S.brand));
+  if (S.platform !== 'All') scopeParts.push(S.platform);
+  if (curPreset !== '90 วันล่าสุด') scopeParts.push(curPreset.split(' (')[0]);
+  if (S.format !== 'All') scopeParts.push(S.format);
+  if (S.noRecruit) scopeParts.push('ไม่รวม Recruitment');
+  $('#p-more-btn').textContent = scopeParts.length ? `🎚️ ${scopeParts.join(' · ')} (F)` : '🎚️ ตัวกรอง (F)';
+  $('#p-more-btn').classList.toggle('active', !$('#p-filter-tray').hidden);
+
+  const staleChip = (I.written_for_as_of && I.written_for_as_of < M.latest_source_as_of)
+    ? `<span class="p-stale" title="ข้อความสรุปเขียนจากข้อมูล ณ ${dth(I.written_for_as_of)}">ข้อมูลใหม่กว่าบทวิเคราะห์</span>` : '';
+
+  $('#present-meta').innerHTML = `<div class="p-meta-in">
+    <div class="p-meta-facts">
+      <span class="p-draft">${esc((I.status || 'DRAFT').split(' · ')[0])}</span>
+      <span>Refresh ล่าสุด <b>${dth(M.generated_at)}</b></span>
+      <span>Publer ล่าสุด <b>${dth(M.latest_source_as_of)}</b></span>
+      <span>โพสต์ล่าสุด <b>${dth(M.latest_post)}</b></span>
+      <span>Snapshot (ไม่ใช่ real-time)</span>
+      ${staleChip}
+    </div>
+    <span class="p-kbd-hint">←/→/Space เปลี่ยนหน้า · 1–7 ข้ามหน้า · B แบรนด์ · T แพลตฟอร์ม · R รีเซ็ต</span>
+  </div>`;
+}
+
+function renderPresenterStage() {
+  const st = STOPS[S.stop - 1];
+  const bodyFns = {
+    1: renderStop1,
+    2: renderStop2,
+    3: () => renderBrandSpotlight('SURYA', 3),
+    4: () => renderBrandSpotlight('Monster and Friends', 4),
+    5: renderStop5,
+    6: renderStop6,
+    7: renderStop7
+  };
+
+  const brandHero = S.stop === 3
+    ? `<div class="p-brand-hero">${brandMark('SURYA', 34)}<span class="p-brand-tag SURYA">SURYA COFFEE EXPLORERS · "Coffee is a boundless journey."</span></div>`
+    : S.stop === 4
+      ? `<div class="p-brand-hero">${brandMark('Monster and Friends', 34)}<span class="p-brand-tag Monster">MONSTER &amp; FRIENDS</span></div>`
+      : '';
+
+  $('#main').innerHTML = `<div class="p-stage">
+    <div class="p-head">
+      <div>
+        ${brandHero}
+        <p class="p-kicker">${st.kicker}</p>
+        <h2>${st.title}</h2>
+        <p class="p-sub">${st.sub()}</p>
+      </div>
+      <div class="p-head-actions">
+        <button type="button" class="p-btn" id="stage-jump-btn">🗂️ สารบัญ (G)</button>
+      </div>
+    </div>
+    ${bodyFns[S.stop]()}
+  </div><div id="print-deck"></div>`;
+
+  bindPresenterEvents();
+  bindThumbFallbacks('#main');
+}
+
+function bindPresenterEvents() {
+  const stageJump = $('#stage-jump-btn');
+  if (stageJump) stageJump.onclick = () => openJumper();
+
+  document.querySelectorAll('#main [data-sub]').forEach(btn => {
+    btn.onclick = () => {
+      const [stop, tab] = btn.dataset.sub.split(':');
+      S.sub[stop] = tab;
+      renderPresenterStage();
+    };
+  });
+
+  const exPrev = $('#ex-prev'), exNext = $('#ex-next');
+  if (exPrev) exPrev.onclick = () => { S.execIdx = (S.execIdx - 1 + (I.executive || []).length) % (I.executive || []).length; renderPresenterStage(); };
+  if (exNext) exNext.onclick = () => { S.execIdx = (S.execIdx + 1) % (I.executive || []).length; renderPresenterStage(); };
+
+  document.querySelectorAll('#main [data-tplat]').forEach(btn => {
+    btn.onclick = () => { S.trendPlat = btn.dataset.tplat; renderPresenterStage(); };
+  });
+
+  document.querySelectorAll('#main [data-setbrand]').forEach(btn => {
+    btn.onclick = () => { S.brand = btn.dataset.setbrand; syncFilterInputs(); syncURL(); render(); };
+  });
+
+  document.querySelectorAll('#main [data-jump]').forEach(btn => {
+    btn.onclick = () => goToStop(parseInt(btn.dataset.jump, 10));
+  });
+
+  document.querySelectorAll('#main [data-drill="kpi"]').forEach(el => {
+    el.onclick = () => openKpiDrawer(el.dataset.brand, el.dataset.platform);
+  });
+
+  document.querySelectorAll('#main [data-drill="pillar"]').forEach(el => {
+    el.onclick = () => openPillarDrawer(el.dataset.brand, el.dataset.platform, el.dataset.pillar);
+  });
+
+  document.querySelectorAll('#main [data-drill="month"], #main .month-hit').forEach(el => {
+    el.onclick = () => openMonthDrawer(el.dataset.month);
+  });
+
+  document.querySelectorAll('#main [data-drawer="trends-table"]').forEach(el => {
+    el.onclick = () => openDrawer({kicker: '06 / HISTORICAL TRENDS', title: 'ตารางรายเดือน (ค่ากลาง · จำนวนโพสต์)', html: trendsTableHTML()});
+  });
+
+  document.querySelectorAll('#main [data-drawer="brand-tables"]').forEach(el => {
+    el.onclick = () => openDrawer({kicker: `05 / PATTERN TABLES · ${short(el.dataset.brand).toUpperCase()}`, title: `ตารางละเอียด ${el.dataset.brand}`, html: brandTablesHTML(el.dataset.brand)});
+  });
+
+  document.querySelectorAll('#main [data-drawer="all-posts"]').forEach(el => {
+    el.onclick = () => openAllPostsDrawer();
+  });
+
+  // Stop 5 controls
+  document.querySelectorAll('#main [data-metric]').forEach(btn => {
+    btn.onclick = () => { S.metric = btn.dataset.metric; S.visible = 9; syncURL(); renderPresenterStage(); };
+  });
+  const pp = $('#p-pillar'), pq = $('#p-q');
+  if (pp) pp.onchange = e => { S.pillar = e.target.value; S.visible = 9; syncURL(); renderPresenterStage(); };
+  if (pq) pq.oninput = e => {
+    const pos = e.target.selectionStart;
+    S.q = e.target.value; S.visible = 9; syncURL(); renderPresenterStage();
+    const inp = $('#p-q'); if (inp) { inp.focus(); inp.setSelectionRange(pos, pos); }
+  };
+
+  // Stop 7 meeting decision controls
+  document.querySelectorAll('#main [data-notekey][data-st]').forEach(btn => {
+    btn.onclick = () => {
+      const k = btn.dataset.notekey, st = btn.dataset.st;
+      setNoteStatus(k, st);
+      renderPresenterStage();
+    };
+  });
+  document.querySelectorAll('#main [data-noteinput]').forEach(inp => {
+    inp.oninput = e => {
+      setNoteText(inp.dataset.noteinput, e.target.value);
+      const ts = $('#notes-ts');
+      if (ts && NOTES.updated_at) ts.textContent = `บันทึกล่าสุด ${dth(NOTES.updated_at.slice(0, 16))}`;
+    };
+  });
+
+  const copyBtn = $('#copy-notes-btn');
+  if (copyBtn) copyBtn.onclick = async () => {
+    const linesOut = ['# COFFLORER Meeting Decisions', `Snapshot: ${M.latest_source_as_of} | Latest post: ${M.latest_post}`, ''];
+    for (const it of allDecisionItems()) {
+      const n = getNote(it.key);
+      linesOut.push(`- [${KIND[it.type]}] (${it.brand}) **${it.title}** — **${STATUS_LABELS[n.status]}**${n.note ? ` · หมายเหตุ: ${n.note}` : ''}`);
+    }
+    const text = linesOut.join('\n');
+    try { await navigator.clipboard.writeText(text); showToast('คัดลอกสรุปการประชุมแล้ว'); }
+    catch { prompt('คัดลอกสรุปการประชุมด้านล่าง:', text); }
+  };
+
+  const expBtn = $('#export-notes-btn');
+  if (expBtn) expBtn.onclick = () => {
+    const payload = {generated_at: new Date().toISOString(), snapshot: M.latest_source_as_of, items: allDecisionItems().map(it => ({...it, ...getNote(it.key)}))};
+    const blob = new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `cofflorer-decisions-${cutoff}.json`; a.click();
+    showToast('ดาวน์โหลด JSON แล้ว');
+  };
+
+  const prBtn = $('#print-notes-btn');
+  if (prBtn) prBtn.onclick = () => triggerPrint();
+
+  const clrBtn = $('#clear-notes-btn');
+  if (clrBtn) clrBtn.onclick = () => {
+    if (!confirm('ล้างสถานะและบันทึกการประชุมทั้งหมดในเบราว์เซอร์นี้?')) return;
+    NOTES = {updated_at: null, items: {}};
+    try { localStorage.removeItem(NOTES_KEY); } catch {}
+    renderPresenterStage();
+    showToast('ล้างบันทึกแล้ว');
+  };
+}
+
+function openJumper() {
+  $('#jumper-grid').innerHTML = STOPS.map(st => `<button type="button" class="j-card${st.id === S.stop ? ' current' : ''}" data-jstop="${st.id}">
+    <span class="j-num">STOP 0${st.id} / 0${STOPS.length}</span>
+    <span class="j-title">${esc(st.title)}</span>
+    <span class="j-src">${esc(st.src)}</span>
+  </button>`).join('');
+  $('#stop-jumper').hidden = false;
+  document.querySelectorAll('#jumper-grid [data-jstop]').forEach(b => b.onclick = () => goToStop(parseInt(b.dataset.jstop, 10)));
+}
+
+function syncFilterInputs() {
+  const pName = matchingPreset();
+  $('#s-platform').value = S.platform;
+  $('#s-format').value = S.format;
+  $('#s-preset').value = pName;
+  $('#s-from').value = S.from;
+  $('#s-to').value = S.to;
+  $('#s-recruit').checked = S.noRecruit;
+
+  $('#p-from').value = S.from;
+  $('#p-to').value = S.to;
+  $('#p-format').value = S.format;
+  $('#p-recruit').checked = S.noRecruit;
+}
+
+function resetFilters() {
+  Object.assign(S, {
+    brand: DEFAULT_S.brand,
+    platform: DEFAULT_S.platform,
+    from: DEFAULT_S.from,
+    to: DEFAULT_S.to,
+    format: DEFAULT_S.format,
+    noRecruit: DEFAULT_S.noRecruit,
+    pillar: DEFAULT_S.pillar,
+    q: DEFAULT_S.q,
+    metric: DEFAULT_S.metric,
+    visible: DEFAULT_S.visible
+  });
+  syncFilterInputs();
+  syncURL();
+  render();
+  showToast('รีเซ็ตตัวกรองเป็นค่าเริ่มต้นแล้ว');
+}
+
+function setMode(nextMode) {
+  S.mode = nextMode;
+  closeDrawer();
+  $('#stop-jumper').hidden = true;
+  $('#p-filter-tray').hidden = true;
+  syncURL();
+  render();
+}
+
+function triggerPrint() {
+  if (S.mode === 'present') {
+    const deck = $('#print-deck');
+    if (deck) deck.innerHTML = buildPrintDeck();
+  } else {
+    document.querySelectorAll('details').forEach(d => d.open = true);
+  }
+  print();
+}
+
+// ---------- Main Render ----------
+function render() {
+  document.body.className = S.mode === 'present' ? 'present-mode' : 'analysis-mode';
+  document.body.dataset.brandTheme = S.brand;
+  $('#tabs').innerHTML = [['Compare', 'สองแบรนด์'], ['SURYA', 'Coffee Explorers'], ['Monster and Friends', 'and Friends']].map(([b, s]) => `<button class="tab" data-brand="${b}" aria-pressed="${S.brand === b}">${b === 'Monster and Friends' ? 'Monster' : b} <small>${s}</small></button>`).join('');
+
+  if (S.mode === 'present') {
+    renderPresenterChrome();
+    renderPresenterStage();
+  } else {
+    $('#main').innerHTML = Object.entries(SECTIONS).map(([id, f]) => `<section id="${id}">${f()}</section>`).join('') + renderPrintNotes();
+    $('#l-pillar').onchange = e => { S.pillar = e.target.value; S.visible = 9; syncURL(); renderLab(); };
+    $('#l-metric').onchange = e => { S.metric = e.target.value; S.visible = 9; syncURL(); renderLab(); };
+    $('#l-q').oninput = e => { S.q = e.target.value; S.visible = 9; syncURL(); renderLab(); };
+    renderLab();
+  }
+}
+
+// ---------- Keyboard Shortcuts ----------
+document.addEventListener('keydown', e => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const tag = (e.target.tagName || '').toLowerCase();
+  const typing = tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable;
+
+  if (e.key === 'Escape') {
+    if (!$('#drawer').hidden) { closeDrawer(); return; }
+    if (!$('#stop-jumper').hidden) { $('#stop-jumper').hidden = true; return; }
+    if (!$('#p-filter-tray').hidden) { $('#p-filter-tray').hidden = true; $('#p-more-btn').setAttribute('aria-expanded', 'false'); $('#p-more-btn').classList.remove('active'); return; }
+    return;
+  }
+  if (typing) return;
+
+  if (e.key === 'p' || e.key === 'P') { e.preventDefault(); setMode(S.mode === 'present' ? 'analysis' : 'present'); return; }
+  if (S.mode !== 'present') return;
+
+  const drawerOpen = !$('#drawer').hidden;
+  const jumperOpen = !$('#stop-jumper').hidden;
+  if (!drawerOpen && !jumperOpen) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || (e.key === ' ' && tag !== 'button') || e.key === 'ArrowDown') {
+      e.preventDefault(); if (S.stop < STOPS.length) goToStop(S.stop + 1); return;
+    }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'ArrowUp') {
+      e.preventDefault(); if (S.stop > 1) goToStop(S.stop - 1); return;
+    }
+  }
+  if (/^[1-7]$/.test(e.key)) { e.preventDefault(); goToStop(parseInt(e.key, 10)); return; }
+  if (e.key === 'g' || e.key === 'G') { e.preventDefault(); $('#stop-jumper').hidden ? openJumper() : ($('#stop-jumper').hidden = true); return; }
+  if (e.key === 'b' || e.key === 'B') {
+    e.preventDefault();
+    const order = ['Compare', ...BR];
+    S.brand = order[(order.indexOf(S.brand) + 1) % order.length];
+    syncFilterInputs(); syncURL(); render(); return;
+  }
+  if (e.key === 't' || e.key === 'T') {
+    e.preventDefault();
+    const order = ['All', ...PL];
+    S.platform = order[(order.indexOf(S.platform) + 1) % order.length];
+    syncFilterInputs(); syncURL(); render(); return;
+  }
+  if (e.key === 'f' || e.key === 'F') {
+    e.preventDefault();
+    const tray = $('#p-filter-tray'); tray.hidden = !tray.hidden;
+    $('#p-more-btn').setAttribute('aria-expanded', String(!tray.hidden));
+    $('#p-more-btn').classList.toggle('active', !tray.hidden); return;
+  }
+  if (e.key === 'r' || e.key === 'R') { e.preventDefault(); resetFilters(); return; }
+  if (e.key === 'm' || e.key === 'M') { e.preventDefault(); $('#drawer').hidden ? openMethodDrawer() : closeDrawer(); return; }
+});
+
+// ---------- Initialization ----------
 function init() {
-  $('#h-period').textContent = `${EN[cm - 1]} ${cy} MTD`; document.title = `Creative Performance Intelligence · ${EN[cm - 1]} ${cy} MTD | COFFLORER`;
+  readURL();
+  $('#h-period').textContent = `${EN[cm - 1]} ${cy} MTD`;
+  document.title = `Creative Performance Intelligence · ${EN[cm - 1]} ${cy} MTD | COFFLORER`;
   $('#h-snap').textContent = `PUBLER SNAPSHOT · ${dth(M.latest_source_as_of)}`;
   $('#banner').innerHTML = `<strong>${esc(I.status || 'DRAFT')}</strong><span>Refresh ล่าสุด <b>${dth(M.generated_at)}</b></span><span>อ่านค่าจาก Publer ล่าสุด <b>${dth(M.latest_source_as_of)}</b></span><span>โพสต์ล่าสุดในข้อมูล <b>${dth(M.latest_post)}</b></span><span><b>${M.posts.toLocaleString()}</b> โพสต์ไม่ซ้ำ · ${M.timezone}</span><span>เป็น snapshot ไม่ใช่ real-time · เดือนยังไม่ปิด</span>`;
-  if (I.written_for_as_of && I.written_for_as_of < M.latest_source_as_of) { $('#stale').hidden = false; $('#stale').innerHTML = `<strong>ข้อมูลใหม่กว่าบทวิเคราะห์</strong><span>ข้อความสรุปเขียนจากข้อมูล ณ ${dth(I.written_for_as_of)} ตัวเลขในการ์ดและตารางเป็นปัจจุบันกว่า</span>`; }
+  if (I.written_for_as_of && I.written_for_as_of < M.latest_source_as_of) {
+    $('#stale').hidden = false;
+    $('#stale').innerHTML = `<strong>ข้อมูลใหม่กว่าบทวิเคราะห์</strong><span>ข้อความสรุปเขียนจากข้อมูล ณ ${dth(I.written_for_as_of)} ตัวเลขในการ์ดและตารางเป็นปัจจุบันกว่า</span>`;
+  }
   $('#foot').textContent = `COFFLORER · Creative Performance Intelligence · ร่างสำหรับตรวจภายใน · ข้อมูล Publer ณ ${dth(M.latest_source_as_of)} · จำนวนโพสต์นับรายแพลตฟอร์ม ไม่ใช่จำนวนชิ้นงานไม่ซ้ำ`;
+
   const fill = (el, list, v) => el.innerHTML = list.map(x => `<option${x === v ? ' selected' : ''}>${esc(x)}</option>`).join('');
-  fill($('#s-platform'), ['All', ...PL], S.platform); fill($('#s-format'), ['All', ...new Set(P.map(p => p.format))], S.format); fill($('#s-preset'), Object.keys(PRESETS), '90 วันล่าสุด');
-  const reset = () => { S.visible = 9; render(); };
-  for (const k of ['from', 'to']) { const el = $('#s-' + k); el.value = S[k]; el.min = firstDay; el.max = cutoff; el.onchange = () => { if (el.value) { S[k] = el.value; $('#s-preset').value = 'กำหนดเอง'; reset(); } }; }
-  $('#s-preset').onchange = e => { const r = PRESETS[e.target.value]; if (r) { [S.from, S.to] = r; $('#s-from').value = S.from; $('#s-to').value = S.to; reset(); } };
-  $('#s-platform').onchange = e => { S.platform = e.target.value; reset(); }; $('#s-format').onchange = e => { S.format = e.target.value; reset(); };
-  $('#s-recruit').onchange = e => { S.noRecruit = e.target.checked; reset(); };
-  $('#tabs').onclick = e => { const b = e.target.closest('button'); if (b) { S.brand = b.dataset.brand; reset(); } };
-  $('#printBtn').onclick = () => { document.querySelectorAll('details').forEach(d => d.open = true); print(); };
-  document.addEventListener('mousemove', e => { const t = e.target.closest?.('[data-tip]'), tip = $('#tip'); if (!t) { tip.style.display = 'none'; return; } tip.innerHTML = t.dataset.tip; tip.style.display = 'block'; tip.style.left = Math.min(e.clientX + 12, innerWidth - 270) + 'px'; tip.style.top = e.clientY + 14 + 'px'; });
+  fill($('#s-platform'), ['All', ...PL], S.platform);
+  fill($('#s-format'), FORMATS, S.format);
+  fill($('#p-format'), FORMATS, S.format);
+  fill($('#s-preset'), Object.keys(PRESETS), matchingPreset());
+
+  const applyUpdate = () => { S.visible = 9; syncFilterInputs(); syncURL(); render(); };
+
+  for (const k of ['from', 'to']) {
+    for (const prefix of ['#s-', '#p-']) {
+      const el = $(prefix + k);
+      el.min = firstDay; el.max = cutoff; el.value = S[k];
+      el.onchange = () => { if (el.value) { S[k] = el.value; applyUpdate(); } };
+    }
+  }
+  $('#s-preset').onchange = e => { const r = PRESETS[e.target.value]; if (r) { [S.from, S.to] = r; applyUpdate(); } };
+  $('#p-preset').onchange = e => { const r = PRESETS[e.target.value]; if (r) { [S.from, S.to] = r; applyUpdate(); } else { $('#p-filter-tray').hidden = false; } };
+  $('#s-platform').onchange = e => { S.platform = e.target.value; applyUpdate(); };
+  $('#s-format').onchange = e => { S.format = e.target.value; applyUpdate(); };
+  $('#p-format').onchange = e => { S.format = e.target.value; applyUpdate(); };
+  $('#s-recruit').onchange = e => { S.noRecruit = e.target.checked; applyUpdate(); };
+  $('#p-recruit').onchange = e => { S.noRecruit = e.target.checked; applyUpdate(); };
+  $('#tabs').onclick = e => { const b = e.target.closest('button'); if (b) { S.brand = b.dataset.brand; applyUpdate(); } };
+
+  // Presenter top bar bindings
+  $('#p-prev').onclick = () => { if (S.stop > 1) goToStop(S.stop - 1); };
+  $('#p-next').onclick = () => { if (S.stop < STOPS.length) goToStop(S.stop + 1); };
+  $('#p-where').onclick = e => {
+    const dot = e.target.closest('[data-dot]');
+    if (dot) { goToStop(parseInt(dot.dataset.dot, 10)); return; }
+    $('#stop-jumper').hidden ? openJumper() : ($('#stop-jumper').hidden = true);
+  };
+  $('#p-brands').onclick = e => { const b = e.target.closest('[data-pbrand]'); if (b) { S.brand = b.dataset.pbrand; applyUpdate(); } };
+  $('#p-plats').onclick = e => { const b = e.target.closest('[data-pplat]'); if (b) { S.platform = b.dataset.pplat; applyUpdate(); } };
+  $('#p-more-btn').onclick = () => {
+    const tray = $('#p-filter-tray'); tray.hidden = !tray.hidden;
+    $('#p-more-btn').setAttribute('aria-expanded', String(!tray.hidden));
+    $('#p-more-btn').classList.toggle('active', !tray.hidden);
+  };
+  $('#p-reset').onclick = resetFilters;
+  $('#p-tray-reset').onclick = resetFilters;
+  $('#p-method-btn').onclick = () => $('#drawer').hidden ? openMethodDrawer() : closeDrawer();
+  $('#p-fs-btn').onclick = () => {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen?.().catch(() => {});
+    else document.exitFullscreen?.().catch(() => {});
+  };
+  document.addEventListener('fullscreenchange', () => {
+    $('#p-fs-btn').textContent = document.fullscreenElement ? '✕ ออกเต็มจอ' : '⛶ เต็มจอ';
+  });
+
+  $('#toAnalysisBtn').onclick = () => setMode('analysis');
+  $('#toPresentBtn').onclick = () => setMode('present');
+  $('#printBtn').onclick = () => triggerPrint();
+  window.addEventListener('beforeprint', () => {
+    if (S.mode === 'present') {
+      const deck = $('#print-deck');
+      if (deck) deck.innerHTML = buildPrintDeck();
+    } else {
+      document.querySelectorAll('details').forEach(d => d.open = true);
+    }
+  });
+
+  $('#drawer-close').onclick = closeDrawer;
+  $('#drawer').onclick = e => { if (e.target === $('#drawer')) closeDrawer(); };
+  $('#jumper-close').onclick = () => $('#stop-jumper').hidden = true;
+  $('#stop-jumper').onclick = e => { if (e.target === $('#stop-jumper')) $('#stop-jumper').hidden = true; };
+
+  document.addEventListener('mousemove', e => {
+    const t = e.target.closest?.('[data-tip]'), tip = $('#tip');
+    if (!t) { tip.style.display = 'none'; return; }
+    tip.innerHTML = t.dataset.tip; tip.style.display = 'block';
+    tip.style.left = Math.min(e.clientX + 12, innerWidth - 290) + 'px';
+    tip.style.top = Math.min(e.clientY + 14, innerHeight - 80) + 'px';
+  });
+
+  syncFilterInputs();
+  syncURL();
   render();
 }
 init();
