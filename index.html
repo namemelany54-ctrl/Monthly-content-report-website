@@ -510,6 +510,113 @@ body.present-mode .podium-grid .thumb{max-height:240px}
   svg text{fill:#333!important}
   *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
 }
+
+/* ==========================================================================
+   MEETING THEME · presenter mode on a TV / projector, mixed audience
+   Brand fonts are referenced by name (installed locally), never shipped.
+   ========================================================================== */
+@font-face{font-family:"Brand Thai";src:local("FC Iconic Bold"),local("FCIconic-Bold");font-weight:700;font-display:swap}
+@font-face{font-family:"Brand Thai";src:local("FC Iconic Regular"),local("FCIconic-Regular"),local("FC Iconic");font-weight:400;font-display:swap}
+@font-face{font-family:"Monster Display";src:local("Janda Manatee Solid"),local("JandaManateeSolid");font-display:swap}
+body.present-mode{
+  --bg:#0e1826;--surface:#172436;--surface-2:#1f3047;--line:#2d4560;--line-strong:#46668a;
+  --text:#f8f5ef;--muted:#d3dbe3;--quiet:#a9b6c3;
+  --radius:18px;--radius-sm:12px;
+  font-size:20px;
+  background:radial-gradient(1100px 560px at -5% -12%,rgba(218,194,89,.13),transparent 62%),
+             radial-gradient(1000px 600px at 105% -12%,rgba(56,83,151,.30),transparent 62%),var(--bg);
+  background-attachment:fixed;
+}
+body.present-mode .p-head h2{font-size:clamp(2.3rem,3.3vw,3.3rem);line-height:1.15;letter-spacing:-.02em}
+body.present-mode .p-kicker{font-size:17px;letter-spacing:.08em}
+body.present-mode .p-sub{font-size:19px}
+body.present-mode .supporting-item p,body.present-mode .brief-row dd,body.present-mode .pbar-lbl,
+body.present-mode .pbar-val,body.present-mode .post-hero h4,body.present-mode .ranked-main h4,
+body.present-mode table,body.present-mode th,body.present-mode td{font-size:20px}
+body.present-mode .p-btn,body.present-mode .p-subtab{border-radius:999px}
+body.present-mode .p-subtab{font-size:18px;padding:9px 18px}
+body.present-mode .spotlight,body.present-mode .supporting-item,body.present-mode .card,
+body.present-mode .scroll,body.present-mode .dec-card,body.present-mode .post-hero{border-radius:var(--radius)}
+body.present-mode .pbar-track,body.present-mode .pbar-fill{border-radius:999px}
+
+/* plain-language helpers */
+.meet-gloss{display:flex;flex-wrap:wrap;gap:10px}
+.meet-gloss span{background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:17px;color:var(--muted)}
+.meet-gloss b{color:var(--text)}
+.meet-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.meet-tile{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:6px;cursor:pointer;
+  background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px solid var(--line);
+  border-top:6px solid var(--mark);border-radius:var(--radius);padding:18px 22px;min-width:0;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.meet-tile:hover,.meet-tile:focus-visible{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,0,0,.35);border-color:var(--line-strong)}
+.meet-tile:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.meet-tile .mt-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.meet-tile .mt-lead{font-size:17px;color:var(--muted);margin-top:6px}
+.meet-tile .mt-num{font-size:3.6rem;font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--text)}
+.meet-tile .mt-unit{font-size:18px;color:var(--muted)}
+.meet-tile .mt-cmp{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:17px;color:var(--quiet)}
+.mt-pill{font-weight:800;font-size:17px;padding:3px 12px;border-radius:999px}
+.mt-pill.up{background:rgba(110,231,183,.16);color:var(--up)}
+.mt-pill.down{background:rgba(252,165,165,.16);color:var(--down)}
+.mt-pill.flat{background:var(--surface-2);color:var(--muted)}
+.meet-tile .mt-foot{font-size:15px;color:var(--quiet);margin-top:auto;padding-top:8px;border-top:1px dashed var(--line)}
+.meet-tile .mt-warn{color:var(--warn);font-weight:700}
+.meet-note{font-size:17px;color:var(--muted);margin:0}
+.meet-note b{color:var(--text)}
+
+/* SURYA stop: kraft-paper note, FC Iconic */
+body.present-mode.stop-surya .p-head{position:relative;border:0;padding:36px 92px 34px;color:#38251D;
+  background:url("assets/brand/surya-kraft-paper.webp") center/100% 100% no-repeat;
+  filter:drop-shadow(0 12px 18px rgba(0,0,0,.38));transform:rotate(-.35deg)}
+body.present-mode.stop-surya .p-head::before{content:"";position:absolute;top:-10px;left:50%;width:150px;height:30px;
+  transform:translateX(-50%) rotate(-2deg);background:rgba(255,249,238,.55);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+body.present-mode.stop-surya .p-head h2{font-family:"Brand Thai",var(--font);font-weight:700;color:#38251D}
+body.present-mode.stop-surya .p-head .p-kicker{color:#76431C}
+body.present-mode.stop-surya .p-head .p-sub{color:#4a3528}
+body.present-mode.stop-surya .p-head .p-brand-tag{background:#1C1A1A;color:#DAC259;font-family:"Brand Thai",var(--font)}
+body.present-mode.stop-surya .p-head .p-btn{background:rgba(28,26,26,.85);color:#FFF9EE;border-color:transparent}
+
+/* Monster stop: cream sticker, brand palette confetti */
+body.present-mode.stop-monster .p-head{position:relative;overflow:visible;padding:24px 34px;color:#22305a;
+  background:#FFF7D6;border:3px solid #1d1d1f;border-radius:26px;box-shadow:7px 7px 0 #FED347}
+body.present-mode.stop-monster .p-head h2{font-family:"Brand Thai",var(--font);font-weight:700;color:#385397}
+body.present-mode.stop-monster .p-head .p-kicker{color:#385397}
+body.present-mode.stop-monster .p-head .p-sub{color:#3d4766}
+body.present-mode.stop-monster .p-head .p-brand-tag{background:#385397;color:#FED347;font-family:"Monster Display",var(--font);
+  font-size:18px;letter-spacing:.04em;font-weight:400}
+body.present-mode.stop-monster .p-head .p-btn{background:#385397;color:#fff;border-color:transparent}
+body.present-mode.stop-monster .p-brand-hero .bmark img{width:58px!important;height:auto!important}
+.confetti{position:absolute;inset:0;pointer-events:none}
+.confetti i{position:absolute;left:var(--x);top:var(--y);width:var(--w,26px);height:9px;border-radius:9px;background:var(--c);
+  border:2px solid #1d1d1f;transform:rotate(var(--r))}
+
+/* ---- motion (screen only, skipped for reduced-motion) ---- */
+@media screen and (prefers-reduced-motion:no-preference){
+  body.present-mode .p-stage>*{animation:meetIn .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 80ms)}
+  body.present-mode .p-stage[data-dir="next"]>*{--dx:34px}
+  body.present-mode .p-stage[data-dir="prev"]>*{--dx:-34px}
+  body.present-mode .p-stage[data-dir="same"]>*{animation-duration:.3s;--dx:0px}
+  @keyframes meetIn{from{opacity:0;transform:translate(var(--dx,0px),12px)}}
+  body.present-mode .meet-tile{animation:tileIn .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(180ms + var(--k,0) * 70ms)}
+  @keyframes tileIn{from{opacity:0;transform:translateY(18px) scale(.97)}}
+  body.present-mode #main .pbar-fill,body.present-mode #main .fill{transform-origin:left center;animation:barGrow .9s .25s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes barGrow{from{transform:scaleX(0)}}
+  body.present-mode #main svg .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:lineDraw 1.2s .3s ease-out forwards}
+  @keyframes lineDraw{to{stroke-dashoffset:0}}
+  body.present-mode.stop-surya .p-head{animation:noteIn .7s cubic-bezier(.2,.9,.25,1.15) both}
+  @keyframes noteIn{from{opacity:0;transform:translateY(-26px) rotate(-3deg)}to{transform:rotate(-.35deg)}}
+  body.present-mode.stop-monster .p-brand-hero .bmark{animation:monsterHi .9s .2s cubic-bezier(.3,1.5,.5,1) both}
+  @keyframes monsterHi{0%{transform:scale(.3) rotate(-25deg);opacity:0}55%{transform:scale(1.18) rotate(10deg);opacity:1}75%{transform:rotate(-6deg)}100%{transform:none}}
+  .confetti i{animation:confettiPop .7s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(.35s + var(--d,0) * 60ms)}
+  @keyframes confettiPop{from{opacity:0;transform:translateY(16px) rotate(0) scale(.2)}}
+}
+@media print{
+  body.present-mode.stop-surya .p-head,body.present-mode.stop-monster .p-head{background:none!important;filter:none!important;transform:none!important;box-shadow:none!important;border:0!important;color:#111!important}
+  .confetti,.meet-gloss{display:none!important}
+}
+@media(max-width:1100px){.meet-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.meet-tiles{grid-template-columns:1fr}.meet-tile .mt-num{font-size:2.8rem}
+  body.present-mode.stop-surya .p-head,body.present-mode.stop-monster .p-head{padding:20px 20px;transform:none}}
 </style>
 </head>
 <body class="present-mode">
@@ -716,7 +823,7 @@ const HINT = {
 
 // Default to current MTD period per reporting specification
 const DEFAULT_S = {mode: 'present', stop: 1, brand: 'Compare', platform: 'All', from: mtd.from, to: mtd.to, format: 'All', noRecruit: false, pillar: 'All', q: '', metric: 'reach', visible: 9};
-const S = {...DEFAULT_S, sub: {1: 'score', 2: 'aud', 3: 'worked', 4: 'worked', 6: 'recs', 7: 'decision'}, execIdx: 0, trendPlat: 'All', spotPlat: 'Instagram', page: {}};
+const S = {...DEFAULT_S, sub: {1: 'tiles', 2: 'aud', 3: 'worked', 4: 'worked', 6: 'recs', 7: 'decision'}, execIdx: 0, trendPlat: 'All', spotPlat: 'Instagram', page: {}};
 
 // ---------- Single Filter & Stats Path (preserved intact) ----------
 const brands = () => S.brand === 'Compare' ? BR : [S.brand], plats = () => S.platform === 'All' ? PL : [S.platform];
@@ -1220,9 +1327,10 @@ function bindThumbFallbacks(rootSelector) {
 function renderStop1() {
   const execs = I.executive || [];
   const lead = execs[0];
-  const activeTab = S.sub[1] || 'score';
+  const activeTab = S.sub[1] || 'tiles';
   const subtabs = `<div class="p-subtabs" role="tablist">
-    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'score'}" data-sub="1:score">${ico('analysis', 16)} ตัวเลข 1–${cd} ${curLbl} เทียบ ${prevLbl}</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'tiles'}" data-sub="1:tiles">${ico('analysis', 16)} ภาพรวม 1–${cd} ${curLbl}</button>
+    <button class="p-subtab" role="tab" aria-selected="${activeTab === 'score'}" data-sub="1:score">${ico('list', 16)} ตารางละเอียด</button>
     <button class="p-subtab" role="tab" aria-selected="${activeTab === 'facts'}" data-sub="1:facts">${ico('list', 16)} สรุปข้อเท็จจริง (${execs.length})</button>
   </div>`;
 
@@ -1238,6 +1346,7 @@ function renderStop1() {
     <button class="p-btn" type="button" data-sub="1:facts">ดูทั้งหมด ${execs.length} ข้อ</button>
   </div>` : '';
 
+  if (activeTab === 'tiles') return `${subtabs}${meetTilesHTML()}`;
   return `${subtabs}${leadHTML}${scorecardTableHTML(true)}`;
 }
 
@@ -1597,6 +1706,96 @@ function renderPresenterChrome() {
     <span class="p-keys">←/→/Space เปลี่ยนหน้า · 1–7 ข้ามหน้า · B แบรนด์ · T แพลตฟอร์ม · F ตัวกรอง · R รีเซ็ต</span>`;
 }
 
+
+// ---------- Meeting view: plain-language tiles (same sel()/stat() path) ----------
+function meetGlossHTML() {
+  return `<div class="meet-gloss" aria-label="อ่านตัวเลขยังไง">
+    <span><b>ค่ากลาง</b> = โพสต์ทั่วไป 1 ชิ้น (โพสต์ดังโพสต์เดียวดึงตัวเลขไม่ได้)</span>
+    <span><b>Reach</b> = จำนวนบัญชีที่เห็นโพสต์ (FB / IG)</span>
+    <span><b>Views</b> = ยอดดูวิดีโอ TikTok (คนเดิมดูซ้ำได้)</span>
+  </div>`;
+}
+function meetTilesHTML() {
+  let k = 0;
+  const tiles = [];
+  for (const b of brands()) for (const pl of plats()) {
+    const a = stat(sel({brand: b, platform: pl, ...mtd})), c = stat(sel({brand: b, platform: pl, ...prev}));
+    const tt = pl === 'TikTok';
+    let pill = '<span class="mt-pill flat">ยังเทียบไม่ได้</span>';
+    if (a.reach != null && c.reach) {
+      const d = 100 * (a.reach - c.reach) / c.reach;
+      pill = Math.abs(d) < 0.5 ? '<span class="mt-pill flat">เท่าเดิม</span>'
+        : `<span class="mt-pill ${d > 0 ? 'up' : 'down'}">${d > 0 ? '▲' : '▼'} ${Math.abs(d).toFixed(0)}%</span>`;
+    }
+    const thinN = Math.min(a.n, c.n) < 5;
+    tiles.push(`<button type="button" class="meet-tile ${cls(b)}" style="--k:${k++}" data-drill="kpi" data-brand="${esc(b)}" data-platform="${esc(pl)}" data-kpi="${short(b)}|${pl}" aria-label="${esc(short(b))} ${pl}: เปิดโพสต์เบื้องหลังตัวเลข">
+      <div class="mt-top"><span class="bn-wrap">${brandMark(b, 22)}<span class="bn">${short(b).toUpperCase()}</span></span><span class="plat-tag plat-${pl}">${platLogo(pl, 18)}<span>${pl}</span></span></div>
+      <div class="mt-lead">โพสต์ทั่วไป 1 ชิ้น${tt ? 'มียอดดู' : 'มีคนเห็น'}</div>
+      <div><span class="mt-num" data-count data-v="reach">${n0(a.reach)}</span> <span class="mt-unit">${tt ? 'ครั้ง' : 'บัญชี'}</span></div>
+      <div class="mt-cmp">${pill}<span>ช่วงเดียวกัน${prevLbl} ${n0(c.reach)}</span></div>
+      <div class="mt-foot">${a.n} โพสต์ใน${curLbl} · ${c.n} โพสต์ใน${prevLbl}${a.pending ? ` · ${a.pending} รอซิงก์` : ''}${thinN ? ' · <span class="mt-warn">โพสต์น้อย อ่านเป็นทิศทาง</span>' : ''}</div>
+    </button>`);
+  }
+  return `${meetGlossHTML()}<div class="meet-tiles">${tiles.join('') || '<div class="card empty">ไม่มีข้อมูลในตัวกรองนี้</div>'}</div>
+    <p class="meet-note"><b>อ่านลูกศรอย่างระวัง:</b> โพสต์${curLbl}ยังใหม่ ตัวเลขยังขึ้นได้อีก การเทียบจึงเอียงให้${prevLbl}ดูดีกว่า · กดการ์ดเพื่อดูโพสต์จริงเบื้องหลังตัวเลข</p>`;
+}
+
+// ---------- Meeting motion: entrance, count-up, line draw, brand stops ----------
+let lastStopShown = 0;
+const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+function countUp(root) {
+  if (reducedMotion()) return;
+  root.querySelectorAll('[data-count], .kpi-mini .big').forEach(el => {
+    const finalText = el.textContent.trim();
+    const m = finalText.match(/^([\d,]+(?:\.\d+)?)(%?)$/);
+    if (!m) return;
+    const target = parseFloat(m[1].replace(/,/g, '')), dec = (m[1].split('.')[1] || '').length, suf = m[2];
+    if (!target) return;
+    const fmt = v => v.toLocaleString('en-US', {minimumFractionDigits: dec, maximumFractionDigits: dec}) + suf;
+    const t0 = performance.now(), dur = 900;
+    let done = false;
+    const finish = () => { if (!done) { done = true; el.textContent = finalText; } };
+    const step = now => { if (done) return; const k = Math.min(1, (now - t0) / dur); el.textContent = fmt(target * (1 - Math.pow(1 - k, 3))); k < 1 ? requestAnimationFrame(step) : finish(); };
+    el.textContent = fmt(0);
+    requestAnimationFrame(step);
+    setTimeout(finish, dur + 150); // never leave a number unfinished if frames are paused
+  });
+}
+function applyMeetingMotion() {
+  const stage = document.querySelector('#main .p-stage');
+  if (!stage) return;
+  stage.dataset.dir = S.stop === lastStopShown ? 'same' : S.stop > lastStopShown ? 'next' : 'prev';
+  [...stage.children].forEach((el, i) => el.style.setProperty('--i', i));
+  stage.querySelectorAll('svg path').forEach(path => {
+    if ((path.getAttribute('fill') || '') === 'none' && path.getAttribute('d')) { path.setAttribute('pathLength', '1'); path.classList.add('draw'); }
+  });
+  document.body.classList.toggle('stop-surya', S.stop === 3);
+  document.body.classList.toggle('stop-monster', S.stop === 4);
+  if (S.stop === 4) {
+    const head = stage.querySelector('.p-head');
+    if (head && !head.querySelector('.confetti')) {
+      const bits = [['6%', '-9px', '-18deg', '#FED347'], ['22%', 'calc(100% - 4px)', '12deg', '#B4D7AC'], ['41%', '-8px', '24deg', '#EBBBC6'],
+        ['63%', 'calc(100% - 5px)', '-14deg', '#FED347'], ['79%', '-10px', '9deg', '#B4D7AC'], ['93%', '38%', '-28deg', '#EBBBC6'], ['-1%', '55%', '30deg', '#B4D7AC']];
+      head.insertAdjacentHTML('afterbegin', `<span class="confetti" aria-hidden="true">${bits.map(([x, y, r, c], d) => `<i style="--x:${x};--y:${y};--r:${r};--c:${c};--d:${d}"></i>`).join('')}</span>`);
+    }
+  }
+  countUp(stage);
+  fitStage();
+  lastStopShown = S.stop;
+}
+// Scale a stop down (never up, never below 72%) only when it would overflow the screen.
+function fitStage() {
+  const stage = document.querySelector('#main .p-stage');
+  if (!stage || S.mode !== 'present') return;
+  stage.style.zoom = '1';
+  if (innerWidth < 900) { stage.style.zoom = ''; updateMoreHint(); return; } // phones scroll; never shrink text there
+  const avail = innerHeight - (stage.getBoundingClientRect().top + scrollY) - 34;
+  const need = stage.scrollHeight;
+  stage.style.zoom = need > avail && avail > 200 ? String(Math.max(0.72, avail / need).toFixed(3)) : '';
+  updateMoreHint();
+}
+addEventListener('resize', () => { clearTimeout(fitStage._t); fitStage._t = setTimeout(fitStage, 120); });
+
 function renderPresenterStage() {
   const st = STOPS[S.stop - 1];
   const bodyFns = {
@@ -1628,6 +1827,7 @@ function renderPresenterStage() {
 
   bindPresenterEvents();
   bindThumbFallbacks('#main');
+  applyMeetingMotion();
   updateMoreHint();
 }
 
@@ -1772,7 +1972,7 @@ function syncFilterInputs() {
 function resetFilters() {
   const keepMode = S.mode, keepStop = S.stop;
   Object.assign(S, {...DEFAULT_S, mode: keepMode, stop: keepStop});
-  S.sub = {1: 'score', 2: 'aud', 3: 'worked', 4: 'worked', 6: 'recs', 7: 'decision'};
+  S.sub = {1: 'tiles', 2: 'aud', 3: 'worked', 4: 'worked', 6: 'recs', 7: 'decision'};
   S.trendPlat = 'All';
   syncFilterInputs();
   syncURL();
